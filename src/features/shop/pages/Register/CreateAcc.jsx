@@ -12,6 +12,7 @@ import { FaGoogle, FaFacebookF } from "react-icons/fa";
 import { TbUser } from "react-icons/tb";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const schema = Yup.object({
   fullname: Yup.string().required("Required"),
@@ -22,6 +23,7 @@ const schema = Yup.object({
 
 function CreateAcc() {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -39,6 +41,10 @@ function CreateAcc() {
     };
     localStorage.setItem("user", JSON.stringify(user));
     toast.success("Account created!");
+
+    setTimeout(() => {
+      navigate("/login");
+    }, 1000);
   };
 
   return (
@@ -124,9 +130,13 @@ function CreateAcc() {
 
         <p className="text-center text-sm text-gray-600 mt-4">
           Already have an account?{" "}
-          <a href="#" className="text-blue-600 hover:underline">
+          <button
+            type="button"
+            onClick={() => navigate("/Login")}
+            className="text-blue-600 hover:underline"
+          >
             sign in
-          </a>
+          </button>
         </p>
       </form>
 
