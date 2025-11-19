@@ -11,7 +11,7 @@ import {
 import { FaGoogle, FaFacebookF } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const schema = Yup.object({
   email: Yup.string().email("Invalid email").required("Required"),
@@ -20,7 +20,6 @@ const schema = Yup.object({
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
 
   const {
     register,
@@ -46,8 +45,10 @@ function Login() {
       toast.success("Login successful!");
 
       setTimeout(() => {
-        navigate("/home");
+        window.location.href = "/home";
       }, 1000);
+    } else {
+      toast.error("Incorrect email or password!");
     }
   };
 
@@ -92,30 +93,11 @@ function Login() {
           Log In
         </button>
 
-        <div className="flex items-center gap-4 my-2">
-          <span className="flex-1 h-px bg-gray-300"></span>
-          <p className="text-sm text-gray-500">Or Log In with</p>
-          <span className="flex-1 h-px bg-gray-300"></span>
-        </div>
-
-        <div className="grid grid-cols-2 gap-3">
-          <button className="border py-2 rounded-lg hover:bg-gray-100 transition flex items-center justify-center gap-2">
-            <FaGoogle /> Google
-          </button>
-          <button className="border py-2 rounded-lg hover:bg-gray-100 transition flex items-center justify-center gap-2">
-            <FaFacebookF /> Facebook
-          </button>
-        </div>
-
         <p className="text-center text-sm text-gray-600 mt-4">
           Don’t have an account?{" "}
-          <button
-            type="button"
-            onClick={() => navigate("/CreateAcc")}
-            className="text-blue-600 hover:underline"
-          >
+          <Link to="/CreateAcc" className="text-blue-600 hover:underline">
             sign up
-          </button>
+          </Link>
         </p>
       </form>
 

@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import pictNotFound from "../Not_Found/img/notFound5.png";
 
-export default function NotFound() {
+function NotFound() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-100 to-white px-6 text-center">
-      <div className="flex flex-col items-center max-w-xl animate-fadeIn">
+      <div className="flex flex-col items-center max-w-xl ">
         <img
           src={pictNotFound}
           alt="Not found"
@@ -39,3 +39,4 @@ export default function NotFound() {
     </div>
   );
 }
+export default NotFound

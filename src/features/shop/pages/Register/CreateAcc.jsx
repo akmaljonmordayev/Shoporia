@@ -12,18 +12,25 @@ import { FaGoogle, FaFacebookF } from "react-icons/fa";
 import { TbUser } from "react-icons/tb";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const schema = Yup.object({
-  fullname: Yup.string().required("Required"),
+  fullname: Yup.string()
+    .min(3, "Full name must be at least 3 characters")
+    .matches(/^[A-Za-z\s]+$/, "Only letters allowed")
+    .required("Required"),
   email: Yup.string().email("Invalid email").required("Required"),
-  password: Yup.string().min(4, "Min 4 characters").required("Required"),
+  password: Yup.string()
+    .min(8, "At least 8 characters")
+    .matches(/[A-Z]/, "Must contain at least 1 uppercase letter")
+    .matches(/[0-9]/, "Must contain at least 1 number")
+    .matches(/^\S*$/, "No spaces allowed")
+    .required("Required"),
   terms: Yup.boolean().oneOf([true], "Shartlarga rozilik bering"),
 });
 
 function CreateAcc() {
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
 
   const {
     register,
@@ -43,7 +50,7 @@ function CreateAcc() {
     toast.success("Account created!");
 
     setTimeout(() => {
-      navigate("/login");
+      window.location.href = "/login";
     }, 1000);
   };
 
@@ -113,30 +120,11 @@ function CreateAcc() {
           Create Account
         </button>
 
-        <div className="flex items-center gap-4 my-2">
-          <span className="flex-1 h-px bg-gray-300"></span>
-          <p className="text-sm text-gray-500">Or Sign Up with</p>
-          <span className="flex-1 h-px bg-gray-300"></span>
-        </div>
-
-        <div className="grid grid-cols-2 gap-3">
-          <button className="border py-2 rounded-lg hover:bg-gray-100 transition flex items-center justify-center gap-2">
-            <FaGoogle /> Google
-          </button>
-          <button className="border py-2 rounded-lg hover:bg-gray-100 transition flex items-center justify-center gap-2">
-            <FaFacebookF /> Facebook
-          </button>
-        </div>
-
         <p className="text-center text-sm text-gray-600 mt-4">
           Already have an account?{" "}
-          <button
-            type="button"
-            onClick={() => navigate("/Login")}
-            className="text-blue-600 hover:underline"
-          >
+          <Link to="/login" className="text-blue-600 hover:underline">
             sign in
-          </button>
+          </Link>
         </p>
       </form>
 
