@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 function Footer() {
   return <div>
     <div>
-      <footer className="w-full bg-[#021736] pt-9 pb-4">
-        <div className="flex items-start justify-center gap-[163px]">
+      <footer className="w-full bg-[#021736] pt-9 pb-4 mt-[80px]">
+        <div className="flex items-start justify-center gap-[163px] ml-[-80px]">
           
           <div>
             <ul>
