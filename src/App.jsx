@@ -1,13 +1,8 @@
 import React from 'react'
 import "./App.css";
-import Header from "./features/shop/components/Header/Header";
 
 function App() {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
+  return <h1>Shoporia</h1>;
 }
 
 export default App;
