@@ -7,7 +7,7 @@ function Register() {
 
   return (
     <div className="w-[450px] mx-auto mt-10 bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
-      <div className="flex justify-center gap-4 mb-6 border-b">
+      <div className="flex justify-center gap-4 mb-6">
         <button
           className={`pb-2 ${
             activeTab === "login"
