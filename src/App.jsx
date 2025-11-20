@@ -8,6 +8,8 @@ import Faq from "./features/shop/pages/FAQ/Faq";
 import Home from "./features/shop/pages/Home/Home";
 import Blog from "./features/shop/pages/Blog/Blog";
 import ContactUs from "./features/shop/pages/ContactUs/ContactUs";
+import Register from "./features/shop/pages/Register/Register";
+import Cart from "./features/shop/pages/Cart/Cart";
 function App() {
   return (
     <>
@@ -57,6 +59,22 @@ function App() {
           element={
             <LayOut>
               <ContactUs />
+            </LayOut>
+          }
+        ></Route>
+        <Route
+          path="/cart"
+          element={
+            <LayOut>
+              <Cart />
+            </LayOut>
+          }
+        ></Route>
+        <Route
+          path="/register"
+          element={
+            <LayOut>
+              <Register />
             </LayOut>
           }
         ></Route>
