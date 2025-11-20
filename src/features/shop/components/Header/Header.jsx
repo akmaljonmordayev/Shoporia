@@ -9,10 +9,10 @@ function Header() {
 
   const navItems = [
     { id: 1, name: 'Home', path: '/' },
-    { id: 2, name: 'Products', path: '/products' },
+    { id: 2, name: 'Products', path: '/product' },
     { id: 3, name: 'Blog', path: '/blog' },
     { id: 4, name: 'FAQ', path: '/faq' },
-    { id: 5, name: 'Contact Us', path: '/contact' },
+    { id: 5, name: 'Contact Us', path: '/contact-us' },
   ]
 
   const handleSearch = (e) => {
@@ -70,7 +70,7 @@ function Header() {
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
           </NavLink>
 
-          <NavLink to="/login" className="text-gray-700 hover:text-blue-600 transition">
+          <NavLink to="/register" className="text-gray-700 hover:text-blue-600 transition">
             <FiUser className="text-xl" />
           </NavLink>
 
