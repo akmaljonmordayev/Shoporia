@@ -1,0 +1,75 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "name": "",
+      "surname": "Jabborov",
+      "email": "jabborovadhamjon977@gmail.com",
+      "password": "notarius_2",
+      "addres": "toshken"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "",
+      "surname": "Jabborov",
+      "email": "jabborovadhamjon977@gmail.com",
+      "password": "notarius_2",
+      "addres": "toshken"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch",
+      "image": "",
+      "price": 433,
+      "color": "blue",
+      "guaranteed": true,
+      "freeDelivery": true,
+      "inStock": true,
+      "discount": "20%",
+      "brand": "asus",
+      "ram": 32,
+      "screenSize": 15,
+      "processor": " Intel Core i5",
+      "gpuBrand": "Nvidia",
+      "driveSize": 512,
+      "star": 4.9
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "commentOwnerName": "Alex",
+      "date": "10.10.2025",
+      "text": "I needed a fast, efficient laptop for on the go use. Battery life is amazing. Build quality is fantastic. Perfect fit for my needs."
+    }
+  ],
+  "landingCart": [
+    {
+      "id": 1,
+      "title": "MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch",
+      "image": "",
+      "color": "blue",
+      "price": 433,
+      "guaranteed": true,
+      "freeDelivery": true,
+      "inStock": true,
+      "discount": "20%",
+      "star": 4.9,
+      "quantity": 1
+    }
+  ],
+  "blogCart": [
+    {
+      "id": 1,
+      "titleBlog": "The best gaming headsets",
+      "imageBlog": "",
+      "suntitle": "Immerse yourself in unparalleled gaming experiences with the ultimate gaming headset.",
+      "date": "10.10.2025",
+      "timeRead": 4
+    }
+  ]
+}
