@@ -3,10 +3,6 @@ import LayOut from "./features/shop/components/layOut/LayOut";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./components/Not_Found/Not_Found";
 import React from "react";
-import React from "react";
-import LayOut from "./features/shop/components/layOut/LayOut";
-import { Route, Routes } from "react-router-dom";
-import NotFound from "./components/Not_Found/Not_Found";
 import Product from "./features/shop/pages/Products/Product";
 import Faq from "./features/shop/pages/FAQ/Faq";
 import Home from "./features/shop/pages/Home/Home";
@@ -83,7 +79,7 @@ function App() {
               <Register />
             </LayOut>
           }
-        ></Rou
+        ></Route>
       </Routes>
     </>
   );
