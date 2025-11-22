@@ -2,7 +2,7 @@
   "admins": [
     {
       "id": 1,
-      "name": "",
+      "name": "Adham",
       "surname": "Jabborov",
       "email": "jabborovadhamjon977@gmail.com",
       "password": "notarius_2",
@@ -12,11 +12,10 @@
   "users": [
     {
       "id": 1,
-      "name": "",
-      "surname": "Jabborov",
+      "fullName": "Adham Jabborov",
       "email": "jabborovadhamjon977@gmail.com",
       "password": "notarius_2",
-      "addres": "toshken"
+      "addres": ""
     }
   ],
   "products": [
@@ -29,14 +28,15 @@
       "guaranteed": true,
       "freeDelivery": true,
       "inStock": true,
-      "discount": "20%",
+      "discount": 20,
       "brand": "asus",
       "ram": 32,
       "screenSize": 15,
       "processor": " Intel Core i5",
       "gpuBrand": "Nvidia",
       "driveSize": 512,
-      "star": 4.9
+      "star": 4.9,
+      "date": "10.10.2025"
     }
   ],
   "comments": [
@@ -57,7 +57,7 @@
       "guaranteed": true,
       "freeDelivery": true,
       "inStock": true,
-      "discount": "20%",
+      "discount": 20,
       "star": 4.9,
       "quantity": 1
     }
@@ -70,6 +70,47 @@
       "suntitle": "Immerse yourself in unparalleled gaming experiences with the ultimate gaming headset.",
       "date": "10.10.2025",
       "timeRead": 4
+    }
+  ],
+  "Slider": [
+    {
+      "id": 1,
+      "imageSlider": ""
+    },
+    {
+      "id": 2,
+      "imageSlider": ""
+    },
+    {
+      "id": 3,
+      "imageSlider": ""
+    }
+  ],
+  "CategoryCarts": [
+    {
+      "id": 1,
+      "categoryImage": "",
+      "categoryName" :"Accessories"
+    },{
+      "id": 2,
+      "categoryImage": "",
+      "categoryName" :"Camera"
+    },{
+      "id": 3,
+      "categoryImage": "",
+      "categoryName" :"Laptop"
+    },{
+      "id": 4,
+      "categoryImage": "",
+      "categoryName" :"Smart Phone"
+    },{
+      "id": 5,
+      "categoryImage": "",
+      "categoryName" :"Gaming"
+    },{
+      "id": 5,
+      "categoryImage": "",
+      "categoryName" :"Smart Watch"
     }
   ]
 }
