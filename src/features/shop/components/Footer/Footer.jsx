@@ -33,11 +33,11 @@ function Footer() {
         <h4 className="text-white font-medium text-[20px] mb-2">Info</h4>
 
         <li className="text-[#CBCBCB] text-[16px] leading-[30px]">
-          <Link to="/how-it-works">How it works?</Link>
+          <Link to="/faq">How it works?</Link>
         </li>
 
         <li className="text-[#CBCBCB] text-[16px] leading-[30px]">
-          <Link to="/promises">Our promises</Link>
+          <Link to="/faq">Our promises</Link>
         </li>
 
         <li className="text-[#CBCBCB] text-[16px] leading-[30px]">
