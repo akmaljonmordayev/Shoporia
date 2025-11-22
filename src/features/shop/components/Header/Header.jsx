@@ -24,7 +24,7 @@ function Header() {
   }
 
   return (
-    <header className="bg-white shadow-sm">
+    <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <NavLink to="/" className="flex items-center gap-2 text-xl font-bold text-blue-600 hover:opacity-80 transition">
           <img src={logo} alt="Shoporia Logo" className="w-8 h-8 object-contain" />
