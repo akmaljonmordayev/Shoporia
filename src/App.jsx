@@ -10,6 +10,7 @@ import Blog from "./features/shop/pages/Blog/Blog";
 import ContactUs from "./features/shop/pages/ContactUs/ContactUs";
 import Register from "./features/shop/pages/Register/Register";
 import Cart from "./features/shop/pages/Cart/Cart";
+import About from "./features/shop/pages/About/About";
 function App() {
   return (
     <>
@@ -62,8 +63,6 @@ function App() {
             </LayOut>
           }
         ></Route>
- 
-
         <Route
           path="/cart"
           element={
