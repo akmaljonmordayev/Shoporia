@@ -28,7 +28,7 @@ export default function Home() {
           "Join the <span className='text-orange-500'>digital revolution</span>"
         </p>
         <Link to={"/blog"}>
-        <button className="bg-orange-500 hover:bg-orange-600 transition text-white font-semibold py-2 px-[60px] rounded-md w-fit mt-4">
+        <button className="bg-orange-500 hover:bg-orange-600 transition text-white font-semibold py-2 px-[60px] rounded-md w-fit mt-4 cursor-pointer">
           Explore More
         </button>
         </Link>
@@ -46,7 +46,7 @@ export default function Home() {
               <img
                 src={img}
                 alt="slide"
-                className="w-full object-contain drop-shadow-xl"
+                className=""
               />
             </SwiperSlide>
           ))}
