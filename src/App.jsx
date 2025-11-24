@@ -1,94 +1,103 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "./App.css";
-import LayOut from "./features/shop/components/layOut/LayOut";
 import { Route, Routes } from "react-router-dom";
+import LayOut from "./features/shop/components/layOut/LayOut";
 import NotFound from "./components/Not_Found/Not_Found";
-import Product from "./features/shop/pages/Products/Product";
-import Faq from "./features/shop/pages/FAQ/Faq";
-import Home from "./features/shop/pages/Home/Home";
-import Blog from "./features/shop/pages/Blog/Blog";
-import ContactUs from "./features/shop/pages/ContactUs/ContactUs";
-import Register from "./features/shop/pages/Register/Register";
-import Cart from "./features/shop/pages/Cart/Cart";
-import About from "./features/shop/pages/About/About";
+const Product = React.lazy(() =>
+  import("./features/shop/pages/Products/Product")
+);
+const Faq = React.lazy(() => import("./features/shop/pages/FAQ/Faq"));
+const Home = React.lazy(() => import("./features/shop/pages/Home/Home"));
+const Blog = React.lazy(() => import("./features/shop/pages/Blog/Blog"));
+const ContactUs = React.lazy(() =>
+  import("./features/shop/pages/ContactUs/ContactUs")
+);
+const Register = React.lazy(() =>
+  import("./features/shop/pages/Register/Register")
+);
+const Cart = React.lazy(() => import("./features/shop/pages/Cart/Cart"));
+const About = React.lazy(() => import("./features/shop/pages/About/About"));
 import ProtectedRoute from "./features/shop/components/ProtectedRoute/ProtectedRoute";
+import Skeleton from "./features/shop/Skeleton/Skeleton";
 function App() {
   return (
     <>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <LayOut>
-              <Home />
-            </LayOut>
-          }
-        ></Route>
-        <Route
-          path="*"
-          element={
-            <LayOut>
-              <NotFound />
-            </LayOut>
-          }
-        ></Route>
-        <Route
-          path="/blog"
-          element={
-            <LayOut>
-              <Blog />
-            </LayOut>
-          }
-        ></Route>
-        <Route
-          path="/faq"
-          element={
-            <LayOut>
-              <Faq />
-            </LayOut>
-          }
-        ></Route>
-        <Route
-          path="/product"
-          element={
-            <LayOut>
-              <Product />
-            </LayOut>
-          }
-        ></Route>
-        <Route
-          path="/contact-us"
-          element={
-            <LayOut>
-              <ContactUs />
-            </LayOut>
-          }
-        ></Route>
-        <Route
-          path="/cart"
-          element={
-            <LayOut>
-              <Cart />
-            </LayOut>
-          }
-        ></Route>
-        <Route
-          path="/register"
-          element={
-            <LayOut>
-              <Register />
-            </LayOut>
-          }
-        ></Route>
-        <Route
-          path="/about"
-          element={
-            <LayOut>
-              <About />
-            </LayOut>
-          }
-        ></Route>
-      </Routes>
+      <Suspense fallback={<Skeleton />}>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <LayOut>
+                <Home />
+              </LayOut>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <LayOut>
+                <NotFound />
+              </LayOut>
+            }
+          />
+          <Route
+            path="/blog"
+            element={
+              <LayOut>
+                <Blog />
+              </LayOut>
+            }
+          />
+          <Route
+            path="/faq"
+            element={
+              <LayOut>
+                <Faq />
+              </LayOut>
+            }
+          />
+          <Route
+            path="/product"
+            element={
+              <LayOut>
+                <Product />
+              </LayOut>
+            }
+          />
+          <Route
+            path="/contact-us"
+            element={
+              <LayOut>
+                <ContactUs />
+              </LayOut>
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <LayOut>
+                <Cart />
+              </LayOut>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <LayOut>
+                <Register />
+              </LayOut>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <LayOut>
+                <About />
+              </LayOut>
+            }
+          />
+        </Routes>
+      </Suspense>
     </>
   );
 }
