@@ -7,6 +7,13 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();
 
+import { useThemeStore } from "./contexts/mode.jsx";
+
+const theme = JSON.parse(localStorage.getItem("mode"))?.state?.theme;
+
+if (theme === "dark") {
+  document.documentElement.classList.add("dark");
+}
 
 createRoot(document.getElementById("root")).render(
   <QueryClientProvider client={queryClient}>

@@ -1,8 +1,8 @@
+import React from "react";
 import "./App.css";
 import LayOut from "./features/shop/components/layOut/LayOut";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./components/Not_Found/Not_Found";
-import React from "react";
 import Product from "./features/shop/pages/Products/Product";
 import Faq from "./features/shop/pages/FAQ/Faq";
 import Home from "./features/shop/pages/Home/Home";
@@ -11,6 +11,7 @@ import ContactUs from "./features/shop/pages/ContactUs/ContactUs";
 import Register from "./features/shop/pages/Register/Register";
 import Cart from "./features/shop/pages/Cart/Cart";
 import About from "./features/shop/pages/About/About";
+import ProtectedRoute from "./features/shop/components/ProtectedRoute/ProtectedRoute";
 function App() {
   return (
     <>
@@ -76,6 +77,14 @@ function App() {
           element={
             <LayOut>
               <Register />
+            </LayOut>
+          }
+        ></Route>
+        <Route
+          path="/about"
+          element={
+            <LayOut>
+              <About />
             </LayOut>
           }
         ></Route>
