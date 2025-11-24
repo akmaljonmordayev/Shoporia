@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiChevronUp } from "react-icons/fi";
-import faqImage from "./Frame 26086945.png";
+import faqImage from "./faqBanner.png";
 
 function Faq() {
   const [expandedId, setExpandedId] = useState("all");
@@ -52,11 +52,18 @@ function Faq() {
   return (
     <div className="min-h-screen bg-white py-12 px-4">
       <div className="max-w-7xl mx-auto mb-12">
-        <img
-          src={faqImage}
-          alt="Frequently Asked Questions"
-          className="w-full h-96 object-cover rounded-lg"
-        />
+        <div className="relative w-full h-96 rounded-lg overflow-hidden">
+          <img
+            src={faqImage}
+            alt="Frequently Asked Questions"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 flex items-center">
+            <h1 className="text-6xl md:text-4xl font-bold text-blue-600 ml-8">
+              Frequently Asked Questions
+            </h1>
+          </div>
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto">
