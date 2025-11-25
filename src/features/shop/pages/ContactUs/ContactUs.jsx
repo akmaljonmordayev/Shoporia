@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import ReviewModal from "../../components/ReviewModal/ReviewModal";
 
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
@@ -12,6 +13,7 @@ const schema = yup.object().shape({
   message: yup.string().required("Message is required"),
 });
 function ContactUs() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const {
     register,
     handleSubmit,
@@ -69,6 +71,12 @@ function ContactUs() {
           </div>
 
           <div className="form-section w-[45%]">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="mb-4 px-6 py-3 bg-[#2d7cff] text-white rounded-lg font-semibold hover:bg-[#1f5acc] transition-all w-full"
+            >
+              Leave a Comment
+            </button>
             <form className="flex flex-col gap-3" onSubmit={handleSubmit(submitForm)}>
               <input
                 type="text"
@@ -122,6 +130,7 @@ function ContactUs() {
         </div>
       </div>
     </div>
+    <ReviewModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
   </div>;
 }
 
