@@ -131,7 +131,7 @@
       "categoryImage": "",
       "categoryName": "Camera"
     },
-  {
+    {
       "id": 3,
       "categoryImage": "",
       "categoryName": "Laptop"
@@ -151,5 +151,32 @@
       "categoryImage": "",
       "categoryName": "Smart Watch"
     }
-  ]
+  ],
+  "youtubeVideos": [
+    {
+      "id": 1,
+      "videoCode": "https://www.youtube.com/embed/bx_hAihgqEA?si=udmtQFz6TTnbCBzC"
+    },
+    {
+      "id": 2,
+      "videoCode": "https://www.youtube.com/embed/bx_hAihgqEA?si=udmtQFz6TTnbCBzC"
+    },
+    {
+      "id": 3,
+      "videoCode": "https://www.youtube.com/embed/bx_hAihgqEA?si=udmtQFz6TTnbCBzC"
+    },
+    {
+      "id": 4,
+      "videoCode": "https://www.youtube.com/embed/bx_hAihgqEA?si=udmtQFz6TTnbCBzC"
+    },
+    {
+      "id": 5,
+      "videoCode": "https://www.youtube.com/embed/bx_hAihgqEA?si=udmtQFz6TTnbCBzC"
+    },
+    {
+      "id": 6,
+      "videoCode": "https://www.youtube.com/embed/bx_hAihgqEA?si=udmtQFz6TTnbCBzC"
+    }
+  ],
+  "wishlist": []
 }
