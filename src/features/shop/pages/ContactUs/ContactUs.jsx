@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import ReviewModal from "../../components/ReviewModal/ReviewModal";
+import img1 from "../../../../assets/imgfayl/img1.png"
+import img2 from "../../../../assets/imgfayl/img2.png"
+import img3 from "../../../../assets/imgfayl/img3.png"
 
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
@@ -31,8 +33,10 @@ function ContactUs() {
       <div className="contact-container px-20 py-10 font-sans mt-20">
         <div className="info-section flex justify-center gap-[170px]">
           <div className="info-box text-center">
-            <div className="icon text-[32px] bg-[#eef3ff] text-[#0057ff] w-[55px] h-[55px] rounded-full mx-auto flex items-center justify-center">
-              🏢
+            <div className="icon text-[32px] text-[#0057ff] w-[55px] h-[55px] rounded-full mx-auto flex items-center justify-center">
+              <img src={
+                img1
+              } alt="" />
             </div>
             <h3 className="mt-2 text-[20px] font-semibold">Office</h3>
             <p className="text-[#666] text-[14px] mt-1">
@@ -43,16 +47,21 @@ function ContactUs() {
           </div>
 
           <div className="info-box text-center">
-            <div className="icon text-[32px] bg-[#eef3ff] text-[#0057ff] w-[55px] h-[55px] rounded-full mx-auto flex items-center justify-center">
-              📧
+            <div className="icon text-[32px]  text-[#0057ff] w-[55px] h-[55px] rounded-full mx-auto flex items-center justify-center">
+            <img src={
+                img2
+              } alt="" />
             </div>
             <h3 className="mt-2 text-[20px] font-semibold">Email</h3>
             <p className="text-[#666] text-[14px] mt-1">info@techheim.com</p>
           </div>
 
           <div className="info-box text-center">
-            <div className="icon text-[32px] bg-[#eef3ff] text-[#0057ff] w-[55px] h-[55px] rounded-full mx-auto flex items-center justify-center">
-              📞
+            <div className="icon text-[32px]  text-[#0057ff] w-[55px] h-[55px] rounded-full mx-auto flex items-center justify-center">
+            <img src={
+                img3
+              } alt="" />
+
             </div>
             <h3 className="mt-2 text-[20px] font-semibold">Phone</h3>
             <p className="text-[#666] text-[14px] mt-1">+1 (555) 123-4567</p>
