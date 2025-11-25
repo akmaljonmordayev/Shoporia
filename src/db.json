@@ -18,25 +18,59 @@
       "addres": ""
     }
   ],
-  "products": [
+  "typeOfElectronics": [
     {
-      "id": 1,
-      "title": "MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch",
-      "image": "",
-      "price": 433,
-      "color": "blue",
-      "guaranteed": true,
-      "freeDelivery": true,
-      "inStock": true,
-      "discount": 20,
-      "brand": "asus",
-      "ram": 32,
-      "screenSize": 15,
-      "processor": " Intel Core i5",
-      "gpuBrand": "Nvidia",
-      "driveSize": 512,
-      "star": 4.9,
-      "date": "10.10.2025"
+      "mobile": [
+        {
+          "title": "Smartfon Samsung Galaxy A23 4/64 GB White",
+          "image": "",
+          "price": 200,
+          "color": "white",
+          "guaranteed": true,
+          "freeDelivery": true,
+          "inStock": true,
+          "discount": 30,
+          "brand": "samsung",
+          "ram": 4,
+          "screenSize": 6.6,
+          "processor": "Android 12",
+          "gpuBrand": "Qualcomm Snapdragon 855/860",
+          "driveSize": 64,
+          "star": 5,
+          "date": "10.10.2025",
+          "energy": 5000
+        }
+      ],
+      "laptop": [
+        {
+          "id": 1,
+          "title": "MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch",
+          "image": "",
+          "price": 433,
+          "color": "blue",
+          "guaranteed": true,
+          "freeDelivery": true,
+          "inStock": true,
+          "discount": 20,
+          "brand": "asus",
+          "ram": 32,
+          "screenSize": 15,
+          "processor": "Intel Core i5",
+          "gpuBrand": "Nvidia",
+          "driveSize": 512,
+          "star": 4.9,
+          "date": "10.10.2025",
+          "height": 1.56,
+          "widht": 30.41
+        }
+      ],
+      "washingmachines": [],
+      "heaters": [],
+      "TVs": [],
+      "airconditioners": [],
+      "Smartwatches": [],
+      "audio": [],
+      "Laptopaccessories": []
     }
   ],
   "comments": [
@@ -90,27 +124,32 @@
     {
       "id": 1,
       "categoryImage": "",
-      "categoryName" :"Accessories"
-    },{
+      "categoryName": "Accessories"
+    },
+    {
       "id": 2,
       "categoryImage": "",
-      "categoryName" :"Camera"
-    },{
+      "categoryName": "Camera"
+    },
+  {
       "id": 3,
       "categoryImage": "",
-      "categoryName" :"Laptop"
-    },{
+      "categoryName": "Laptop"
+    },
+    {
       "id": 4,
       "categoryImage": "",
-      "categoryName" :"Smart Phone"
-    },{
+      "categoryName": "Smart Phone"
+    },
+    {
       "id": 5,
       "categoryImage": "",
-      "categoryName" :"Gaming"
-    },{
+      "categoryName": "Gaming"
+    },
+    {
       "id": 6,
       "categoryImage": "",
-      "categoryName" :"Smart Watch"
+      "categoryName": "Smart Watch"
     }
   ]
 }
