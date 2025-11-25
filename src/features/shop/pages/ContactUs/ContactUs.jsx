@@ -139,7 +139,6 @@ function ContactUs() {
         </div>
       </div>
     </div>
-    <ReviewModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
   </div>;
 }
 
