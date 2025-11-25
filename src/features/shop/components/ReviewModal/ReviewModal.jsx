@@ -70,8 +70,7 @@ function ReviewModal({ isOpen, onClose }) {
       return;
     }
 
-    // Simulate API call
-    // Simulate API call
+    
     console.log("Review submitted:", formData);
 
     setShowSuccess(true);
