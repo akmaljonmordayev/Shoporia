@@ -21,7 +21,7 @@ const images = [
 
 export default function Home() {
   return (
-    <div className="w-full bg-white py-10 px-6 flex items-center justify-center gap-[300px] ">
+    <div className="w-full bg-white py-10 px-30 flex items-center justify-between ">
       <div className="flex flex-col gap-[30px] max-w-md mb-[100px] ">
         <h1 className="text-5xl font-bold text-[#0b2559]">Tech Heim</h1>
         <p className="text-lg text-gray-600 font-medium">
@@ -34,7 +34,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="w-[550px]">
+      <div className="flex justify-center w-[550px]">
         <Swiper
           modules={[Autoplay, Navigation]}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
@@ -46,7 +46,7 @@ export default function Home() {
               <img
                 src={img}
                 alt="slide"
-                className=""
+                className="w-[300px]"
               />
             </SwiperSlide>
           ))}

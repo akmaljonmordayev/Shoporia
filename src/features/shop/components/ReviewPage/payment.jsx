@@ -38,9 +38,7 @@ const items = [
 function Payment() {
   return (
     <div className="w-[300px] bg-white rounded-xl border border-gray-200 p-4 flex flex-col gap-2">
-
       <div className="w-full h-2 bg-gray-100 mb-2" />
-
       <div className="flex flex-col gap-3">
         {items.map((item) => (
           <div
