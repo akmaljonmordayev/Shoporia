@@ -17,6 +17,12 @@ const Register = React.lazy(() =>
 );
 const Cart = React.lazy(() => import("./features/shop/pages/Cart/Cart"));
 const About = React.lazy(() => import("./features/shop/pages/About/About"));
+const PersonalData = React.lazy(() =>
+  import("./features/shop/pages/PersonalData/PersonalData")
+);
+const Profile = React.lazy(() =>
+  import("./features/shop/pages/Profile/Profile")
+);
 import ProtectedRoute from "./features/shop/components/ProtectedRoute/ProtectedRoute";
 import Skeleton from "./features/shop/Skeleton/Skeleton";
 function App() {
@@ -45,6 +51,14 @@ function App() {
             element={
               <LayOut>
                 <Blog />
+              </LayOut>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <LayOut>
+                <Profile />
               </LayOut>
             }
           />
@@ -93,6 +107,14 @@ function App() {
             element={
               <LayOut>
                 <About />
+              </LayOut>
+            }
+          />
+          <Route
+            path="/profile/personal-data"
+            element={
+              <LayOut>
+                <PersonalData />
               </LayOut>
             }
           />
