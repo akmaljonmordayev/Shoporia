@@ -1,21 +1,20 @@
 import React from "react";
+
 function Reviewers({
   name,
-  rating1,
-  rating2,
-  rating3,
-  rating4,
-  rating5,
+  rating,
   good,
   bad,
   date,
 }) {
+  const stars = "★".repeat(rating) + "☆".repeat(5 - rating);
+
   return (
     <div className="w-full bg-gray-100 rounded-2xl p-4 flex flex-col relative">
       <h3 className="font-semibold text-lg text-gray-900">{name}</h3>
 
       <div className="flex items-center gap-1 mt-1">
-        <span className="text-orange-400 text-xl">★</span>
+        <span className="text-orange-400 text-xl">{stars}</span>
       </div>
 
       <div className="mt-3">
