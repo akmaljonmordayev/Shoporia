@@ -1,7 +1,7 @@
 
 import axios from "axios";
 const axiosClient = axios.create({
-  baseURL: "https://your-api-base-url.com",
+  baseURL: "https://shoporia-o6ja.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },
