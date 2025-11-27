@@ -4,7 +4,6 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import LayOut from "./features/shop/components/layOut/LayOut";
 import NotFound from "./components/Not_Found/Not_Found";
 
-// Lazy load страниц
 const Product = React.lazy(() =>
   import("./features/shop/pages/Products/Product")
 );

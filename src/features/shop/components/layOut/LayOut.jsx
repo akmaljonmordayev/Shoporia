@@ -5,7 +5,7 @@ function LayOut({ children }) {
   return (
     <>
       <Header />
-      <div className="pt-24">
+      <div className="">
         {children}
       </div>
       <Footer />
