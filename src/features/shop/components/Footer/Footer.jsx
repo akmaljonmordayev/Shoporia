@@ -11,7 +11,7 @@ function Footer() {
         <h4 className="text-white font-medium text-[20px] mb-2">Company</h4>
 
         <li className="text-[#CBCBCB] text-[16px] leading-[30px]">
-          <Link to="/about">About us</Link> blog
+          <Link to="/about">About us blog</Link>
         </li>
 
         <li className="text-[#CBCBCB] text-[16px] leading-[30px]">
