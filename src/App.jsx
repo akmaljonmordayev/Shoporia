@@ -29,8 +29,12 @@ const PaymentInstalments = React.lazy(() =>
   import("./features/shop/pages/PaymentInstalments/PaymentInstalments")
 );
 const Orders = React.lazy(() => import("./features/shop/pages/Orders/Orders"));
-const WishList = React.lazy(() => import("./features/shop/pages/WishList/WishList"));
-const Discounts = React.lazy(() => import("./features/shop/pages/Discounts/Discounts"));
+const WishList = React.lazy(() =>
+  import("./features/shop/pages/WishList/WishList")
+);
+const Discounts = React.lazy(() =>
+  import("./features/shop/pages/Discounts/Discounts")
+);
 const SecurityAccess = React.lazy(() =>
   import("./features/shop/pages/SecurityAccess/SecurityAccess")
 );
@@ -120,7 +124,6 @@ function App() {
           <Route path="security-access" element={<SecurityAccess />} />
           <Route path="notification" element={<Notification />} />
         </Route>
-
         <Route
           path="*"
           element={
