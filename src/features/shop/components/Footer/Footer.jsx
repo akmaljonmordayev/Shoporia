@@ -11,7 +11,7 @@ function Footer() {
         <h4 className="text-white font-medium text-[20px] mb-2">Company</h4>
 
         <li className="text-[#CBCBCB] text-[16px] leading-[30px]">
-          <Link to="/about">About us</Link> blog
+          <Link to="/about">About us blog</Link>
         </li>
 
         <li className="text-[#CBCBCB] text-[16px] leading-[30px]">
@@ -113,7 +113,7 @@ function Footer() {
 
       <div className="w-full h-[56px] bg-[#021736] flex items-center justify-between border-t border-[#021736]">
         <p className="text-[#CBCBCB] text-[12px] font-medium ml-[70px]">
-          2023 Tech Heim.
+          2025 Shoporia.
         </p>
 
         <div className="flex items-center gap-[50px] mr-[70px]">
