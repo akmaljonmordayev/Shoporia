@@ -1,30 +1,29 @@
-import React from 'react'
-import Image from '../../../../assets/imgfayl/aboutimage.png'
+import React from "react";
+import Image from "../../../../assets/imgfayl/aboutimage.png";
 
-function About () {
+function About() {
   return (
-    <div className='w-full min-h-screen bg-white flex flex-col items-center px-4 py-10'>
-      <div className='w-full max-w-4xl'>
+    <div className="w-full min-h-screen bg-white flex flex-col items-center px-4 py-10">
+      <div className="w-full max-w-4xl">
         <img
           src={Image}
-          alt='Tech'
-          className='w-full rounded-xl shadow-md mb-8'
+          alt="Tech"
+          className="w-full rounded-xl shadow-md mb-8"
         />
 
-        <div className='text-gray-700 leading-relaxed space-y-4'>
+        <div className="text-gray-700 leading-relaxed space-y-4">
           <p>
-            Tech Heim is an innovative online store that offers a diverse
-            selection of digital gadgets, available for purchase in both cash
-            and installment options. Embodying the motto "Join the digital
-            revolution today" the website not only provides a seamless shopping
-            experience but also features a captivating blog section filled with
-            insightful reviews, articles, and videos about cutting-edge
-            technology and digital gadgets. Users can actively engage with the
-            content through comments and a question-answer section, fostering a
-            dynamic community of tech enthusiasts.
+            Shoporia is a modern online marketplace that delivers a wide range
+            of high-quality products, available for purchase both with cash and
+            through flexible installment plans. Guided by the motto “Smart
+            shopping starts here”, the platform offers not only a smooth and
+            intuitive buying experience, but also an engaging blog section
+            filled with product reviews, articles, and useful shopping tips.
+            Users can interact through comments and a Q&A system, creating an
+            active and helpful community around the brand.
           </p>
-          <h2 className='text-xl font-semibold text-gray-900 mt-6'>
-            Tech Heim Meaning
+          <h2 className="text-xl font-semibold text-gray-900 mt-6">
+            Shoporia Meaning
           </h2>
           <p>
             The name "Tech Heim" cleverly combines two languages (English &
@@ -34,29 +33,27 @@ function About () {
             exciting gadgets.
           </p>
 
-          <h2 className='text-xl font-semibold text-gray-900 mt-6'>
-            Some of Tech Heim’s impressive features :
+          <h2 className="text-xl font-semibold text-gray-900 mt-6">
+            Wide selection of products with both cash and installment purchase
+            options{" "}
           </h2>
-          <ul className='list-disc ml-6 space-y-2'>
+          <ul className="list-disc ml-6 space-y-2">
+            <li>Blog filled with helpful reviews, guides, and articles </li>
+            <li>Comments and Q&A section to support customer interaction</li>
             <li>
-              Diverse digital gadgets for purchase in cash or installments
+              Represents a joyful, convenient “home of shopping” experience
             </li>
+            <li>Clean, easy-to-use interface</li>
+            <li>Consistent and modern design</li>
+            <li>A hub for users to exchange opinions and shopping insights</li>
             <li>
-              A blog with reviews and articles about the latest technology and
-              gadgets
+              Helps customers make smarter and more informed purchasing
+              decisions
             </li>
-            <li>User comments and Q&A section for community interaction</li>
-            <li>
-              Represents a tech-savvy "home" with all necessary technology
-            </li>
-            <li>Easy-to-use interface for a great user experience</li>
-            <li>Consistent and visually appealing design</li>
-            <li>A hub for tech enthusiasts to connect and share insights</li>
-            <li>Helps users make informed purchase decisions</li>
           </ul>
         </div>
       </div>
     </div>
-  )
+  );
 }
-export default About
+export default About;
