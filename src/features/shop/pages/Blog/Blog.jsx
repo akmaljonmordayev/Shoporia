@@ -4,7 +4,7 @@ import useGetAll from '../../../../hooks/UseGetAll'
 import VideoCard from '../../components/videoCard/videoCard'
 function Blog () {
   const { data, isError, isLoading } = useGetAll('/blogCart')
-  const { data1, isError1, isLoading1 } = useGetAll('/youtubeVideos')
+  const { data:data1, isErrorVideo:isErrorVideo1, isLoadingVideo:isLoadingVideo1 } = useGetAll('/youtubeVideos')
   return (
     <>
       <div className='flex gap-10'>
@@ -21,9 +21,9 @@ function Blog () {
         ))}
       </div>
       <div className='flex gap-10'>
-        {data?.map(({ id, videoCode }) => (
+        {data1?.map(({ id, videoCode, videoTitle }) => (
           <div>
-            <VideoCard iframe={videoCode} />
+            <VideoCard iframe={videoCode} titleVideo={videoTitle} />
           </div>
         ))}
       </div>
