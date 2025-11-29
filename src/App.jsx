@@ -41,6 +41,9 @@ const Notification = React.lazy(() =>
   import("./features/shop/pages/Notification/Notification")
 );
 
+const BlogSingle = React.lazy(() =>
+  import("./features/shop/pages/BlogSingle/BlogSingle")
+);
 import ProfileLayout from "./features/shop/components/SideBar/ProfileLayout";
 import Skeleton from "./features/shop/Skeleton/Skeleton";
 
@@ -109,6 +112,14 @@ function App() {
           element={
             <LayOut>
               <About />
+            </LayOut>
+          }
+        />
+        <Route
+          path="/blog/:id"
+          element={
+            <LayOut>
+              <BlogSingle />
             </LayOut>
           }
         />
