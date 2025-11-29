@@ -81,19 +81,22 @@
       "text": "I needed a fast, efficient laptop for on the go use. Battery life is amazing. Build quality is fantastic. Perfect fit for my needs."
     }
   ],
-  "landingCart": [
+  "carts": [
     {
       "id": 1,
-      "title": "MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch",
-      "image": "",
-      "color": "blue",
-      "price": 433,
-      "guaranteed": true,
-      "freeDelivery": true,
-      "inStock": true,
-      "discount": 20,
-      "star": 4.9,
-      "quantity": 1
+      "userId": 1,
+      "items": [
+        {
+          "productId": 1,
+          "title": "MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch",
+          "image": "",
+          "color": "blue",
+          "price": 433,
+          "discount": 20,
+          "star": 4.9,
+          "quantity": 1
+        }
+      ]
     }
   ],
   "blogCart": [
@@ -105,7 +108,7 @@
       "date": "10.10.2025",
       "timeRead": 4
     },
-     {
+    {
       "id": 2,
       "titleBlog": "Ronaldo G.O.A.T",
       "imageBlog": "",
@@ -113,7 +116,7 @@
       "date": "11.09.2025",
       "timeRead": 8
     },
-     {
+    {
       "id": 3,
       "titleBlog": "The best gaming headsets",
       "imageBlog": "",
@@ -171,27 +174,33 @@
   "youtubeVideos": [
     {
       "id": 1,
-      "videoCode": "https://www.youtube.com/embed/bx_hAihgqEA?si=udmtQFz6TTnbCBzC"
+      "videoCode": "https://www.youtube.com/embed/jjpjjcMeujM?si=18n-owlgr-oPoW_2",
+      "videoTitle": ""
     },
     {
       "id": 2,
-      "videoCode": "https://www.youtube.com/embed/bx_hAihgqEA?si=udmtQFz6TTnbCBzC"
+      "videoCode": "https://www.youtube.com/embed/jjpjjcMeujM?si=18n-owlgr-oPoW_2",
+      "videoTitle": "Ronaldo"
     },
     {
       "id": 3,
-      "videoCode": "https://www.youtube.com/embed/bx_hAihgqEA?si=udmtQFz6TTnbCBzC"
+      "videoCode": "https://www.youtube.com/embed/jjpjjcMeujM?si=18n-owlgr-oPoW_2",
+      "videoTitle": "Ronaldo"
     },
     {
       "id": 4,
-      "videoCode": "https://www.youtube.com/embed/bx_hAihgqEA?si=udmtQFz6TTnbCBzC"
+      "videoCode": "https://www.youtube.com/embed/jjpjjcMeujM?si=18n-owlgr-oPoW_2",
+      "videoTitle": "Ronaldo"
     },
     {
       "id": 5,
-      "videoCode": "https://www.youtube.com/embed/bx_hAihgqEA?si=udmtQFz6TTnbCBzC"
+      "videoCode": "https://www.youtube.com/embed/jjpjjcMeujM?si=18n-owlgr-oPoW_2",
+      "videoTitle": "Ronaldo"
     },
     {
       "id": 6,
-      "videoCode": "https://www.youtube.com/embed/bx_hAihgqEA?si=udmtQFz6TTnbCBzC"
+      "videoCode": "https://www.youtube.com/embed/jjpjjcMeujM?si=18n-owlgr-oPoW_2",
+      "videoTitle": "Ronaldo"
     }
   ],
   "wishlist": []

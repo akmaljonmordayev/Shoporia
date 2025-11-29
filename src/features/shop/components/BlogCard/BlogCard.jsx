@@ -24,7 +24,6 @@ function BlogCard({ img, title, date, time, desc }) {
           </div>
         </div>
       </div>
-      ;
     </>
   );
 }
