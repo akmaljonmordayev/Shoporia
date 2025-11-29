@@ -1,13 +1,17 @@
-import React from 'react'
-import BlogCard from '../../components/BlogCard/BlogCard'
-import useGetAll from '../../../../hooks/UseGetAll'
-import VideoCard from '../../components/videoCard/videoCard'
-function Blog () {
-  const { data, isError, isLoading } = useGetAll('/blogCart')
-  const { data1, isError1, isLoading1 } = useGetAll('/youtubeVideos')
+import React from "react";
+import BlogCard from "../../components/BlogCard/BlogCard";
+import useGetAll from "../../../../hooks/UseGetAll";
+import VideoCard from "../../components/videoCard/videoCard";
+function Blog() {
+  const { data, isError, isLoading } = useGetAll("/blogCart");
+  const {
+    data: data1,
+    isError: isErro1,
+    isLoading: isLoading1,
+  } = useGetAll("/youtubeVideos");
   return (
     <>
-      <div className='flex gap-10'>
+      <div className="flex gap-10">
         {data?.map(({ id, titleBlog, imageBlog, suntitle, date, timeRead }) => (
           <div>
             <BlogCard
@@ -20,15 +24,15 @@ function Blog () {
           </div>
         ))}
       </div>
-      <div className='flex gap-10'>
-        {data?.map(({ id, videoCode }) => (
+      <div className="flex gap-10">
+        {data1?.map(({ id, videoCode }) => (
           <div>
             <VideoCard iframe={videoCode} />
           </div>
         ))}
       </div>
     </>
-  )
+  );
 }
 
-export default Blog
+export default Blog;
