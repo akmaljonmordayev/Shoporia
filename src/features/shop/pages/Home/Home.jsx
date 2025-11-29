@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="w-full bg-white py-10 flex items-center justify-between ">
       <div className="flex flex-col gap-[30px] max-w-md mb-[100px] ">
-        <h1 className="text-5xl font-bold text-[#0b2559]">Tech Heim</h1>
+        <h1 className="text-5xl font-bold text-[#0b2559]">Shoporia</h1>
         <p className="text-lg text-gray-600 font-medium">
           "Join the <span className='text-orange-500'>digital revolution</span>"
         </p>
