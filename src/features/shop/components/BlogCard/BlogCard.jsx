@@ -14,7 +14,7 @@ function BlogCard({ img, title, date, time, desc }) {
           <div className="px-[18px] py-[16px]">
             <div className="flex justify-between items-center text-[#7a7a7a] text-[14px] mb-[10px]">
               <p>{date}</p>
-              <p>{time}</p>
+              <p>{time} min read</p>
             </div>
 
             <h2 className="text-[20px] font-semibold text-[#111] mb-[8px] leading-[1.3]">
