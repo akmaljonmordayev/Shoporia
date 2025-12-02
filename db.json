@@ -25,7 +25,7 @@
         {
           "id": 1,
           "title": "Smartfon Samsung Galaxy A23 4/64 GB White",
-          "image": "/image3.png",
+          "image": "/image copy 10.png",
           "price": 200,
           "color": "white",
           "guaranteed": true,
@@ -45,7 +45,7 @@
         {
           "id": 2,
           "title": "Apple iPhone 15 Pro Max 256GB",
-          "image": "/image5.png",
+          "image": "/image copy 11.png",
           "price": 999,
           "color": "space gray",
           "guaranteed": true,
@@ -65,7 +65,7 @@
         {
           "id": 3,
           "title": "Xiaomi 13 Ultra 512GB",
-          "image": "/image6.png",
+          "image": "/image copy 12.png",
           "price": 650,
           "color": "black",
           "guaranteed": true,
@@ -85,7 +85,7 @@
         {
           "id": 4,
           "title": "Huawei Mate 50 Pro 256GB",
-          "image": "/image7.png",
+          "image": "/image copy 13.png",
           "price": 800,
           "color": "gold",
           "guaranteed": true,
@@ -105,7 +105,7 @@
         {
           "id": 5,
           "title": "Honor Magic 5 Pro 512GB",
-          "image": "/image8.png",
+          "image": "/image copy 14.png",
           "price": 550,
           "color": "silver",
           "guaranteed": true,
@@ -125,7 +125,7 @@
         {
           "id": 6,
           "title": "Vivo V27 Pro 256GB",
-          "image": "/image9.png",
+          "image": "/image copy 15.png",
           "price": 480,
           "color": "purple",
           "guaranteed": true,
@@ -145,7 +145,7 @@
         {
           "id": 7,
           "title": "OnePlus 12 512GB",
-          "image": "/image10.png",
+          "image": "/image copy 16.png",
           "price": 799,
           "color": "black",
           "guaranteed": true,
@@ -165,7 +165,7 @@
         {
           "id": 8,
           "title": "Motorola Edge 50 Pro",
-          "image": "/image11.png",
+          "image": "/image copy 17.png",
           "price": 599,
           "color": "teal",
           "guaranteed": true,
@@ -185,7 +185,7 @@
         {
           "id": 9,
           "title": "Samsung Galaxy S24 Ultra",
-          "image": "/image12.png",
+          "image": "/image copy 18.png",
           "price": 1299,
           "color": "titanium",
           "guaranteed": true,
@@ -205,7 +205,7 @@
         {
           "id": 10,
           "title": "Google Pixel 8 Pro",
-          "image": "/image13.png",
+          "image": "/image copy 19.png",
           "price": 999,
           "color": "obsidian",
           "guaranteed": true,
@@ -225,7 +225,7 @@
         {
           "id": 11,
           "title": "Samsung Galaxy A54 256GB",
-          "image": "/image18.png",
+          "image": "/image copy 2.png",
           "price": 420,
           "color": "violet",
           "guaranteed": true,
@@ -245,7 +245,7 @@
         {
           "id": 12,
           "title": "Apple iPhone 14 Pro",
-          "image": "/image19.png",
+          "image": "/image copy 20.png",
           "price": 899,
           "color": "deep purple",
           "guaranteed": true,
@@ -265,7 +265,7 @@
         {
           "id": 13,
           "title": "Xiaomi Redmi Note 13",
-          "image": "/image20.png",
+          "image": "/image copy 21.png",
           "price": 350,
           "color": "midnight black",
           "guaranteed": true,
@@ -285,7 +285,7 @@
         {
           "id": 14,
           "title": "Nokia G42 5G",
-          "image": "/image21.png",
+          "image": "/image copy 22.png",
           "price": 299,
           "color": "dark cyan",
           "guaranteed": true,
@@ -305,7 +305,7 @@
         {
           "id": 15,
           "title": "Realme 12 Pro Plus",
-          "image": "/image22.png",
+          "image": "/image copy 23.png",
           "price": 599,
           "color": "gold",
           "guaranteed": true,
@@ -327,7 +327,7 @@
         {
           "id": 1,
           "title": "MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch",
-          "image": "/image4.png",
+          "image": "/image copy 24.png",
           "price": 1499,
           "color": "blue",
           "guaranteed": true,
@@ -348,7 +348,7 @@
         {
           "id": 2,
           "title": "Dell XPS 13 Plus",
-          "image": "/image1.png",
+          "image": "/image copy 25.png",
           "price": 1199,
           "color": "silver",
           "guaranteed": true,
@@ -369,7 +369,7 @@
         {
           "id": 3,
           "title": "HP Pavilion 15",
-          "image": "/image2.png",
+          "image": "/image copy 26.png",
           "price": 599,
           "color": "champagne gold",
           "guaranteed": true,
@@ -390,7 +390,7 @@
         {
           "id": 4,
           "title": "Lenovo ThinkPad X1 Carbon",
-          "image": "/image14.png",
+          "image": "/image copy 27.png",
           "price": 1299,
           "color": "black",
           "guaranteed": true,
@@ -411,7 +411,7 @@
         {
           "id": 5,
           "title": "ASUS VivoBook 15",
-          "image": "/image15.png",
+          "image": "/image copy 28.png",
           "price": 749,
           "color": "silver",
           "guaranteed": true,
@@ -432,7 +432,7 @@
         {
           "id": 6,
           "title": "Acer Aspire 5",
-          "image": "/image16.png",
+          "image": "/image copy 29.png",
           "price": 699,
           "color": "blue",
           "guaranteed": true,
@@ -453,7 +453,7 @@
         {
           "id": 7,
           "title": "MSI Modern 15",
-          "image": "/image17.png",
+          "image": "/image copy 3.png",
           "price": 899,
           "color": "gray",
           "guaranteed": true,
@@ -474,7 +474,7 @@
         {
           "id": 8,
           "title": "Razer Blade 15",
-          "image": "/image23.png",
+          "image": "/image copy 30.png",
           "price": 1899,
           "color": "black",
           "guaranteed": true,
@@ -495,7 +495,7 @@
         {
           "id": 9,
           "title": "ASUS ROG Zephyrus",
-          "image": "/image24.png",
+          "image": "/image copy 31.png",
           "price": 2199,
           "color": "transparent",
           "guaranteed": true,
@@ -516,7 +516,7 @@
         {
           "id": 10,
           "title": "Gigabyte Aero 15",
-          "image": "/image25.png",
+          "image": "/image copy 32.png",
           "price": 1599,
           "color": "midnight black",
           "guaranteed": true,
@@ -537,7 +537,7 @@
         {
           "id": 11,
           "title": "LG Gram 17",
-          "image": "/image26.png",
+          "image": "/image copy 33.png",
           "price": 1299,
           "color": "silver",
           "guaranteed": true,
@@ -558,7 +558,7 @@
         {
           "id": 12,
           "title": "Alienware m15 R7",
-          "image": "/image27.png",
+          "image": "/image copy 34.png",
           "price": 1799,
           "color": "dark gray",
           "guaranteed": true,
@@ -579,7 +579,7 @@
         {
           "id": 13,
           "title": "Framework Laptop",
-          "image": "/image28.png",
+          "image": "/image copy 35.png",
           "price": 1299,
           "color": "aluminum",
           "guaranteed": true,
@@ -602,7 +602,7 @@
         {
           "id": 1,
           "title": "Samsung EcoBubble WW80T554DAW",
-          "image": "/wm1.png",
+          "image": "/image copy 36.png",
           "price": 499,
           "color": "white",
           "guaranteed": true,
@@ -622,7 +622,7 @@
         {
           "id": 2,
           "title": "LG TurboWash F4WV309S3E",
-          "image": "/wm2.png",
+          "image": "/image copy 4.png",
           "price": 560,
           "color": "silver",
           "guaranteed": true,
@@ -642,7 +642,7 @@
         {
           "id": 3,
           "title": "Bosch Serie 6 WAT2848XPL",
-          "image": "/wm3.png",
+          "image": "/image copy 5.png",
           "price": 650,
           "color": "dark grey",
           "guaranteed": true,
@@ -662,7 +662,7 @@
         {
           "id": 4,
           "title": "Haier I-Pro Series 7 HW80",
-          "image": "/wm4.png",
+          "image": "/image copy 6.png",
           "price": 430,
           "color": "white",
           "guaranteed": false,
@@ -682,7 +682,7 @@
         {
           "id": 5,
           "title": "Beko WTE7611BWR",
-          "image": "/wm5.png",
+          "image": "/image copy 7.png",
           "price": 350,
           "color": "white",
           "guaranteed": true,
@@ -702,7 +702,7 @@
         {
           "id": 6,
           "title": "Indesit MTWE 81483",
-          "image": "/wm6.png",
+          "image": "/image copy 8.png",
           "price": 380,
           "color": "white",
           "guaranteed": true,
@@ -722,7 +722,7 @@
         {
           "id": 7,
           "title": "Siemens iQ500 WM14UT75PL",
-          "image": "/wm7.png",
+          "image": "/image copy 9.png",
           "price": 710,
           "color": "silver",
           "guaranteed": true,
@@ -742,7 +742,7 @@
         {
           "id": 8,
           "title": "Candy Smart CS 1292D3",
-          "image": "/wm8.png",
+          "image": "/image copy 10.png",
           "price": 320,
           "color": "white",
           "guaranteed": false,
@@ -762,7 +762,7 @@
         {
           "id": 9,
           "title": "Hisense WFVC6010S",
-          "image": "/wm9.png",
+          "image": "/image.png",
           "price": 295,
           "color": "grey",
           "guaranteed": true,
@@ -782,7 +782,7 @@
         {
           "id": 10,
           "title": "Ariston Hotpoint Natis RSG 825",
-          "image": "/wm10.png",
+          "image": "/image copy 11.png",
           "price": 470,
           "color": "white",
           "guaranteed": true,
@@ -804,7 +804,7 @@
         {
           "id": 1,
           "title": "Ballu Electric Heater BEC/EZER-1000",
-          "image": "/heater1.png",
+          "image": "/image copy 12.png",
           "price": 89,
           "color": "white",
           "guaranteed": true,
@@ -824,7 +824,7 @@
         {
           "id": 2,
           "title": "UFO Infrared Heater Star 2400",
-          "image": "/heater2.png",
+          "image": "/image copy 13.png",
           "price": 120,
           "color": "black",
           "guaranteed": true,
@@ -844,7 +844,7 @@
         {
           "id": 3,
           "title": "Timberk Convector TEC.PC M2000",
-          "image": "/heater3.png",
+          "image": "/image copy 14.png",
           "price": 110,
           "color": "white",
           "guaranteed": true,
@@ -864,7 +864,7 @@
         {
           "id": 4,
           "title": "Royal Clima Oil Heater RC-OH1500M",
-          "image": "/heater4.png",
+          "image": "/image copy 15.png",
           "price": 95,
           "color": "black",
           "guaranteed": true,
@@ -884,7 +884,7 @@
         {
           "id": 5,
           "title": "Electrolux Air Heat ECH/AG-1500",
-          "image": "/heater5.png",
+          "image": "/image copy 16.png",
           "price": 130,
           "color": "white",
           "guaranteed": true,
@@ -904,7 +904,7 @@
         {
           "id": 6,
           "title": "Polaris Oil Radiator PRE W 0715",
-          "image": "/heater6.png",
+          "image": "/image copy 17.png",
           "price": 75,
           "color": "grey",
           "guaranteed": true,
@@ -924,7 +924,7 @@
         {
           "id": 7,
           "title": "Midea Convector Heater MCH2000",
-          "image": "/heater7.png",
+          "image": "/image copy 18.png",
           "price": 115,
           "color": "white",
           "guaranteed": false,
@@ -944,7 +944,7 @@
         {
           "id": 8,
           "title": "Sharp Ceramic Heater SH-CH1500",
-          "image": "/heater8.png",
+          "image": "/image copy 19.png",
           "price": 99,
           "color": "black",
           "guaranteed": true,
@@ -964,7 +964,7 @@
         {
           "id": 9,
           "title": "Zanussi Fan Heater ZFH120",
-          "image": "/heater9.png",
+          "image": "/image copy 2.png",
           "price": 40,
           "color": "white",
           "guaranteed": false,
@@ -984,7 +984,7 @@
         {
           "id": 10,
           "title": "Delonghi Oil Heater TRRS0920",
-          "image": "/heater10.png",
+          "image": "/image copy 20.png",
           "price": 150,
           "color": "white",
           "guaranteed": true,
@@ -1006,7 +1006,7 @@
         {
           "id": 1,
           "title": "Samsung QLED Q60B 55-inch",
-          "image": "/tv1.png",
+          "image": "/image copy 21.png",
           "price": 799,
           "color": "black",
           "guaranteed": true,
@@ -1026,7 +1026,7 @@
         {
           "id": 2,
           "title": "LG OLED C2 48-inch",
-          "image": "/tv2.png",
+          "image": "/image copy 22.png",
           "price": 999,
           "color": "black",
           "guaranteed": true,
@@ -1046,7 +1046,7 @@
         {
           "id": 3,
           "title": "Sony Bravia X90J 65-inch",
-          "image": "/tv3.png",
+          "image": "/image copy 23.png",
           "price": 1199,
           "color": "black",
           "guaranteed": true,
@@ -1066,7 +1066,7 @@
         {
           "id": 4,
           "title": "Hisense U7H 55-inch",
-          "image": "/tv4.png",
+          "image": "/image copy 24.png",
           "price": 650,
           "color": "black",
           "guaranteed": false,
@@ -1086,7 +1086,7 @@
         {
           "id": 5,
           "title": "TCL Q6 QLED 50-inch",
-          "image": "/tv5.png",
+          "image": "/image copy 25.png",
           "price": 480,
           "color": "black",
           "guaranteed": true,
@@ -1106,7 +1106,7 @@
         {
           "id": 6,
           "title": "Xiaomi Mi TV P1 43-inch",
-          "image": "/tv6.png",
+          "image": "/image copy 26.png",
           "price": 320,
           "color": "black",
           "guaranteed": true,
@@ -1126,7 +1126,7 @@
         {
           "id": 7,
           "title": "Philips Ambilight 58-inch",
-          "image": "/tv7.png",
+          "image": "/image copy 27.png",
           "price": 720,
           "color": "dark grey",
           "guaranteed": true,
@@ -1146,7 +1146,7 @@
         {
           "id": 8,
           "title": "Panasonic HX700 40-inch",
-          "image": "/tv8.png",
+          "image": "/image copy 28.png",
           "price": 410,
           "color": "black",
           "guaranteed": true,
@@ -1166,7 +1166,7 @@
         {
           "id": 9,
           "title": "Sharp 4T-C65DL1X 65-inch",
-          "image": "/tv9.png",
+          "image": "/image copy 29.png",
           "price": 950,
           "color": "black",
           "guaranteed": false,
@@ -1186,7 +1186,7 @@
         {
           "id": 10,
           "title": "JVC Fire TV 55-inch",
-          "image": "/tv10.png",
+          "image": "/image copy 3.png",
           "price": 530,
           "color": "black",
           "guaranteed": true,
@@ -1208,7 +1208,7 @@
         {
           "id": 1,
           "title": "LG Dual Inverter 12k BTU",
-          "image": "/ac1.png",
+          "image": "/image copy 30.png",
           "price": 520,
           "color": "white",
           "guaranteed": true,
@@ -1228,7 +1228,7 @@
         {
           "id": 2,
           "title": "Samsung WindFree AR12",
-          "image": "/ac2.png",
+          "image": "/image copy 31.png",
           "price": 560,
           "color": "white",
           "guaranteed": true,
@@ -1248,7 +1248,7 @@
         {
           "id": 3,
           "title": "Midea Inverter Mission II 18k BTU",
-          "image": "/ac3.png",
+          "image": "/image copy 32.png",
           "price": 690,
           "color": "white",
           "guaranteed": true,
@@ -1268,7 +1268,7 @@
         {
           "id": 4,
           "title": "Artel Crystal AC 09HM",
-          "image": "/ac4.png",
+          "image": "/image copy 33.png",
           "price": 330,
           "color": "white",
           "guaranteed": true,
@@ -1288,7 +1288,7 @@
         {
           "id": 5,
           "title": "Hisense Silent Pro 12k BTU",
-          "image": "/ac5.png",
+          "image": "/image copy 34.png",
           "price": 470,
           "color": "white",
           "guaranteed": true,
@@ -1308,7 +1308,7 @@
         {
           "id": 6,
           "title": "Gree Bora Inverter 24k BTU",
-          "image": "/ac6.png",
+          "image": "/image copy 35.png",
           "price": 880,
           "color": "white",
           "guaranteed": false,
@@ -1328,7 +1328,7 @@
         {
           "id": 7,
           "title": "TCL Elite Series 12k BTU",
-          "image": "/ac7.png",
+          "image": "/image copy 36.png",
           "price": 440,
           "color": "white",
           "guaranteed": true,
@@ -1348,7 +1348,7 @@
         {
           "id": 8,
           "title": "Panasonic Aero Series 18k BTU",
-          "image": "/ac8.png",
+          "image": "/image copy 4.png",
           "price": 720,
           "color": "white",
           "guaranteed": true,
@@ -1368,7 +1368,7 @@
         {
           "id": 9,
           "title": "Sharp J-Tech Inverter 12k BTU",
-          "image": "/ac9.png",
+          "image": "/image copy 5.png",
           "price": 495,
           "color": "white",
           "guaranteed": false,
@@ -1388,7 +1388,7 @@
         {
           "id": 10,
           "title": "Bosch Climate 5000 9k BTU",
-          "image": "/ac10.png",
+          "image": "/image copy 6.png",
           "price": 430,
           "color": "white",
           "guaranteed": true,
@@ -1410,7 +1410,7 @@
         {
           "id": 1,
           "title": "Apple Watch Series 9",
-          "image": "/sw1.png",
+          "image": "/image copy 7.png",
           "price": 399,
           "color": "silver",
           "guaranteed": true,
@@ -1430,7 +1430,7 @@
         {
           "id": 2,
           "title": "Samsung Galaxy Watch 6",
-          "image": "/sw2.png",
+          "image": "/image copy 8.png",
           "price": 359,
           "color": "black",
           "guaranteed": true,
@@ -1450,7 +1450,7 @@
         {
           "id": 3,
           "title": "Garmin Venu 3",
-          "image": "/sw3.png",
+          "image": "/image copy 9.png",
           "price": 299,
           "color": "grey",
           "guaranteed": true,
@@ -1470,7 +1470,7 @@
         {
           "id": 4,
           "title": "Fitbit Versa 4",
-          "image": "/sw4.png",
+          "image": "/image.png",
           "price": 199,
           "color": "pink",
           "guaranteed": true,
@@ -1490,7 +1490,7 @@
         {
           "id": 5,
           "title": "Amazfit GTR 4",
-          "image": "/sw5.png",
+          "image": "/image copy 10.png",
           "price": 179,
           "color": "black",
           "guaranteed": true,
@@ -1510,7 +1510,7 @@
         {
           "id": 6,
           "title": "Huawei Watch GT 3",
-          "image": "/sw6.png",
+          "image": "/image copy 11.png",
           "price": 219,
           "color": "silver",
           "guaranteed": true,
@@ -1530,7 +1530,7 @@
         {
           "id": 7,
           "title": "Fossil Gen 6",
-          "image": "/sw7.png",
+          "image": "/image copy 12.png",
           "price": 249,
           "color": "brown",
           "guaranteed": true,
@@ -1550,7 +1550,7 @@
         {
           "id": 8,
           "title": "TicWatch Pro 5",
-          "image": "/sw8.png",
+          "image": "/image copy 13.png",
           "price": 299,
           "color": "black",
           "guaranteed": true,
@@ -1570,7 +1570,7 @@
         {
           "id": 9,
           "title": "Samsung Galaxy Watch Active 3",
-          "image": "/sw9.png",
+          "image": "/image copy 14.png",
           "price": 199,
           "color": "grey",
           "guaranteed": true,
@@ -1590,7 +1590,7 @@
         {
           "id": 10,
           "title": "Garmin Forerunner 965",
-          "image": "/sw10.png",
+          "image": "/image copy 15.png",
           "price": 399,
           "color": "black",
           "guaranteed": true,
@@ -1612,7 +1612,7 @@
         {
           "id": 1,
           "title": "Bose SoundLink Revolve",
-          "image": "/audio1.png",
+          "image": "/image copy 16.png",
           "price": 199,
           "color": "black",
           "guaranteed": true,
@@ -1631,7 +1631,7 @@
         {
           "id": 2,
           "title": "Sony WH-1000XM5",
-          "image": "/audio2.png",
+          "image": "/image copy 17.png",
           "price": 349,
           "color": "silver",
           "guaranteed": true,
@@ -1650,7 +1650,7 @@
         {
           "id": 3,
           "title": "JBL Flip 6",
-          "image": "/audio3.png",
+          "image": "/image copy 18.png",
           "price": 129,
           "color": "blue",
           "guaranteed": true,
@@ -1669,7 +1669,7 @@
         {
           "id": 4,
           "title": "Apple AirPods Pro 2",
-          "image": "/audio4.png",
+          "image": "/image copy 19.png",
           "price": 249,
           "color": "white",
           "guaranteed": true,
@@ -1688,7 +1688,7 @@
         {
           "id": 5,
           "title": "Bowers & Wilkins Formation Wedge",
-          "image": "/audio5.png",
+          "image": "/image copy 2.png",
           "price": 999,
           "color": "black",
           "guaranteed": true,
@@ -1707,7 +1707,7 @@
         {
           "id": 6,
           "title": "Sony SRS-XB43",
-          "image": "/audio6.png",
+          "image": "/image copy 20.png",
           "price": 199,
           "color": "red",
           "guaranteed": true,
@@ -1726,7 +1726,7 @@
         {
           "id": 7,
           "title": "Bang & Olufsen Beoplay A9",
-          "image": "/audio7.png",
+          "image": "/image copy 21.png",
           "price": 2999,
           "color": "white",
           "guaranteed": true,
@@ -1745,7 +1745,7 @@
         {
           "id": 8,
           "title": "JBL PartyBox 310",
-          "image": "/audio8.png",
+          "image": "/image copy 22.png",
           "price": 399,
           "color": "black",
           "guaranteed": true,
@@ -1764,7 +1764,7 @@
         {
           "id": 9,
           "title": "Marshall Stanmore II",
-          "image": "/audio9.png",
+          "image": "/image copy 23.png",
           "price": 349,
           "color": "black",
           "guaranteed": true,
@@ -1783,7 +1783,7 @@
         {
           "id": 10,
           "title": "Anker Soundcore Flare 2",
-          "image": "/audio10.png",
+          "image": "/image copy 24.png",
           "price": 79,
           "color": "grey",
           "guaranteed": true,
@@ -1804,7 +1804,7 @@
         {
           "id": 1,
           "title": "Logitech MX Master 3 Mouse",
-          "image": "/laptopacc1.png",
+          "image": "/image copy 25.png",
           "price": 99,
           "color": "black",
           "guaranteed": true,
@@ -1815,158 +1815,8 @@
           "type": "mouse",
           "compatibility": "Windows/Mac",
           "star": 4.9,
-          "date": "10.11.2025",
-          "height": 5,
-          "widht": 8
-        },
-        {
-          "id": 2,
-          "title": "Anker USB-C Hub 7-in-1",
-          "image": "/laptopacc2.png",
-          "price": 49,
-          "color": "grey",
-          "guaranteed": true,
-          "freeDelivery": false,
-          "inStock": true,
-          "discount": 12,
-          "brand": "anker",
-          "type": "hub",
-          "compatibility": "USB-C laptops",
-          "star": 4.7,
-          "date": "11.11.2025",
-          "height": 2,
-          "widht": 12
-        },
-        {
-          "id": 3,
-          "title": "Dell Laptop Sleeve 15-inch",
-          "image": "/laptopacc3.png",
-          "price": 29,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 5,
-          "brand": "dell",
-          "type": "sleeve",
-          "compatibility": "15-inch laptops",
-          "star": 4.5,
-          "date": "12.11.2025",
-          "height": 2,
-          "widht": 37
-        },
-        {
-          "id": 4,
-          "title": "Apple Magic Keyboard",
-          "image": "/laptopacc4.png",
-          "price": 99,
-          "color": "white",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 8,
-          "brand": "apple",
-          "type": "keyboard",
-          "compatibility": "MacBooks",
-          "star": 4.8,
-          "date": "13.11.2025",
-          "height": 2,
-          "widht": 28
-        },
-        {
-          "id": 5,
-          "title": "HyperX Cloud II Headset",
-          "image": "/laptopacc5.png",
-          "price": 79,
-          "color": "black/red",
-          "guaranteed": true,
-          "freeDelivery": false,
-          "inStock": true,
-          "discount": 7,
-          "brand": "hyperx",
-          "type": "headset",
-          "compatibility": "PC/Laptops",
-          "star": 4.6,
-          "date": "14.11.2025",
-          "height": 18,
-          "widht": 20
-        },
-        {
-          "id": 6,
-          "title": "Razer Basilisk V3 Mouse",
-          "image": "/laptopacc6.png",
-          "price": 69,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 10,
-          "brand": "razer",
-          "type": "mouse",
-          "compatibility": "Windows/Mac",
-          "star": 4.7,
-          "date": "15.11.2025",
-          "height": 5,
-          "widht": 8
-        },
-        {
-          "id": 7,
-          "title": "Microsoft Surface Dock 2",
-          "image": "/laptopacc7.png",
-          "price": 199,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 9,
-          "brand": "microsoft",
-          "type": "dock",
-          "compatibility": "Surface laptops",
-          "star": 4.6,
-          "date": "16.11.2025",
-          "height": 4,
-          "widht": 20
-        },
-        {
-          "id": 8,
-          "title": "Corsair K100 RGB Keyboard",
-          "image": "/laptopacc8.png",
-          "price": 159,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": false,
-          "discount": 6,
-          "brand": "corsair",
-          "type": "keyboard",
-          "compatibility": "Windows/Mac",
-          "star": 4.8,
-          "date": "17.11.2025",
-          "height": 3,
-          "widht": 45
-        },
-        {
-          "id": 9,
-          "title": "Satechi Aluminum Stand",
-          "image": "/laptopacc9.png",
-          "price": 49,
-          "color": "silver",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 10,
-          "brand": "satechi",
-          "type": "stand",
-          "compatibility": "All laptops",
-          "star": 4.5,
-          "date": "18.11.2025",
-          "height": 5,
-          "widht": 25
-        },
-        {
-          "id": 10,
           "title": "TP-Link USB Wi-Fi Adapter",
-          "image": "/laptopacc10.png",
+          "image": "/image copy 33.png",
           "price": 29,
           "color": "black",
           "guaranteed": true,
@@ -2038,7 +1888,7 @@
       "timeRead": 6,
       "Bigdesc": "Bir kun saharda, quyoshning birinchi nurlari shahar ustini o‘rab, har bir deraza va tomni oltin rangga bo‘yagandek edi. Shahar uyg‘onayotgan edi, lekin tinchlik hali ham havoda hukmron edi. Ko‘chalarda odamlar shoshilayotgan, ba’zilari esa sekin yurib, hayotning har bir lahzasini qadrlayotgan edi. Har bir qadamda sirli hikoyalar yashirin, har bir eshik orqasida yangi sarguzashtlar kutayotgan edi."
     },
-     {
+    {
       "id": 4,
       "titleBlog": "The best gaming headsets",
       "imageBlog": "",
