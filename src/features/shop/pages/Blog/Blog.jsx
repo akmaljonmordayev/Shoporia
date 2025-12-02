@@ -1,7 +1,10 @@
 import React from "react";
-
+import RecentBlockCard from "../../../../components/RecentBlockCard/RecentBlockCard";
 function Blog() {
-  return <div>Blog</div>;
+  return (
+    <div>
+      <RecentBlockCard />
+    </div>
+  );
 }
-
 export default Blog;
