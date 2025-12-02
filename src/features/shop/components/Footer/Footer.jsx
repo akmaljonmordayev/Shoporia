@@ -23,7 +23,7 @@ function Footer() {
         </li>
 
         <li className="text-[#CBCBCB] text-[16px] leading-[30px]">
-          <Link to="/order-status">Order status</Link>
+          <Link to="/profile/orders">Order status</Link>
         </li>
       </ul>
     </div>
@@ -51,15 +51,15 @@ function Footer() {
         <h4 className="text-white font-medium text-[20px] mb-2">Contact us</h4>
 
         <li className="text-[#CBCBCB] text-[16px] leading-[30px]">
-          <Link to="/contact">123 Main Street, Anytown, USA</Link>
+          <Link to="/contact">Batyr Zakirov street, 7, Tashkent</Link>
         </li>
 
         <li className="text-[#CBCBCB] text-[16px] leading-[30px]">
-          <Link to="/contact">+1 (555) 123-4567</Link>
+          <Link to="/contact">+998 (12) 345-67-89</Link>
         </li>
 
         <li className="text-[#CBCBCB] text-[16px] leading-[30px]">
-          <Link to="/contact">TechHeimSupport@gmail.com</Link>
+          <Link to="/contact-us">ShoporiaSupport@gmail.com</Link>
         </li>
       </ul>
     </div>
