@@ -22,7 +22,7 @@ function BlogSingle() {
           <img
             className="w-[808px] h-[414px] rounded-md object-cover mb-5"
             src={data?.imageBlog}
-            alt={data?.titleBlog}
+            alt=""
           />
 
           <p className="text-base leading-6 text-gray-800">{data?.Bigdesc}</p>
