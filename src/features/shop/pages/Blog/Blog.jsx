@@ -65,7 +65,7 @@ function Blog () {
             <h1 className='font-[500] text-[24px]'>Recent posts</h1>
             <div className='recentposts flex flex-col gap-4 mt-32'>
               {data
-                ?.sort((a, b) => new Date(b.date) - new Date(a.date)) 
+                ?.sort((a, b) => new Date(b.date) - new Date(a.date))
                 .slice(0, 3)
                 .map(
                   ({ id, titleBlog, imageBlog, suntitle, date, timeRead }) => (
