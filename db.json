@@ -2941,7 +2941,6 @@
       "videoCode": "https://www.youtube.com/embed/IE5nITBvM0c?si=iFpYjJdC_EjSzD9b",
       "videoTitle": "Donk vs Kyousuke"
     },
-  
     {
       "id": 4,
       "videoCode": "https://www.youtube.com/embed/GDOumy3_UI4?si=0n1Nr5lCTJ58Qdp_",
@@ -2958,5 +2957,39 @@
       "videoTitle": "YouTube"
     }
   ],
-  "wishlist": []
+  "wishlist": [],
+  "OurCommand": [
+    {
+      "id": 1,
+      "name": "Akmaljon Mordayev",
+      "position": "Project Director",
+      "image": "https://avatars.githubusercontent.com/u/134265659?v=4",
+      "description": "I am a Frontend engineer building pixel-perfect, high-performance web apps. Favourite stack: React, Vite, TypeScript, Tailwind, Next Js. ",
+      "ContactTelegramUs": "https://t.me/Mr_Akmal_dev"
+    },
+    {
+      "id": 2,
+      "name": "Jabborov Adhamjon",
+      "position": "UI/UX & Frontend Developer",
+      "image": "https://png.pngtree.com/element_our/20200610/ourmid/pngtree-computer-hacker-image_2247730.jpg",
+      "description": "I am a Frontend Developer with a strong focus on UI/UX design. I am proficient in HTML, CSS, and JavaScript, and familiar with various React libraries. I can deploy projects using platforms like Render, GitHub, and Netlify. Besides programming, I enjoy gaming and often play CS2 in my free time.",
+      "ContactTelegramUs": "https://t.me/jabborov_0o7"
+    },
+    {
+      "id": 3,
+      "name": "Shuhratov Ayubhon",
+      "position": "Frontend Developer",
+      "image": "https://example.com/alice-johnson.jpg",
+      "description": "Alice Johnson oversees our marketing strategies and has a passion for digital marketing.",
+      "ContactTelegramUs": "https://t.me/akmaljon_mordayev"
+    },
+    {
+      "id": 4,
+      "name": "Ro'ziyev Firdavs",
+      "position": "Frontend Developer",
+      "image": "https://example.com/bob-brown.jpg",
+      "description": "Bob Brown is responsible for our sales team and has a knack for closing deals.",
+      "ContactTelegramUs": "https://t.me/akmaljon_mordayev"
+    }
+  ]
 }
