@@ -44,9 +44,13 @@ const Notification = React.lazy(() =>
 const BlogSingle = React.lazy(() =>
   import("./features/shop/pages/BlogSingle/BlogSingle")
 );
+const ProductSingle = React.lazy(() =>
+  import("./features/shop/pages/ProductSingle/ProductSingle")
+);
 import ProfileLayout from "./features/shop/components/SideBar/ProfileLayout";
 import Skeleton from "./features/shop/Skeleton/Skeleton";
-
+import ProtectedRoute from "./features/shop/components/ProtectedRoute/ProtectedRoute";
+import LoginLayout from "./features/shop/components/LoginLayout.jsx/LoginLayout";
 function App() {
   return (
     <Suspense fallback={<Skeleton />}>
@@ -54,59 +58,66 @@ function App() {
         <Route
           path="/"
           element={
-            <LayOut>
-              <Home />
-            </LayOut>
+            <ProtectedRoute>
+              <LayOut>
+                <Home />
+              </LayOut>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/blog"
           element={
-            <LayOut>
-              <Blog />
-            </LayOut>
+            <ProtectedRoute>
+              <LayOut>
+                <Blog />
+              </LayOut>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/faq"
           element={
-            <LayOut>
-              <Faq />
-            </LayOut>
+            <ProtectedRoute>
+              <LayOut>
+                <Faq />
+              </LayOut>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/products"
           element={
-            <LayOut>
-              <Product />
-            </LayOut>
+            <ProtectedRoute>
+              <LayOut>
+                <Product />
+              </LayOut>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/contact-us"
           element={
-            <LayOut>
-              <ContactUs />
-            </LayOut>
+            <ProtectedRoute>
+              <LayOut>
+                <ContactUs />
+              </LayOut>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/cart"
           element={
-            <LayOut>
-              <Cart />
-            </LayOut>
+            <ProtectedRoute>
+              <LayOut>
+                <Cart />
+              </LayOut>
+            </ProtectedRoute>
           }
         />
-        <Route
-          path="/register"
-          element={
-            <LayOut>
-              <Register />
-            </LayOut>
-          }
-        />
+        <Route path="/auth" element={<LoginLayout />}>
+          <Route path="register" element={<Register />} />
+        </Route>
         <Route
           path="/about"
           element={
@@ -123,7 +134,14 @@ function App() {
             </LayOut>
           }
         />
-
+        <Route
+          path="/products/:id"
+          element={
+            <LayOut>
+              <ProductSingle />
+            </LayOut>
+          }
+        />
         <Route path="/profile" element={<ProfileLayout />}>
           <Route index element={<Profile />} />
           <Route path="personal-data" element={<PersonalData />} />

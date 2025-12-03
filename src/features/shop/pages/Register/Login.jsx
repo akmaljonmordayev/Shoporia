@@ -8,54 +8,70 @@ import {
   AiOutlineEyeInvisible,
   AiOutlineEye,
 } from "react-icons/ai";
-import { FaGoogle, FaFacebookF } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useGetAll from "../../../../hooks/UseGetAll";
 
 const schema = Yup.object({
-  email: Yup.string().email("Invalid email").required("Required"),
-  password: Yup.string().required("Required"),
+  email: Yup.string()
+    .email("Invalid email")
+    .required("Please enter your email"),
+  password: Yup.string().required("Please enter your password"),
 });
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const { data: userData, isLoading, isError } = useGetAll("users", ["users"]);
+  const navigate = useNavigate();
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
 
   const onSubmit = (data) => {
-    const savedUser = JSON.parse(localStorage.getItem("user"));
-
-    if (!savedUser) {
-      toast.error("User not found. Please sign up first!");
+    if (!userData || userData.length === 0) {
+      toast.error("Users not found!");
       return;
     }
 
-    if (
-      data.email === savedUser.email &&
-      data.password === savedUser.password
-    ) {
-      localStorage.setItem("isAuthenticated", "true");
-      toast.success("Login successful!");
+    const foundUser = userData.find(
+      (user) => user.email === data.email && user.password === data.password
+    );
 
-      setTimeout(() => {
-        window.location.href = "/home";
-      }, 1000);
-    } else {
+    if (!foundUser) {
       toast.error("Incorrect email or password!");
+      reset();
+      return;
     }
+
+    const token = crypto.randomUUID();
+
+    localStorage.setItem(
+      "token",
+      JSON.stringify({
+        token: token,
+        userId: foundUser.id,
+      })
+    );
+
+    toast.success("Login successful!");
+    reset();
+
+    setTimeout(() => {
+      navigate("/", { replace: true });
+    }, 800);
   };
 
   return (
     <div className="w-[420px] p-8">
       <h2 className="text-2xl font-semibold mb-6 text-center">
-        Log in to Tech Heim
+        Log in to Shoporia
       </h2>
 
       <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
