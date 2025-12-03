@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -15,54 +15,51 @@ import FrameImage from "./img/Frame 26086940.png";
 import CategoryImage from "./img/image.png";
 import IamImage from "./img/iam.png";
 import QwertyImage from "./img/qwerty.png";
-import axiosClient from "../../../../api/axiosClient";
+import useGetAll from "../../../../hooks/UseGetAll";
 import { Link } from "react-router-dom";
 
 const heroImages = [Photo1, Photo2, Photo3, Photo4, Photo5];
 
 const categories = [
   { name: "Accessories", image: CategoryImage },
-  { name: "Camera", image:  FrameImage}, 
+  { name: "Camera", image: FrameImage },
   { name: "Laptop", image: QwertyImage },
-  { name: "Smart Phone", image:  IamImage},
+  { name: "Smart Phone", image: IamImage },
   { name: "Gaming", image: Photo7 },
-  { name: "Smart Watch", image:  Photo6},
+  { name: "Smart Watch", image: Photo6 },
 ];
 
 export default function Home() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { data: electronics, isLoading } = useGetAll("/typeOfElectronics", [
+    "electronics",
+  ]);
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        setLoading(true);
-        const response = await axiosClient.get("/typeOfElectronics");
+  const products = React.useMemo(() => {
+    if (!electronics || !Array.isArray(electronics) || !electronics[0]) {
+      return [];
+    }
 
-        // Get products from different categories
-        const allProducts = [];
-        if (response && response[0]) {
-          // Mobile phones
-          if (response[0].mobile && Array.isArray(response[0].mobile)) {
-            allProducts.push(...response[0].mobile.slice(0, 4));
-          }
-          // Laptops
-          if (response[0].laptop && Array.isArray(response[0].laptop)) {
-            allProducts.push(...response[0].laptop.slice(0, 4));
-          }
-        }
+    const allProducts = [];
+    const categories = electronics[0];
 
-        setProducts(allProducts.slice(0, 8));
-        console.log("Products loaded:", allProducts.slice(0, 8));
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      } finally {
-        setLoading(false);
+    [
+      "mobile",
+      "laptop",
+      "washingmachines",
+      "heaters",
+      "TVs",
+      "airconditioners",
+      "Smartwatches",
+      "audio",
+      "Laptopaccessories",
+    ].forEach((category) => {
+      if (Array.isArray(categories[category])) {
+        allProducts.push(...categories[category]);
       }
-    };
+    });
 
-    fetchProducts();
-  }, []);
+    return allProducts;
+  }, [electronics]);
 
   return (
     <div className="w-full bg-white">
@@ -115,7 +112,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Category Section */}
       <div className="bg-white px-6 py-8 md:px-8 md:py-12 border-b">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -157,7 +153,7 @@ export default function Home() {
             </Link>
           </div>
 
-          {loading ? (
+          {isLoading ? (
             <div className="flex justify-center items-center h-64">
               <div className="text-white text-lg">Loading products...</div>
             </div>
@@ -165,8 +161,6 @@ export default function Home() {
             <Swiper
               modules={[Autoplay, Navigation, Pagination]}
               autoplay={{ delay: 4000, disableOnInteraction: false }}
-              navigation
-              pagination={{ clickable: true, type: "bullets" }}
               loop
               spaceBetween={20}
               slidesPerView={1}
@@ -175,33 +169,22 @@ export default function Home() {
                 1024: { slidesPerView: 4, spaceBetween: 20 },
               }}
               className="w-full"
-              style={{
-                "--swiper-navigation-color": "#fff",
-                "--swiper-pagination-color": "#fff",
-              }}
+              style={{}}
             >
               {products.map((product) => (
-                <SwiperSlide key={product.id}>
-                  <Link to={`/product/${product.id}`}>
+                <SwiperSlide key={product.id} className="h-full">
+                  <Link to={`/product/${product.id}`} className="h-full block">
                     <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
-                      {/* Image Container */}
-                      <div className="relative h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
+                      <div className="relative h-64 bg-gray-200 overflow-hidden flex items-center justify-center">
                         {product.discount && (
-                          <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
+                          <div className="absolute top-3 right-3 bg-orange-500 text-white px-3 py-1 rounded text-sm font-bold z-10">
                             -{product.discount}%
                           </div>
                         )}
-                        <img
-                          src={
-                            product.image || "https://via.placeholder.com/200"
-                          }
-                          alt={product.title}
-                          className="w-full h-full object-contain p-3"
-                        />
                       </div>
 
-                      <div className="p-4 flex flex-col flex-grow">
-                        <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-[2.5rem]">
+                      <div className="p-4 flex flex-col grow">
+                        <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-10">
                           {product.title}
                         </h3>
 
@@ -220,7 +203,7 @@ export default function Home() {
 
                         <div className="mt-auto">
                           <div className="flex items-center gap-2 mb-2">
-                            <span className="text-xl font-bold text-gray-900">
+                            <span className="text-lg font-bold text-gray-900">
                               $
                               {product.discount
                                 ? Math.round(
@@ -229,7 +212,7 @@ export default function Home() {
                                 : product.price}
                             </span>
                             {product.discount && (
-                              <span className="text-sm text-gray-400 line-through">
+                              <span className="text-xs text-gray-400 line-through">
                                 ${product.price}
                               </span>
                             )}
@@ -237,7 +220,7 @@ export default function Home() {
                           {product.star && (
                             <div className="flex items-center gap-1">
                               <span className="text-yellow-400">★</span>
-                              <span className="text-sm text-gray-700">
+                              <span className="text-sm text-gray-600">
                                 {product.star}
                               </span>
                             </div>
@@ -250,6 +233,136 @@ export default function Home() {
               ))}
             </Swiper>
           )}
+        </div>
+      </div>
+
+      <div className="bg-white px-6 py-8 md:px-8 md:py-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+              New Products
+            </h2>
+            <Link to={"/products"}>
+              <button className="text-blue-600 font-semibold hover:text-blue-800 transition">
+                View all ›
+              </button>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {products.slice(0, 4).map((product) => (
+              <Link key={product.id} to={`/product/${product.id}`}>
+                <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full flex flex-col cursor-pointer">
+                  <div className="relative bg-gray-200 h-64 flex items-center justify-center overflow-hidden group">
+                    <div className="absolute top-3 left-3 z-10">
+                      <button className="bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition">
+                        ♡
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="p-4 flex flex-col grow">
+                    <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-10">
+                      {product.title}
+                    </h3>
+
+                    <div className="flex flex-wrap gap-1 mb-3 text-xs">
+                      {product.guaranteed && (
+                        <span className="bg-green-100 text-green-700 px-2 py-0.5 rounded">
+                          ✓ Guaranteed
+                        </span>
+                      )}
+                      {product.inStock && (
+                        <span className="bg-blue-100 text-blue-700 px-2 py-0.5 rounded">
+                          In Stock
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="mt-auto">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-lg font-bold text-gray-900">
+                          $
+                          {product.discount
+                            ? Math.round(
+                                product.price * (1 - product.discount / 100)
+                              )
+                            : product.price}
+                        </span>
+                        {product.discount && (
+                          <span className="text-xs text-gray-400 line-through">
+                            ${product.price}
+                          </span>
+                        )}
+                      </div>
+                      {product.star && (
+                        <div className="flex items-center gap-1">
+                          <span className="text-yellow-400">★</span>
+                          <span className="text-sm text-gray-600">
+                            {product.star}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="px-6 py-8 md:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-blue-400 via-cyan-400 to-blue-500 rounded-lg p-8 text-white flex items-center justify-between min-h-64">
+              <div className="flex-1">
+                <h3 className="text-3xl font-bold mb-4">iPhone 15 Series</h3>
+                <div className="flex gap-2 mb-4">
+                  <div className="bg-cyan-500 px-3 py-1 rounded text-sm font-semibold">
+                    8 Days
+                  </div>
+                  <div className="bg-cyan-500 px-3 py-1 rounded text-sm font-semibold">
+                    8 Days
+                  </div>
+                  <div className="bg-cyan-500 px-3 py-1 rounded text-sm font-semibold">
+                    8 Days
+                  </div>
+                  <div className="bg-cyan-500 px-3 py-1 rounded text-sm font-semibold">
+                    8 Days
+                  </div>
+                </div>
+                <p className="text-base mb-6">
+                  It feels good to be the first. Get ready for the future of
+                  smartphones. Experience innovation like never before. Stay
+                  tuned for the big iPhone 15 pre-sale.
+                </p>
+                <Link to="/register">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition">
+                    Register Now
+                  </button>
+                </Link>
+              </div>
+              <div className="hidden md:flex flex-1 justify-center">
+                <div className="w-32 h-32 bg-white bg-opacity-20 rounded-lg"></div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-yellow-400 via-orange-400 to-yellow-500 rounded-lg p-8 text-white flex items-center justify-between min-h-64">
+              <div className="flex-1">
+                <h3 className="text-3xl font-bold mb-4">Play Station 5</h3>
+                <p className="text-lg mb-6">Digital Edition + 2TB</p>
+                <Link to="/products">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition">
+                    Buy Now
+                  </button>
+                </Link>
+              </div>
+              <div className="hidden md:flex flex-1 justify-center">
+                <div className="w-32 h-32 bg-white bg-opacity-20 rounded-lg"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
