@@ -21,7 +21,7 @@ function BlogSingle() {
           <p className="text-sm text-gray-500 mb-4">{data?.date}</p>
           <img
             className="w-[808px] h-[414px] rounded-md object-cover mb-5"
-            src=""
+            src={data?.imageBlog}
             alt=""
           />
 
