@@ -50,10 +50,14 @@ const BlogSingle = React.lazy(() =>
 const ProductSingle = React.lazy(() =>
   import("./features/shop/pages/ProductSingle/ProductSingle")
 );
+const CategorySingle = React.lazy(() =>
+  import("./features/shop/pages/CategorySingle/CategorySingle")
+);
 import ProfileLayout from "./features/shop/components/SideBar/ProfileLayout";
 import Skeleton from "./features/shop/Skeleton/Skeleton";
 import ProtectedRoute from "./features/shop/components/ProtectedRoute/ProtectedRoute";
 import LoginLayout from "./features/shop/components/LoginLayout.jsx/LoginLayout";
+
 function App() {
   return (
     <Suspense fallback={<Skeleton />}>
@@ -150,6 +154,14 @@ function App() {
           element={
             <LayOut>
               <ProductSingle />
+            </LayOut>
+          }
+        />
+        <Route
+          path="/:categoryName"
+          element={
+            <LayOut>
+              <CategorySingle />
             </LayOut>
           }
         />

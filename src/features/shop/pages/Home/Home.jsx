@@ -4,66 +4,31 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import Photo1 from "./img/photo1-Photoroom-removebg-preview.png";
-import Photo2 from "./img/photo2-removebg-preview.png";
-import Photo3 from "./img/photo3-removebg-preview.png";
-import Photo4 from "./img/photo4.webp";
-import Photo5 from "./img/photo5-removebg-preview.png";
-import Photo6 from "./img/photo6-removebg-preview.png";
-import Photo7 from "./img/photo7.webp";
-import FrameImage from "./img/Frame 26086940.png";
-import CategoryImage from "./img/image.png";
-import IamImage from "./img/iam.png";
-import QwertyImage from "./img/qwerty.png";
 import axiosClient from "../../../../api/axiosClient";
 import { Link } from "react-router-dom";
-
-const heroImages = [Photo1, Photo2, Photo3, Photo4, Photo5];
-
-const categories = [
-  { name: "Accessories", image: CategoryImage },
-  { name: "Camera", image:  FrameImage}, 
-  { name: "Laptop", image: QwertyImage },
-  { name: "Smart Phone", image:  IamImage},
-  { name: "Gaming", image: Photo7 },
-  { name: "Smart Watch", image:  Photo6},
-];
+import useGetAll from "../../../../hooks/UseGetAll";
+import CategoryCard from "../../components/CategoryCard/CategoryCard";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { data, isError, isLoading } = useGetAll("/Slider", ["slider"]);
+  const {
+    data: categoryData,
+    isError: isErrorCategoryData,
+    isLoading: isLoadingCategoryData,
+  } = useGetAll("/CategoryCarts", ["categoryCart"]);
+  const {
+    data: saleData,
+    isError: isErrorSale,
+    isLoading: isLoadingSale,
+  } = useGetAll("/typeOfElectronics", ["typeOfElectronics"]);
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        setLoading(true);
-        const response = await axiosClient.get("/typeOfElectronics");
-
-        // Get products from different categories
-        const allProducts = [];
-        if (response && response[0]) {
-          // Mobile phones
-          if (response[0].mobile && Array.isArray(response[0].mobile)) {
-            allProducts.push(...response[0].mobile.slice(0, 4));
-          }
-          // Laptops
-          if (response[0].laptop && Array.isArray(response[0].laptop)) {
-            allProducts.push(...response[0].laptop.slice(0, 4));
-          }
-        }
-
-        setProducts(allProducts.slice(0, 8));
-        console.log("Products loaded:", allProducts.slice(0, 8));
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
+  const discountedProducts = saleData?.length
+    ? Object.values(saleData[0])
+        .flat()
+        .filter((item) => item.discount > 0)
+    : [];
   return (
     <div className="w-full bg-white">
       <div className="py-10 px-6 md:py-16 md:px-8">
@@ -98,14 +63,14 @@ export default function Home() {
                 "--swiper-pagination-color": "#0b2559",
               }}
             >
-              {heroImages.map((img, index) => (
+              {data?.map(({ imageSlider, id }) => (
                 <SwiperSlide
-                  key={index}
+                  key={id}
                   className="flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-4 md:p-6"
                 >
                   <img
-                    src={img}
-                    alt={`Hero Slide ${index + 1}`}
+                    src={imageSlider}
+                    alt={`Hero Slide ${id + 1}`}
                     className="w-full h-auto max-h-80 md:max-h-96 object-contain rounded-lg"
                   />
                 </SwiperSlide>
@@ -115,26 +80,18 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Category Section */}
       <div className="bg-white px-6 py-8 md:px-8 md:py-12 border-b">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
-            {categories.map((category, index) => (
+            {categoryData?.map(({ id, categoryImage, categoryName }) => (
               <Link
-                key={index}
-                to="/products"
-                className="flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-gray-50 transition"
+                key={id}
+                to={`/${categoryName}`}
+                className="flex flex-col items-center gap-3 p-4 rounded-lg"
               >
-                <div className="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
-                  <img
-                    src={category.image}
-                    alt={category.name}
-                    className="w-full h-full object-cover"
-                  />
+                <div>
+                  <CategoryCard title={categoryName} image={categoryImage} />
                 </div>
-                <span className="text-sm font-semibold text-gray-700 text-center">
-                  {category.name}
-                </span>
               </Link>
             ))}
           </div>
@@ -156,100 +113,93 @@ export default function Home() {
               </button>
             </Link>
           </div>
+          <Swiper
+            modules={[Autoplay, Navigation, Pagination]}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            navigation
+            pagination={{ clickable: true, type: "bullets" }}
+            loop
+            spaceBetween={20}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 15 },
+              1024: { slidesPerView: 4, spaceBetween: 20 },
+            }}
+            className="w-full"
+            style={{
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            }}
+          >
+            {discountedProducts?.map((product) => (
+              <SwiperSlide key={product.id}>
+                <Link to={`/products/${product.id}`}>
+                  <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
+                    <div className="relative h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
+                      {product.discount && (
+                        <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
+                          -{product.discount}%
+                        </div>
+                      )}
+                      <img
+                        src={
+                          product.image?.main ||
+                          "https://via.placeholder.com/200"
+                        }
+                        alt={product.title}
+                        className="w-full h-full object-contain p-3"
+                      />
+                    </div>
 
-          {loading ? (
-            <div className="flex justify-center items-center h-64">
-              <div className="text-white text-lg">Loading products...</div>
-            </div>
-          ) : (
-            <Swiper
-              modules={[Autoplay, Navigation, Pagination]}
-              autoplay={{ delay: 4000, disableOnInteraction: false }}
-              navigation
-              pagination={{ clickable: true, type: "bullets" }}
-              loop
-              spaceBetween={20}
-              slidesPerView={1}
-              breakpoints={{
-                640: { slidesPerView: 2, spaceBetween: 15 },
-                1024: { slidesPerView: 4, spaceBetween: 20 },
-              }}
-              className="w-full"
-              style={{
-                "--swiper-navigation-color": "#fff",
-                "--swiper-pagination-color": "#fff",
-              }}
-            >
-              {products.map((product) => (
-                <SwiperSlide key={product.id}>
-                  <Link to={`/product/${product.id}`}>
-                    <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
-                      {/* Image Container */}
-                      <div className="relative h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
-                        {product.discount && (
-                          <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
-                            -{product.discount}%
+                    <div className="p-4 flex flex-col flex-grow">
+                      <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-[2.5rem]">
+                        {product.title}
+                      </h3>
+
+                      <div className="flex flex-wrap gap-1 mb-3">
+                        {product.guaranteed && (
+                          <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
+                            ✓ Guaranteed
+                          </span>
+                        )}
+                        {product.freeDelivery && (
+                          <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
+                            🚚 Free
+                          </span>
+                        )}
+                      </div>
+
+                      <div className="mt-auto">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-xl font-bold text-gray-900">
+                            $
+                            {product.discount
+                              ? Math.round(
+                                  product.price * (1 - product.discount / 100)
+                                )
+                              : product.price}
+                          </span>
+                          {product.discount && (
+                            <span className="text-sm text-gray-400 line-through">
+                              ${product.price}
+                            </span>
+                          )}
+                        </div>
+                        {product.star && (
+                          <div className="flex items-center gap-1">
+                            <span className="text-yellow-400">★</span>
+                            <span className="text-sm text-gray-700">
+                              {product.star}
+                            </span>
                           </div>
                         )}
-                        <img
-                          src={
-                            product.image || "https://via.placeholder.com/200"
-                          }
-                          alt={product.title}
-                          className="w-full h-full object-contain p-3"
-                        />
-                      </div>
-
-                      <div className="p-4 flex flex-col flex-grow">
-                        <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-[2.5rem]">
-                          {product.title}
-                        </h3>
-
-                        <div className="flex flex-wrap gap-1 mb-3">
-                          {product.guaranteed && (
-                            <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
-                              ✓ Guaranteed
-                            </span>
-                          )}
-                          {product.freeDelivery && (
-                            <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
-                              🚚 Free
-                            </span>
-                          )}
-                        </div>
-
-                        <div className="mt-auto">
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="text-xl font-bold text-gray-900">
-                              $
-                              {product.discount
-                                ? Math.round(
-                                    product.price * (1 - product.discount / 100)
-                                  )
-                                : product.price}
-                            </span>
-                            {product.discount && (
-                              <span className="text-sm text-gray-400 line-through">
-                                ${product.price}
-                              </span>
-                            )}
-                          </div>
-                          {product.star && (
-                            <div className="flex items-center gap-1">
-                              <span className="text-yellow-400">★</span>
-                              <span className="text-sm text-gray-700">
-                                {product.star}
-                              </span>
-                            </div>
-                          )}
-                        </div>
                       </div>
                     </div>
-                  </Link>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
+                  </div>
+                </Link>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>
