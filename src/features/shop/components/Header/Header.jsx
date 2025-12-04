@@ -1,13 +1,20 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FiSearch, FiShoppingCart, FiUser, FiMenu, FiX } from "react-icons/fi";
 import logo from "./image.png";
 import { useLanguageStore } from "../../../../contexts/useLanguageStore";
+import { FiShoppingBag } from "react-icons/fi";
+import { AiOutlineHeart, AiOutlineDollarCircle } from "react-icons/ai";
+import { BiLogOut } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
+import logoShoporia from "/public/logoShoporia.png"
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const { language, setLanguage } = useLanguageStore();
+  const [profile, setProfile] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
     { id: 1, name: "Home", path: "/" },
@@ -25,6 +32,12 @@ function Header() {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setProfile(!profile);
+    navigate("/auth/register", { replace: true });
+  };
+
   return (
     <div className="py-[50px] ">
       <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
@@ -34,11 +47,10 @@ function Header() {
             className="flex items-center gap-2 text-xl font-bold text-blue-600 hover:opacity-80 transition"
           >
             <img
-              src={logo}
+              src={logoShoporia}
               alt="Shoporia Logo"
               className="w-8 h-8 object-contain"
             />
-            <span>Shoporia</span>
           </NavLink>
 
           <nav className="hidden md:flex gap-8 items-center">
@@ -93,13 +105,9 @@ function Header() {
               </span>
             </NavLink>
 
-            <NavLink
-              to="/register"
-              className="text-gray-700 hover:text-blue-600 transition"
-            >
-              <FiUser className="text-xl" />
-            </NavLink>
-            <select
+            <FiUser onClick={() => setProfile(!profile)} className="text-xl" />
+
+            {/* <select
               value={language}
               onChange={(e) => setLanguage(e.target.value)}
               className="
@@ -120,7 +128,7 @@ function Header() {
               <option value="uz">🇺🇿 Uzbek</option>
               <option value="ru">🇷🇺 Russian</option>
               <option value="en">🇺🇸 English</option>
-            </select>
+            </select> */}
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -174,6 +182,53 @@ function Header() {
           </nav>
         )}
       </header>
+      {profile && (
+        <div className="w-64 bg-white shadow-lg rounded-xl p-4 fixed right-[70px] top-14 z-10">
+          <Link onClick={() => setProfile(!profile)} to={"/profile"}>
+            <div className="mb-4">
+              <h3 className="text-lg font-semibold text-blue-600 cursor-pointer hover:underline">
+                Jimmy Smith
+              </h3>
+              <p className="text-sm text-gray-600">Jimmy.smith1996@gmail.com</p>
+            </div>
+          </Link>
+
+          <ul className=" text-gray-700 flex flex-col gap-4">
+            <Link onClick={() => setProfile(!profile)} to={"/profile/orders"}>
+              <li className="flex items-center gap-3 cursor-pointer hover:text-blue-600">
+                <FiShoppingBag size={20} />
+                <span className="text-base">Orders</span>
+              </li>
+            </Link>
+            <Link
+              to={"/profile/wish-list"}
+              onClick={() => setProfile(!profile)}
+            >
+              <li className="flex items-center gap-3 cursor-pointer hover:text-blue-600">
+                <AiOutlineHeart size={20} />
+                <span className="text-base">Wish List</span>
+              </li>
+            </Link>
+
+            <Link
+              onClick={() => setProfile(!profile)}
+              to={"/profile/payment-instalments"}
+            >
+              <li className="flex items-center gap-3 cursor-pointer hover:text-blue-600">
+                <AiOutlineDollarCircle size={20} />
+                <span className="text-base">Payments</span>
+              </li>
+            </Link>
+            <li
+              onClick={handleLogout}
+              className="flex items-center gap-3 cursor-pointer hover:text-red-500 mt-2"
+            >
+              <BiLogOut size={20} />
+              <span className="text-base">Log out</span>
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
