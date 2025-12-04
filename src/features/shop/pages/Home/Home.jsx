@@ -16,6 +16,7 @@ import CategoryImage from "./img/image.png";
 import IamImage from "./img/iam.png";
 import QwertyImage from "./img/qwerty.png";
 import useGetAll from "../../../../hooks/UseGetAll";
+import CategoryCard from "../../components/CategoryCard/CategoryCard";
 import { Link } from "react-router-dom";
 
 const heroImages = [Photo1, Photo2, Photo3, Photo4, Photo5];
@@ -114,26 +115,27 @@ export default function Home() {
 
       <div className="bg-white px-6 py-8 md:px-8 md:py-12 border-b">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+          <Swiper
+            modules={[Autoplay, Navigation, Pagination]}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            loop
+            spaceBetween={20}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 15 },
+              1024: { slidesPerView: 4, spaceBetween: 20 },
+              1280: { slidesPerView: 6, spaceBetween: 20 },
+            }}
+            className="w-full"
+          >
             {categories.map((category, index) => (
-              <Link
-                key={index}
-                to="/products"
-                className="flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-gray-50 transition"
-              >
-                <div className="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
-                  <img
-                    src={category.image}
-                    alt={category.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <span className="text-sm font-semibold text-gray-700 text-center">
-                  {category.name}
-                </span>
-              </Link>
+              <SwiperSlide key={index} className="flex justify-center">
+                <Link to="/products">
+                  <CategoryCard title={category.name} image={category.image} />
+                </Link>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
         </div>
       </div>
 
