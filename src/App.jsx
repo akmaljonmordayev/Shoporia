@@ -10,6 +10,9 @@ const Product = React.lazy(() =>
 const Faq = React.lazy(() => import("./features/shop/pages/FAQ/Faq"));
 const Home = React.lazy(() => import("./features/shop/pages/Home/Home"));
 const Blog = React.lazy(() => import("./features/shop/pages/Blog/Blog"));
+const OurCommand = React.lazy(() =>
+  import("./features/shop/pages/OurCommand/OurCommand")
+);
 const ContactUs = React.lazy(() =>
   import("./features/shop/pages/ContactUs/ContactUs")
 );
@@ -73,6 +76,14 @@ function App() {
                 <Blog />
               </LayOut>
             </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/ourcommand"
+          element={
+            <LayOut>
+              <OurCommand />
+            </LayOut>
           }
         />
         <Route
