@@ -580,7 +580,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 12,
+          "discount": 0,
           "brand": "lg",
           "capacity": 9,
           "rpm": 1400,
@@ -681,12 +681,12 @@
           "id": 1,
           "title": "Ballu Electric Heater BEC/EZER-1000",
           "image": {
-            "main": "",
+            "main": "https://prom-partner.com/upload/iblock/517/5171127eb4ddcbd8f637f1bfc25d72e3.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://rkcdn.ru/products/32ab2589-f3e3-11ed-b736-005056013a69/src.jpg",
+              "https://ir.ozone.ru/s3/multimedia-3/c400/6703372119.jpg",
+              "https://7745.by/img/imagecache/card_medium_image_for_product/uploads/products/153931/042a174a62faec8336f2e60ebeaedbdb.jpg",
+              "https://cdn2.domotekhnika.ru/images/products/008/366/882/big/21100868_1.jpg"
             ]
           },
           "price": 89,
@@ -694,7 +694,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 10,
+          "discount": 0,
           "brand": "ballu",
           "capacity": 15,
           "power": 1000,
@@ -709,12 +709,12 @@
           "id": 2,
           "title": "UFO Infrared Heater Star 2400",
           "image": {
-            "main": "",
+            "main": "https://farro.shop/wp-content/uploads/2020/11/UFO-Star-2400-farro.shop-4.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://farro.shop/wp-content/uploads/2020/11/UFO-Star-2400-leg-farro.shop-2.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBxvDE-RmvQYgqRfH3cHdu0z4YKegakiP7Kw&s",
+              "https://i.greatcatalog.net/v/2/2204/2204-588@2x.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-kncCc7s5qqkIKqpslV1eYNz9R4gyIHuFpQ&s"
             ]
           },
           "price": 120,
@@ -737,12 +737,12 @@
           "id": 3,
           "title": "Timberk Convector TEC.PC M2000",
           "image": {
-            "main": "",
+            "main": "https://www.timberk.ru/upload/resize_cache/webp/iblock/23f/700_700_0/23f8dbf7d590fe1c20667536f85861b0.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaoM9sKE4ivOb8AkwlfLFLcvyAaRfXSW8xqQ&s",
+              "https://www.timberk.ru/upload/resize_cache/webp/iblock/0a8/1000_1000_0/0a86ec98a8b93ad77467331bf0dbd815.webp",
+              "https://main-cdn.sbermegamarket.ru/big2/hlr-system/166/024/711/111/114/49/100030129422b1.jpg",
+              "https://cdn2.domotekhnika.ru/images/products/008/367/800/big/21101242_4.jpg"
             ]
           },
           "price": 110,
@@ -750,7 +750,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": false,
-          "discount": 8,
+          "discount": 0,
           "brand": "timberk",
           "capacity": 20,
           "power": 2000,
@@ -765,12 +765,12 @@
           "id": 4,
           "title": "Royal Clima Oil Heater RC-OH1500M",
           "image": {
-            "main": "",
+            "main": "https://masinternational.uk/image/cache/catalog/Electronics/Winter%20Heater/259-oil-heater-1500w-1-1200x1200.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://masinternational.uk/image/cache/catalog/Electronics/Winter%20Heater/259-oil-heater-1500w-2-1200x1200.jpg",
+              "https://productimages.biltema.com/v1/Image/product/xlarge/2000051695/4",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQXGuVqmEUNCAs25iAfl53jfXOCWU82RrV_w&s",
+              "https://masinternational.uk/image/cache/catalog/Electronics/Winter%20Heater/259-oil-heater-1500w-3-1200x1200.jpg"
             ]
           },
           "price": 95,
@@ -778,7 +778,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 0,
+          "discount": 15,
           "brand": "royal clima",
           "capacity": 18,
           "power": 1500,
@@ -793,12 +793,12 @@
           "id": 5,
           "title": "Electrolux Air Heat ECH/AG-1500",
           "image": {
-            "main": "",
+            "main": "https://euroclimate.org/image/cache/data/ElectrAIRGATEEF-777x777.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqBGpJnCo6UaE-Lm_BpfPVqmlnJ5Dhdjpl7w&s",
+              "https://euroclimate.org/image/cache/data/ElectrolAIRGATE1-777x777.jpg",
+              "https://ir.ozone.ru/s3/multimedia-1-e/c400/8230346150.jpg",
+              "https://electrolux-home.ru/upload/iblock/55d/wqjqaczkav9peaa1dt4ot5ghpnpr020i/komplekt_electrolux_air_gate_transformer_s_blokom_upravleniya_ech_ag2_1500_t_tu.jpg"
             ]
           },
           "price": 130,
@@ -806,7 +806,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 15,
+          "discount": 0,
           "brand": "electrolux",
           "capacity": 22,
           "power": 1500,
@@ -821,12 +821,12 @@
           "id": 6,
           "title": "Polaris Oil Radiator PRE W 0715",
           "image": {
-            "main": "",
+            "main": "https://avatars.mds.yandex.net/get-mpic/15307636/2a00000199f500e5f721fdf48647ddf9dbff/orig",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://cdn2.domotekhnika.ru/images/products/008/367/121/big/21100999_1.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9nUuySwsqZ_90t2zuLthfwiRJg9wQJF1PYg&s",
+              "https://cdn.citilink.ru/rYHoNF0Egakrek-CwP7ud_OBrqwgi1f02nSD9WwUUVU/resizing_type:fit/gravity:sm/width:1200/height:1200/plain/product-images/aeb780cb-c1aa-41c1-915c-688f70c3d575.jpg",
+              "https://shop-polaris.ru/upload/_thumbs/129/CLASSIC_300x300_95d2fbf5193965612b56680fbe277bf2.jpg"
             ]
           },
           "price": 75,
@@ -834,7 +834,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 20,
+          "discount": 0,
           "brand": "polaris",
           "capacity": 12,
           "power": 1500,
@@ -844,118 +844,6 @@
           "date": "15.11.2025",
           "height": 62,
           "widht": 45
-        },
-        {
-          "id": 7,
-          "title": "Midea Convector Heater MCH2000",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 115,
-          "color": "white",
-          "guaranteed": false,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 6,
-          "brand": "midea",
-          "capacity": 20,
-          "power": 2000,
-          "energyClass": "A",
-          "noiseLevel": 0,
-          "star": 4.5,
-          "date": "16.11.2025",
-          "height": 40,
-          "widht": 75
-        },
-        {
-          "id": 8,
-          "title": "Sharp Ceramic Heater SH-CH1500",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 99,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 9,
-          "brand": "sharp",
-          "capacity": 15,
-          "power": 1500,
-          "energyClass": "A",
-          "noiseLevel": 28,
-          "star": 4.3,
-          "date": "17.11.2025",
-          "height": 55,
-          "widht": 48
-        },
-        {
-          "id": 9,
-          "title": "Zanussi Fan Heater ZFH120",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 40,
-          "color": "white",
-          "guaranteed": false,
-          "freeDelivery": false,
-          "inStock": true,
-          "discount": 11,
-          "brand": "zanussi",
-          "capacity": 10,
-          "power": 1200,
-          "energyClass": "C",
-          "noiseLevel": 45,
-          "star": 4.1,
-          "date": "18.11.2025",
-          "height": 28,
-          "widht": 22
-        },
-        {
-          "id": 10,
-          "title": "Delonghi Oil Heater TRRS0920",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 150,
-          "color": "white",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 7,
-          "brand": "delonghi",
-          "capacity": 25,
-          "power": 2000,
-          "energyClass": "A",
-          "noiseLevel": 30,
-          "star": 4.8,
-          "date": "19.11.2025",
-          "height": 65,
-          "widht": 50
         }
       ],
       "TVs": [
@@ -963,12 +851,12 @@
           "id": 1,
           "title": "Samsung QLED Q60B 55-inch",
           "image": {
-            "main": "",
+            "main": "https://images.samsung.com/is/image/samsung/p6pim/ru/qe55q60bauxru/gallery/ru-qled-tv-qe55q60bauxru-r-perspective--black-534976874?$Q90_1248_936_F_PNG$",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://i5.walmartimages.com/asr/e01bb521-a630-4470-a2c5-27c645cbb9c4.5d0bda1c03b1a4960c752a5b3974f2c3.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+              "https://www.laptopsdirect.co.uk/Images/QE55Q60BAUXXU_6_Supersize.jpg?v=3",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLybvMRu2uXAi19BjWUaN7ZsNdRmLZwZYhEw&s",
+              "https://i5.walmartimages.com/asr/39491990-e18a-43eb-b05d-01fdb097b11d.b12de7082746c0f6fbe28445a1bac58a.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
             ]
           },
           "price": 799,
@@ -976,7 +864,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 12,
+          "discount": 0,
           "brand": "samsung",
           "resolution": "4K",
           "screenSize": 55,
@@ -991,12 +879,12 @@
           "id": 2,
           "title": "LG OLED C2 48-inch",
           "image": {
-            "main": "",
+            "main": "https://m.media-amazon.com/images/I/81mc1pl2T+L.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://www.lg.com/ru/images/televisions/md07548659/gallery/medium07.jpg",
+              "https://m.media-amazon.com/images/I/51WxpJnSsgL.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDG30Mns-EMB0LuN_hHaWY8ymVZlcqZZzZpQ&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK9ZFVTnf4tRf1XnGDpvFLJzXxHwXia-kCxg&s"
             ]
           },
           "price": 999,
@@ -1019,12 +907,12 @@
           "id": 3,
           "title": "Sony Bravia X90J 65-inch",
           "image": {
-            "main": "",
+            "main": "https://www.atlanticelectrics.co.uk/cdn/shop/products/sony-bravia-xr-xr65x90j-2021-led-hdr-4k-ultra-hd-smart-google-tv-65-inch-with-freeview-hd-freesat-hd-dolby-atmos-black-951706.jpg?v=1675438227&width=813",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnV6yRdPGnZnXPjWGx8awtcd79dzuZHLn-bQ&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9sQNL1A4bjX3uXFQyqatwqTJYHDli50Nabg&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWpa2XS-r3zp62vVV3O9FAaOB9Hwh4g2eG3Q&s",
+              "https://shrimeenakshifanhouse.com/cdn/shop/files/03-X90J-tv-feature.jpg?v=1711010439"
             ]
           },
           "price": 1199,
@@ -1032,7 +920,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 8,
+          "discount": 0,
           "brand": "sony",
           "resolution": "4K",
           "screenSize": 65,
@@ -1047,12 +935,12 @@
           "id": 4,
           "title": "Hisense U7H 55-inch",
           "image": {
-            "main": "",
+            "main": "https://m.media-amazon.com/images/I/51LVRonYxnL._AC_UF1000,1000_QL80_.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://www.jiomart.com/images/product/original/493666713/hisense-164-cm-65-inch-ultra-hd-4k-qled-smart-tv-u7h-series-65u7h-digital-o493666713-p598744909-1-202511150257.jpeg?im=Resize=(1000,1000)",
+              "https://m.media-amazon.com/images/I/61BUKztlKNL.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT77Uriucj-D6hMpukFKgg98SFCLtyqrngk9g&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdg4Ss-grVVkWSwiDtZVOBUEW4jIz0DDW0Iw&s"
             ]
           },
           "price": 650,
@@ -1060,7 +948,7 @@
           "guaranteed": false,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 5,
+          "discount": 0,
           "brand": "hisense",
           "resolution": "4K",
           "screenSize": 55,
@@ -1075,12 +963,12 @@
           "id": 5,
           "title": "TCL Q6 QLED 50-inch",
           "image": {
-            "main": "",
+            "main": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSGGFLaClyuyYOwg-IY1XXlSzp2NooGl7oMA&s",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfsZ0rbybtq-NhCop1z1Gt17C2IeqDF6I-ag&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgMP7HA12cYcZrefyS0_WYGuspHsIJLRVKUQ&s",
+              "https://www.dolby.com/globalassets/catalogassets/cc08a5560fea20b61d900ad0b1aa06ce9ea83823.jpg?mode=pad&width=1440&heightratio=0.5625&bgcolor=fff&quality=80",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCzSylpE0xQtHmY3Rkc0z839ECh8uAx514jA&s"
             ]
           },
           "price": 480,
@@ -1103,12 +991,12 @@
           "id": 6,
           "title": "Xiaomi Mi TV P1 43-inch",
           "image": {
-            "main": "",
+            "main": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSibH6u2oxlLEqJJOXfrLyr4u5pxFLw7KCmw&s",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_UbWej2WhNIeEvwbxmFfmORhypdvzG0NjXA&s",
+              "https://api.idea.uz/storage/products/October2022/Eszwn9E79933IpGqt6AM.png",
+              "https://interbrands.uz/image/cache/catalog/ventilyator/XiaomiMiTVP132GL3-1000x600.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI0Mqj7LA-EOQIihjj7FrgB8nu4uD-WOJp4w&s"
             ]
           },
           "price": 320,
@@ -1116,7 +1004,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 17,
+          "discount": 0,
           "brand": "xiaomi",
           "resolution": "4K",
           "screenSize": 43,
@@ -1131,12 +1019,12 @@
           "id": 7,
           "title": "Philips Ambilight 58-inch",
           "image": {
-            "main": "",
+            "main": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU656MgV-G18BwhfM32AwtR91OaWKG6zqrBg&s",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://images.philips.com/is/image/philipsconsumer/f9c9f3c43d15435fb34eafb9007969ea?$pnglarge$&wid=1250",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmmwHY5Pzrq8qg_4OP1DoOhLy0okLyUhlF8A&s",
+              "https://www.buyitdirect.ie/Images/43PUS855612_2_Supersize.jpg?v=33",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUmWVPFSvahnetdUqbk0PVx_LdUJBWw-U2vg&s"
             ]
           },
           "price": 720,
@@ -1144,7 +1032,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 6,
+          "discount": 0,
           "brand": "philips",
           "resolution": "4K",
           "screenSize": 58,
@@ -1159,12 +1047,12 @@
           "id": 8,
           "title": "Panasonic HX700 40-inch",
           "image": {
-            "main": "",
+            "main": "https://www.flatpanelshd.com/pictures/panasonichx700_tvd_small.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfKCUNsHHQJZjmEos5vyZ66uodicq_zrtnMQ&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpYSy9uGzDofkfZPTiy8gElS6fY7E3CsOdig&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNxFNtvAFg6ehBRg6ecIJ9oD06ngqwEA9aNQ&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLKNOTHTqXPZ0A5czj5hikr74WlotV6qgkg&s"
             ]
           },
           "price": 410,
@@ -1182,62 +1070,6 @@
           "date": "17.11.2025",
           "height": 52,
           "widht": 90
-        },
-        {
-          "id": 9,
-          "title": "Sharp 4T-C65DL1X 65-inch",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 950,
-          "color": "black",
-          "guaranteed": false,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 11,
-          "brand": "sharp",
-          "resolution": "4K",
-          "screenSize": 65,
-          "displayType": "LED",
-          "refreshRate": 120,
-          "star": 4.5,
-          "date": "18.11.2025",
-          "height": 84,
-          "widht": 146
-        },
-        {
-          "id": 10,
-          "title": "JVC Fire TV 55-inch",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 530,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 7,
-          "brand": "jvc",
-          "resolution": "4K",
-          "screenSize": 55,
-          "displayType": "LED",
-          "refreshRate": 60,
-          "star": 4.4,
-          "date": "19.11.2025",
-          "height": 71,
-          "widht": 123
         }
       ],
       "airconditioners": [
