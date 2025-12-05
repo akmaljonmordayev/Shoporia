@@ -26,12 +26,12 @@
           "id": 1,
           "title": "Smartfon Samsung Galaxy A23 4/64 GB White",
           "image": {
-            "main": "",
+            "main": "https://cdn.mediapark.uz/imgs/48136613-dfb5-4858-b1e0-222e9593629b.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://cdn.mediapark.uz/imgs/82b165d1-1c60-42bc-a568-bd6bbc30cdef.webp",
+              "https://www.prom.uz/_ipx/f_webp/https://devel.prom.uz/upload/product_logos/56/b6/56b6c4947dd521a47d338f43cfe182ac.jpeg",
+              "https://cdn.mediapark.uz/imgs/dd2e4ecd-ce19-49ba-93bd-ffa9b1f22235.webp",
+              "https://msk-katalog.ru/image/cache/catalog/Samsung/Samsung%20Galaxy%20A23/%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-07-04%20114524.png_702.webp"
             ]
           },
           "price": 200,
@@ -54,12 +54,12 @@
           "id": 2,
           "title": "Apple iPhone 15 Pro Max 256GB",
           "image": {
-            "main": "",
+            "main": "https://castore.uz/upload/iblock/00d/k4gghus37wmhycgjirpvopn4mb2r6q13/smartfon-apple-iphone-15-pro-max-256gb-black-titanium.jpeg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://castore.uz/upload/iblock/440/6ljoz9sn8tdybqgaup5gewt0i26m11cg/smartfon-apple-iphone-15-pro-max-256gb-black-titanium-2.jpeg",
+              "https://yabloki.ua/media/cache/sylius_shop_product_original/2a/7a/iphone-15-pro-max-space-black-256-mb-4.png.webp",
+              "https://castore.uz/upload/iblock/11e/6u96i5q6zav02rxme3iw4hk3gbm1svyg/smartfon-apple-iphone-15-pro-max-256gb-black-titanium-9.jpeg",
+              "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/6081594975a764c8e3a691fa2b3a321d2023092315051040999HBm6OKJ4v8.png.webp"
             ]
           },
           "price": 999,
@@ -82,12 +82,12 @@
           "id": 3,
           "title": "Xiaomi 13 Ultra 512GB",
           "image": {
-            "main": "",
+            "main": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWQOGb6hiHDNY3iJd7CD0dHaSq6wrzrgi3NA&s",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://asset.openshop.uz/storage/uploads/products/photos/202308/VSTDRv8H0IwsybRMGo5AMvM94sr8domCkdlJTP0L.jpg",
+              "https://olcha.uz/image/700x700/products/supplier/stores/1/2023-08-19/HUFQqpEGp47HrvTuojtgzhWRZFu1d6ieZWlwDd5JTC3baD9Jl4a1L0XO4Opp.jpg",
+              "https://best-magazin.com/image/cache/catalog/product/Telephone/Xiaomi/2023/13-ultra/smartfon-xiaomi-13-ultra-black-otzivi-800x800.jpg",
+              "https://api.2droida.ru/storage/descriptions/t8340/moskva/smartfon_xiaomi_13_ultra_16_512gb_black_global_rom_moskva_kupit_nedorogo_8636.jpg"
             ]
           },
           "price": 650,
@@ -110,12 +110,12 @@
           "id": 4,
           "title": "Huawei Mate 50 Pro 256GB",
           "image": {
-            "main": "",
+            "main": "https://images-cdn.ubuy.co.in/65a665b9f9ecd50e7e7339ba-huawei-mate-50-pro-6-74-8-256gb.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://cactus.site/image/cache/catalog/VladimirGorchakov/HuaweiMate50Pro/ora/3-800x800.jpg",
+              "https://s.alicdn.com/@sc04/kf/Afb58f453cceb472fb15b46b89d142e974.jpg",
+              "https://a.allegroimg.com/s512/12c1d3/8cec89484be19986eef7959f1f65",
+              "https://lombard24.ee/storage/products/40780/normal/5f913acb-d3cf-4333-9e2d-55291b79cb7c.webp"
             ]
           },
           "price": 800,
@@ -138,16 +138,16 @@
           "id": 5,
           "title": "Honor Magic 5 Pro 512GB",
           "image": {
-            "main": "",
+            "main": "https://bestmobilephone.com.au/wp-content/uploads/2023/09/honor-magic-5-Pro-Purple.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://imgservice.suning.cn/uimg1/b2c/image/SWoFX0Mp2kuBKf805KTnxg.jpg_400w_400h_4e",
+              "https://i.ebayimg.com/images/g/D50AAOSwz7JkkTTP/s-l1600.jpg ",
+              "https://ae01.alicdn.com/kf/S5f3cf46d702444fbbb2b9db4b00b6207Z.jpg_960x960.jpg",
+              "https://imgservice.suning.cn/uimg1/b2c/image/SWoFX0Mp2kuBKf805KTnxg.jpg_400w_400h_4e"
             ]
           },
           "price": 550,
-          "color": "silver",
+          "color": "purple",
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
@@ -166,12 +166,12 @@
           "id": 6,
           "title": "Vivo V27 Pro 256GB",
           "image": {
-            "main": "",
+            "main": "https://slot.ng/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/v/i/vivo_v30_lite-removebg-preview.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://fdn.gsmarena.com/imgroot/news/23/02/vivo-v27-v27pro-v27e-ofic/v27e/-1200x900m/gsmarena_003.jpg",
+              "https://s.ek.ua/jpg/2867769.jpg",
+              "https://fdn.gsmarena.com/imgroot/news/23/02/vivo-v27-v27pro-v27e-ofic/v27e/-1200x900m/gsmarena_003.jpg",
+              "https://slot.ng/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/v/i/vivo_v30_lite-removebg-preview.png"
             ]
           },
           "price": 480,
@@ -179,7 +179,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 22,
+          "discount": 0,
           "brand": "vivo",
           "ram": 8,
           "screenSize": 6.78,
@@ -194,12 +194,12 @@
           "id": 7,
           "title": "OnePlus 12 512GB",
           "image": {
-            "main": "",
+            "main": "https://avatars.mds.yandex.net/get-mpic/5242361/2a000001938cd55fbeff0c2ac4797994d605/9hq",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://www.hemfrance.com/38170-thickbox_default/oneplus-12-5g-682-512-gb-16-gb-ram-black.jpg",
+              "https://m.media-amazon.com/images/I/61N5mujsDJL._AC_UF350,350_QL80_.jpg",
+              "https://image01.oneplus.net/media/202405/28/f8085f0019df6133fb41ee707f45aa51.png?x-amz-process=image/format,webp/quality,Q_80",
+              "https://pcshop.ua/image/catalog/FotoOpis/OnePlus/Oneplus%2012%2003.jpg"
             ]
           },
           "price": 799,
@@ -207,7 +207,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 16,
+          "discount": 0,
           "brand": "oneplus",
           "ram": 12,
           "screenSize": 6.82,
@@ -222,12 +222,12 @@
           "id": 8,
           "title": "Motorola Edge 50 Pro",
           "image": {
-            "main": "",
+            "main": "https://www.yaphone.com/6832-large_default/motorola-edge-50-pro-5g.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://dakauf.eu/wp-content/uploads/2024/09/Motorola-Edge-50-Pro-5G-12GB-RAM-512GB-Caneel-Bay.png",
+              "https://rukminim2.flixcart.com/image/480/640/xif0q/mobile/p/o/i/-original-imah4kfuzzxz6tvn.jpeg?q=90",
+              "https://ak-asset.jarir.com/akeneo-prod/asset/0/9/d/2/09d2dbab2430ea0a526ce267c3b5dd7a4311acb9_641114.jpg",
+              "https://motorolain.vtexassets.com/arquivos/ids/159179-800-auto?width=800&height=auto&aspect=true"
             ]
           },
           "price": 599,
@@ -250,12 +250,12 @@
           "id": 9,
           "title": "Samsung Galaxy S24 Ultra",
           "image": {
-            "main": "",
+            "main": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/4ffce04d92a4d6cb21c1494cdfcd6dc12024012013362683201jqRctSTla2.png.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://mini-io-api.texnomart.uz/catalog/product/3567/356714/195143/81185d6e-5278-4424-bcfd-be9f77cd6496.webp",
+              "https://assets.asaxiy.uz/product/items/desktop/a885652bcc2e98dcf0a9f500436ecbd82024031512260481756lCZ3C9dkqg.png.webp",
+              "https://gadgetbd.com/wp-content/uploads/2024/01/Samsung-S24-Ultra-Titanium-Grey.jpg",
+              "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/9b698eb3105bd82528f23d0c92dedfc02024012013362790770JCdrQZfTxz.png.webp"
             ]
           },
           "price": 1299,
@@ -278,12 +278,12 @@
           "id": 10,
           "title": "Google Pixel 8 Pro",
           "image": {
-            "main": "",
+            "main": "https://m.media-amazon.com/images/I/7170fmWL9EL._AC_UF1000,1000_QL80_.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://assets.asaxiy.uz/product/items/desktop/00935f9e261262027d6d65637df10ab52025041521572016824tFf9oAzLGG.jpg.webp",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2sYhuokAonKXYxM9hEO_kOIc74Fxt8seONA&s",
+              "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Pixel_8_in_Obsidian.max-936x936.format-webp.webp",
+              "https://a.428.ua/img/4085436/3000/2000/mobilnyy_telefon_google_pixel_8_pro_12_256gb_obsidian~864~1024.jpg"
             ]
           },
           "price": 999,
@@ -306,12 +306,12 @@
           "id": 11,
           "title": "Samsung Galaxy A54 256GB",
           "image": {
-            "main": "",
+            "main": "https://pimcdn.sharafdg.com/cdn-cgi/image/width=600,height=600,fit=pad,format=webp,quality=70/images/S300852934_1?1708687564",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://mini-io-api.texnomart.uz/catalog/product/3553/355348/194616/7bd872ac-a61c-45cf-92f4-f78d3729ee69.webp",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4NKc8dJCdFBW7DHOQBjAuS4YvZ_1f7xF_mQ&s",
+              "https://images.samsung.com/is/image/samsung/assets/de/galaxy-a54-5g/color-section/galaxy-a54-light-violet.jpgq",
+              "https://static.insales-cdn.com/images/products/1/4992/790786944/import_files_fe_feaf0a866de211eea2b900155d883509_d4b3e69a949711eea2bb00155d883509.png"
             ]
           },
           "price": 420,
@@ -334,12 +334,12 @@
           "id": 12,
           "title": "Apple iPhone 14 Pro",
           "image": {
-            "main": "",
+            "main": "https://minapi.beemarket.uz/prod-media/productImages/1718099428hENpsJcAbGK8.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://mini-io-api.texnomart.uz/catalog/product/3547/354761/186232/56ff59c5-5d11-46f0-ba7d-7ef697857296.jpg",
+              "https://api.idea.uz/storage/products/November2022/OCQCqIY2YLc1QZvixFiO.png",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW-bFH0-xsrVjubTyJ5zAHrN5rkNYvChMNOg&s",
+              "https://cdn.mediapark.uz/imgs/8bd540bb-7acc-4997-b33d-ed58e3f352ab_2_@1300.webp"
             ]
           },
           "price": 899,
@@ -347,7 +347,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 17,
+          "discount": 0,
           "brand": "apple",
           "ram": 6,
           "screenSize": 6.1,
@@ -362,12 +362,12 @@
           "id": 13,
           "title": "Xiaomi Redmi Note 13",
           "image": {
-            "main": "",
+            "main": "https://mini-io-api.texnomart.uz/catalog/product/3566/356659/204394/c181d607-acf2-4e59-a432-eddbffd0f6eb.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://mini-io-api.texnomart.uz/catalog/product/3566/356659/197034/41833e09-2f58-4713-96c0-952ff977aace.webp",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoPYAP_V-ZW8HhwQXTM03F84Cl9axQQBVmIw&s",
+              "https://mini-io-api.texnomart.uz/catalog/product/3566/356655/204390/8782a0bc-fec1-4589-ae93-08c9ff243d6e.webp",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZhp1r4Z7ESbE_gqHBc_n71bmBpN8IriSPgA&s"
             ]
           },
           "price": 350,
@@ -375,7 +375,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 32,
+          "discount": 0,
           "brand": "xiaomi",
           "ram": 8,
           "screenSize": 6.67,
@@ -385,62 +385,6 @@
           "star": 4.4,
           "date": "17.11.2025",
           "energy": 5000
-        },
-        {
-          "id": 14,
-          "title": "Nokia G42 5G",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 299,
-          "color": "dark cyan",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 24,
-          "brand": "nokia",
-          "ram": 6,
-          "screenSize": 6.58,
-          "processor": "Android 13",
-          "gpuBrand": "MediaTek Dimensity 820",
-          "driveSize": 128,
-          "star": 4.3,
-          "date": "16.11.2025",
-          "energy": 5000
-        },
-        {
-          "id": 15,
-          "title": "Realme 12 Pro Plus",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 599,
-          "color": "gold",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 19,
-          "brand": "realme",
-          "ram": 12,
-          "screenSize": 6.7,
-          "processor": "Android 14",
-          "gpuBrand": "Snapdragon 7 Gen 3 Lead",
-          "driveSize": 512,
-          "star": 4.6,
-          "date": "15.11.2025",
-          "energy": 5000
         }
       ],
       "laptop": [
@@ -448,12 +392,12 @@
           "id": 1,
           "title": "MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch",
           "image": {
-            "main": "",
+            "main": "https://macbro.uz/cdn/shop/files/3_c273a2d7-2549-4b29-85f0-34bacaa38f94.png?v=1744802965",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://macbro.uz/cdn/shop/files/4_179e8c1c-ddf3-42c4-aa47-c1bebcc22cb1.png?v=1744802965",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeREXQRo1XCggxAzDvbnX6fRxfoUYM_Va8XA&s",
+              "https://oechsle.vteximg.com.br/arquivos/ids/10033188-1000-1000/imageUrl_4.jpg?v=637941776950200000",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQo9dGgUYFVSOP0RTmxdb7uevynCqa9PC5Cw&s"
             ]
           },
           "price": 1499,
@@ -477,12 +421,12 @@
           "id": 2,
           "title": "Dell XPS 13 Plus",
           "image": {
-            "main": "",
+            "main": "https://m.media-amazon.com/images/I/71Bc0CG6RkL.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://microless.com/cdn/products/e3b2609ddcc42c3e8ded2732982e2f4b-hi.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDfv2qK5bfJDVl29L-orN4rrmff0yDZIftDQ&s",
+              "https://www.dpreview.com/files/p/articles/0504567219/dell-xps-13-plus-2.jpeg",
+              "https://www.dpreview.com/files/p/articles/4837578893/Dell_XPS_13_Plus_1.png"
             ]
           },
           "price": 1199,
@@ -490,7 +434,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 12,
+          "discount": 0,
           "brand": "dell",
           "ram": 16,
           "screenSize": 13.4,
@@ -506,12 +450,12 @@
           "id": 3,
           "title": "HP Pavilion 15",
           "image": {
-            "main": "",
+            "main": "https://nout.uz/wp-content/uploads/2023/02/84-1-1024x769.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://nout.uz/wp-content/uploads/2023/02/87-1024x769.png",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS01Mt-PXe-kiyhsm30zAHJVB6f6VV-Sgi6qQ&s",
+              "https://m.media-amazon.com/images/I/81NF8kgcsZL._AC_UF894,1000_QL80_.jpg",
+              "https://nout.uz/wp-content/uploads/2023/02/86-1024x769.png"
             ]
           },
           "price": 599,
@@ -535,12 +479,12 @@
           "id": 4,
           "title": "Lenovo ThinkPad X1 Carbon",
           "image": {
-            "main": "",
+            "main": "https://pcmarket.uz/wp-content/uploads/2024/12/0-1.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://pcmarket.uz/wp-content/uploads/2024/12/5.png",
+              "https://pcmarket.uz/wp-content/uploads/2024/12/3.png",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXkg7iSkGB7bbynNDwkWsDPUQKydQZSo0DbA&s",
+              "https://techforgood.com.au/cdn/shop/files/lenovo-thinkpad-x1-carbon-intel-intel-core-i7-155u-laptop-14-16gb-or-512gb-ssd-or-black-techforgood-12.jpg?v=1717667702"
             ]
           },
           "price": 1299,
@@ -564,12 +508,12 @@
           "id": 5,
           "title": "ASUS VivoBook 15",
           "image": {
-            "main": "",
+            "main": "https://nout.uz/wp-content/uploads/2024/07/1-1-1.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://dl.bs365.uz/storage/products/28833/S6P2Jh4SFr3TJqXOHMyz-medium_default.jpg",
+              "https://dl.bs365.uz/storage/products/28833/LZCNHB2wQcTqMYTEP9Ik-medium_default.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMcA5XyuuD4-S6NWq1ank8IgkYvc8NdWv8nw&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYy4PwMvnFf72U3dQkSC2Sr5fx4MSqlkRvUQ&s"
             ]
           },
           "price": 749,
@@ -588,238 +532,6 @@
           "date": "25.11.2025",
           "height": 1.8,
           "widht": 35.8
-        },
-        {
-          "id": 6,
-          "title": "Acer Aspire 5",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 699,
-          "color": "blue",
-          "guaranteed": true,
-          "freeDelivery": false,
-          "inStock": true,
-          "discount": 19,
-          "brand": "acer",
-          "ram": 8,
-          "screenSize": 15.6,
-          "processor": "Intel Core i5",
-          "gpuBrand": "NVIDIA GeForce",
-          "driveSize": 256,
-          "star": 4.4,
-          "date": "24.11.2025",
-          "height": 1.9,
-          "widht": 36.2
-        },
-        {
-          "id": 7,
-          "title": "MSI Modern 15",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 899,
-          "color": "gray",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 0,
-          "brand": "msi",
-          "ram": 16,
-          "screenSize": 15.6,
-          "processor": "Intel Core i7",
-          "gpuBrand": "Intel Iris Xe",
-          "driveSize": 512,
-          "star": 4.6,
-          "date": "23.11.2025",
-          "height": 1.75,
-          "widht": 35.9
-        },
-        {
-          "id": 8,
-          "title": "Razer Blade 15",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 1899,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 9,
-          "brand": "razer",
-          "ram": 32,
-          "screenSize": 15.6,
-          "processor": "Intel Core i9",
-          "gpuBrand": "RTX 4080",
-          "driveSize": 1024,
-          "star": 4.8,
-          "date": "22.11.2025",
-          "height": 1.99,
-          "widht": 35.7
-        },
-        {
-          "id": 9,
-          "title": "ASUS ROG Zephyrus",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 2199,
-          "color": "transparent",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": false,
-          "discount": 0,
-          "brand": "asus",
-          "ram": 32,
-          "screenSize": 14,
-          "processor": "Intel Core i9",
-          "gpuBrand": "RTX 4090",
-          "driveSize": 2048,
-          "star": 4.9,
-          "date": "21.11.2025",
-          "height": 1.99,
-          "widht": 30.9
-        },
-        {
-          "id": 10,
-          "title": "Gigabyte Aero 15",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 1599,
-          "color": "midnight black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 11,
-          "brand": "gigabyte",
-          "ram": 16,
-          "screenSize": 15.6,
-          "processor": "Intel Core i7",
-          "gpuBrand": "RTX 4070",
-          "driveSize": 512,
-          "star": 4.7,
-          "date": "20.11.2025",
-          "height": 2,
-          "widht": 35.8
-        },
-        {
-          "id": 11,
-          "title": "LG Gram 17",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 1299,
-          "color": "silver",
-          "guaranteed": true,
-          "freeDelivery": false,
-          "inStock": true,
-          "discount": 0,
-          "brand": "lg",
-          "ram": 16,
-          "screenSize": 17,
-          "processor": "Intel Core i7",
-          "gpuBrand": "Intel Iris Xe",
-          "driveSize": 512,
-          "star": 4.6,
-          "date": "19.11.2025",
-          "height": 1.5,
-          "widht": 37.8
-        },
-        {
-          "id": 12,
-          "title": "Alienware m15 R7",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 1799,
-          "color": "dark gray",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 12,
-          "brand": "alienware",
-          "ram": 32,
-          "screenSize": 15.6,
-          "processor": "Intel Core i9",
-          "gpuBrand": "RTX 4080",
-          "driveSize": 1024,
-          "star": 4.8,
-          "date": "18.11.2025",
-          "height": 2.5,
-          "widht": 36
-        },
-        {
-          "id": 13,
-          "title": "Framework Laptop",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 1299,
-          "color": "aluminum",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 0,
-          "brand": "framework",
-          "ram": 16,
-          "screenSize": 13.3,
-          "processor": "Intel Core i7",
-          "gpuBrand": "Iris Xe Graphics",
-          "driveSize": 512,
-          "star": 4.7,
-          "date": "17.11.2025",
-          "height": 1.3,
-          "widht": 29.8
         }
       ],
       "washingmachines": [
@@ -896,7 +608,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 8,
+          "discount": 0,
           "brand": "bosch",
           "capacity": 8,
           "rpm": 1600,
@@ -952,7 +664,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 15,
+          "discount": 0,
           "brand": "beko",
           "capacity": 7,
           "rpm": 1200,
@@ -962,146 +674,6 @@
           "date": "14.11.2025",
           "height": 84,
           "widht": 59
-        },
-        {
-          "id": 6,
-          "title": "Indesit MTWE 81483",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 380,
-          "color": "white",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": false,
-          "discount": 9,
-          "brand": "indesit",
-          "capacity": 8,
-          "rpm": 1400,
-          "energyClass": "A++",
-          "noiseLevel": 76,
-          "star": 4.3,
-          "date": "15.11.2025",
-          "height": 85,
-          "widht": 60
-        },
-        {
-          "id": 7,
-          "title": "Siemens iQ500 WM14UT75PL",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 710,
-          "color": "silver",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 0,
-          "brand": "siemens",
-          "capacity": 9,
-          "rpm": 1400,
-          "energyClass": "A+++",
-          "noiseLevel": 67,
-          "star": 4.9,
-          "date": "16.11.2025",
-          "height": 85,
-          "widht": 60
-        },
-        {
-          "id": 8,
-          "title": "Candy Smart CS 1292D3",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 320,
-          "color": "white",
-          "guaranteed": false,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 0,
-          "brand": "candy",
-          "capacity": 9,
-          "rpm": 1200,
-          "energyClass": "A",
-          "noiseLevel": 78,
-          "star": 4.1,
-          "date": "17.11.2025",
-          "height": 85,
-          "widht": 60
-        },
-        {
-          "id": 9,
-          "title": "Hisense WFVC6010S",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 295,
-          "color": "grey",
-          "guaranteed": true,
-          "freeDelivery": false,
-          "inStock": true,
-          "discount": 11,
-          "brand": "hisense",
-          "capacity": 6,
-          "rpm": 1000,
-          "energyClass": "A+",
-          "noiseLevel": 79,
-          "star": 4,
-          "date": "18.11.2025",
-          "height": 85,
-          "widht": 59
-        },
-        {
-          "id": 10,
-          "title": "Ariston Hotpoint Natis RSG 825",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 470,
-          "color": "white",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 0,
-          "brand": "hotpoint",
-          "capacity": 8,
-          "rpm": 1200,
-          "energyClass": "A++",
-          "noiseLevel": 74,
-          "star": 4.4,
-          "date": "19.11.2025",
-          "height": 85,
-          "widht": 60
         }
       ],
       "heaters": [
