@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import logoShoporia from "/public/logoShoporia.png";
+import logoShoporia from "../../../../assets/LogoImages/SHOPORIA-logo.png";
 function LoginLayout() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center p-4">
