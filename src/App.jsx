@@ -57,6 +57,7 @@ import ProfileLayout from "./features/shop/components/SideBar/ProfileLayout";
 import Skeleton from "./features/shop/Skeleton/Skeleton";
 import ProtectedRoute from "./features/shop/components/ProtectedRoute/ProtectedRoute";
 import LoginLayout from "./features/shop/components/LoginLayout.jsx/LoginLayout";
+import Instalments from "./features/shop/pages/PaymentInstalments/Instalments";
 
 function App() {
   return (
@@ -138,6 +139,14 @@ function App() {
           element={
             <LayOut>
               <About />
+            </LayOut>
+          }
+        />
+        <Route
+          path="/profile/payment-instalments/instalments"
+          element={
+            <LayOut>
+              <Instalments/>
             </LayOut>
           }
         />
