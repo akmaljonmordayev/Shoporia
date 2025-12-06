@@ -8,6 +8,9 @@ import axiosClient from "../../../../api/axiosClient";
 import { Link } from "react-router-dom";
 import useGetAll from "../../../../hooks/UseGetAll";
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
+import Ourblogs from "../../components/Our Blogs/ourBlogs";
+import Meta from "../../components/Meta/Meta";
+import Support from "../../components/Support/Support";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -200,8 +203,12 @@ export default function Home() {
               </SwiperSlide>
             ))}
           </Swiper>
+
         </div>
       </div>
+      <Ourblogs/>
+      <Meta/>
+      <Support/>
     </div>
   );
 }
