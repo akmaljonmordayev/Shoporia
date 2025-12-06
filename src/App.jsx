@@ -143,6 +143,14 @@ function App() {
           }
         />
         <Route
+          path="/profile/payment-instalments/instalments"
+          element={
+            <LayOut>
+              <Instalments/>
+            </LayOut>
+          }
+        />
+        <Route
           path="/blog/:id"
           element={
             <LayOut>
