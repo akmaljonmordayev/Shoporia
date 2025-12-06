@@ -4,7 +4,7 @@ import pictNotFound from "../Not_Found/img/notFound5.png";
 
 function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-100 to-white px-6 text-center">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b to-white px-6 text-center">
       <div className="flex flex-col items-center max-w-xl ">
         <img
           src={pictNotFound}

@@ -1,7 +1,10 @@
+import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axiosClient from "../api/axiosClient";
 
-export const useGetAll = (endpoint, queryKey = ["data"]) => {
+const useGetAll = (endpoint, queryKey = ["data"]) => {
+  const [result, setResult] = useState(null);
+
   const fetchData = async () => {
     const res = await axiosClient.get(endpoint);
     return res;
@@ -13,6 +16,13 @@ export const useGetAll = (endpoint, queryKey = ["data"]) => {
     staleTime: 5 * 60 * 1000,
     refetchOnWindowFocus: false,
   });
+  useEffect(() => {
+    if (data) {
+      setResult(data);
+    }
+  }, [data]);
 
-  return { data, isLoading, isError, refetch };
+  return { data: result, isLoading, isError, refetch };
 };
+
+export default useGetAll;

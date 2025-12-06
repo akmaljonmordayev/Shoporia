@@ -1,16 +1,20 @@
-import React from "react";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-function LayOut({ children }) {
+import React from 'react'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
+import Container from '../Container/Container'
+
+function LayOut ({ children }) {
   return (
-    <>
+    <div className='min-h-screen flex flex-col'>
       <Header />
-      <div className="pt-24">
-        {children}
-      </div>
+
+      <main className='flex-1'>
+        <Container>{children}</Container>
+      </main>
+
       <Footer />
-    </>
-  );
+    </div>
+  )
 }
 
-export default LayOut;
+export default LayOut

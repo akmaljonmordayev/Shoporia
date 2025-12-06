@@ -1,104 +1,199 @@
 import React, { Suspense } from "react";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import LayOut from "./features/shop/components/layOut/LayOut";
 import NotFound from "./components/Not_Found/Not_Found";
+
 const Product = React.lazy(() =>
   import("./features/shop/pages/Products/Product")
 );
 const Faq = React.lazy(() => import("./features/shop/pages/FAQ/Faq"));
 const Home = React.lazy(() => import("./features/shop/pages/Home/Home"));
 const Blog = React.lazy(() => import("./features/shop/pages/Blog/Blog"));
+const OurCommand = React.lazy(() =>
+  import("./features/shop/pages/OurCommand/OurCommand")
+);
 const ContactUs = React.lazy(() =>
   import("./features/shop/pages/ContactUs/ContactUs")
 );
-const Register = React.lazy(() =>
-  import("./features/shop/pages/Register/Register")
-);
+
 const Cart = React.lazy(() => import("./features/shop/pages/Cart/Cart"));
 const About = React.lazy(() => import("./features/shop/pages/About/About"));
-import ProtectedRoute from "./features/shop/components/ProtectedRoute/ProtectedRoute";
+const Profile = React.lazy(() =>
+  import("./features/shop/pages/Profile/Profile")
+);
+const PersonalData = React.lazy(() =>
+  import("./features/shop/pages/PersonalData/PersonalData")
+);
+const PaymentInstalments = React.lazy(() =>
+  import("./features/shop/pages/PaymentInstalments/PaymentInstalments")
+);
+const Orders = React.lazy(() => import("./features/shop/pages/Orders/Orders"));
+const WishList = React.lazy(() =>
+  import("./features/shop/pages/WishList/WishList")
+);
+const Discounts = React.lazy(() =>
+  import("./features/shop/pages/Discounts/Discounts")
+);
+const SecurityAccess = React.lazy(() =>
+  import("./features/shop/pages/SecurityAccess/SecurityAccess")
+);
+const Notification = React.lazy(() =>
+  import("./features/shop/pages/Notification/Notification")
+);
+
+const BlogSingle = React.lazy(() =>
+  import("./features/shop/pages/BlogSingle/BlogSingle")
+);
+const ProductSingle = React.lazy(() =>
+  import("./features/shop/pages/ProductSingle/ProductSingle")
+);
+const CategorySingle = React.lazy(() =>
+  import("./features/shop/pages/CategorySingle/CategorySingle")
+);
+import ProfileLayout from "./features/shop/components/SideBar/ProfileLayout";
 import Skeleton from "./features/shop/Skeleton/Skeleton";
+import ProtectedRoute from "./features/shop/components/ProtectedRoute/ProtectedRoute";
+import LoginLayout from "./features/shop/components/LoginLayout.jsx/LoginLayout";
+import Login from "./features/shop/pages/Register/Login";
+import CreateAcc from "./features/shop/pages/Register/CreateAcc";
+
 function App() {
   return (
-    <>
-      <Suspense fallback={<Skeleton />}>
-        <Routes>
-          <Route
-            path="/"
-            element={
+    <Suspense fallback={<Skeleton />}>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
               <LayOut>
                 <Home />
               </LayOut>
-            }
-          />
-          <Route
-            path="*"
-            element={
-              <LayOut>
-                <NotFound />
-              </LayOut>
-            }
-          />
-          <Route
-            path="/blog"
-            element={
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/blog"
+          element={
+            <ProtectedRoute>
               <LayOut>
                 <Blog />
               </LayOut>
-            }
-          />
-          <Route
-            path="/faq"
-            element={
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/ourcommand"
+          element={
+            <LayOut>
+              <OurCommand />
+            </LayOut>
+          }
+        />
+        <Route
+          path="/faq"
+          element={
+            <ProtectedRoute>
               <LayOut>
                 <Faq />
               </LayOut>
-            }
-          />
-          <Route
-            path="/product"
-            element={
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/products"
+          element={
+            <ProtectedRoute>
               <LayOut>
                 <Product />
               </LayOut>
-            }
-          />
-          <Route
-            path="/contact-us"
-            element={
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/contact-us"
+          element={
+            <ProtectedRoute>
               <LayOut>
                 <ContactUs />
               </LayOut>
-            }
-          />
-          <Route
-            path="/cart"
-            element={
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <ProtectedRoute>
               <LayOut>
                 <Cart />
               </LayOut>
-            }
-          />
-          <Route
-            path="/register"
-            element={
-              <LayOut>
-                <Register />
-              </LayOut>
-            }
-          />
-          <Route
-            path="/about"
-            element={
-              <LayOut>
-                <About />
-              </LayOut>
-            }
-          />
-        </Routes>
-      </Suspense>
-    </>
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/auth" element={<LoginLayout />}>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<CreateAcc />} />
+        </Route>
+        <Route
+          path="/about"
+          element={
+            <LayOut>
+              <About />
+            </LayOut>
+          }
+        />
+        <Route
+          path="/profile/payment-instalments/instalments"
+          element={
+            <LayOut>
+              <Instalments/>
+            </LayOut>
+          }
+        />
+        <Route
+          path="/blog/:id"
+          element={
+            <LayOut>
+              <BlogSingle />
+            </LayOut>
+          }
+        />
+        <Route
+          path="/products/:id"
+          element={
+            <LayOut>
+              <ProductSingle />
+            </LayOut>
+          }
+        />
+        <Route
+          path="/:categoryName"
+          element={
+            <LayOut>
+              <CategorySingle />
+            </LayOut>
+          }
+        />
+        <Route path="/profile" element={<ProfileLayout />}>
+          <Route index element={<Profile />} />
+          <Route path="personal-data" element={<PersonalData />} />
+          <Route path="payment-instalments" element={<PaymentInstalments />} />
+          <Route path="orders" element={<Orders />} />
+          <Route path="wish-list" element={<WishList />} />
+          <Route path="discounts" element={<Discounts />} />
+          <Route path="security-access" element={<SecurityAccess />} />
+          <Route path="notification" element={<Notification />} />
+        </Route>
+        <Route
+          path="*"
+          element={
+            <LayOut>
+              <NotFound />
+            </LayOut>
+          }
+        />
+      </Routes>
+    </Suspense>
   );
 }
 

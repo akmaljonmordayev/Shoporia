@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "json-server": "json-server --watch db.json --port 5000"
+    "start": "json-server --watch db.json --port 5000"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -19,6 +19,7 @@
     "chart.js": "^4.5.1",
     "dayjs": "^1.11.19",
     "framer-motion": "^12.23.24",
+    "json-server": "^1.0.0-beta.3",
     "react": "^19.1.1",
     "react-chartjs-2": "^5.3.1",
     "react-dom": "^19.1.1",
