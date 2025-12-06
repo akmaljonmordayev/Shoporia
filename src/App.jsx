@@ -57,6 +57,7 @@ import ProtectedRoute from "./features/shop/components/ProtectedRoute/ProtectedR
 import LoginLayout from "./features/shop/components/LoginLayout.jsx/LoginLayout";
 import Login from "./features/shop/pages/Register/Login";
 import CreateAcc from "./features/shop/pages/Register/CreateAcc";
+import Instalments from "./features/shop/pages/PaymentInstalments/Instalments";
 
 function App() {
   return (
@@ -139,6 +140,14 @@ function App() {
           element={
             <LayOut>
               <About />
+            </LayOut>
+          }
+        />
+        <Route
+          path="/profile/payment-instalments/instalments"
+          element={
+            <LayOut>
+              <Instalments/>
             </LayOut>
           }
         />
