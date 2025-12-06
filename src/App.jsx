@@ -16,9 +16,7 @@ const OurCommand = React.lazy(() =>
 const ContactUs = React.lazy(() =>
   import("./features/shop/pages/ContactUs/ContactUs")
 );
-const Register = React.lazy(() =>
-  import("./features/shop/pages/Register/Register")
-);
+
 const Cart = React.lazy(() => import("./features/shop/pages/Cart/Cart"));
 const About = React.lazy(() => import("./features/shop/pages/About/About"));
 const Profile = React.lazy(() =>
@@ -57,6 +55,8 @@ import ProfileLayout from "./features/shop/components/SideBar/ProfileLayout";
 import Skeleton from "./features/shop/Skeleton/Skeleton";
 import ProtectedRoute from "./features/shop/components/ProtectedRoute/ProtectedRoute";
 import LoginLayout from "./features/shop/components/LoginLayout.jsx/LoginLayout";
+import Login from "./features/shop/pages/Register/Login";
+import CreateAcc from "./features/shop/pages/Register/CreateAcc";
 
 function App() {
   return (
@@ -131,7 +131,8 @@ function App() {
           }
         />
         <Route path="/auth" element={<LoginLayout />}>
-          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<CreateAcc />} />
         </Route>
         <Route
           path="/about"

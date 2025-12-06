@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import axiosClient from "../api/axiosClient";
 
-export const usePost = (endpoint, invalidateKey = ["data"]) => {
+const usePost = (endpoint, invalidateKey = ["data"]) => {
   const queryClient = useQueryClient();
 
   const mutationFn = async (body) => {
@@ -21,3 +21,5 @@ export const usePost = (endpoint, invalidateKey = ["data"]) => {
 
   return { mutate, data, isLoading, isError };
 };
+
+export default usePost;

@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import axiosClient from "../../../../api/axiosClient";
 import { Link } from "react-router-dom";
 import useGetAll from "../../../../hooks/UseGetAll";
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
@@ -29,6 +28,7 @@ export default function Home() {
         .flat()
         .filter((item) => item.discount > 0)
     : [];
+
   return (
     <div className="w-full bg-white">
       <div className="py-10 px-6 md:py-16 md:px-8">

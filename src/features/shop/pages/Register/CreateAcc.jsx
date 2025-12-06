@@ -1,5 +1,5 @@
 import "../../../../index.css";
-import React, { useState } from "react";
+import React, { useId, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
@@ -13,6 +13,9 @@ import { TbUser } from "react-icons/tb";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
+import usePost from "../../../../hooks/usePost";
+import { useNavigate } from "react-router-dom";
+import useGetAll from "../../../../hooks/UseGetAll";
 
 const schema = Yup.object({
   fullname: Yup.string()
@@ -31,6 +34,10 @@ const schema = Yup.object({
 
 function CreateAcc() {
   const [showPassword, setShowPassword] = useState(false);
+  const { data: users } = useGetAll("/users", ["usersData"]);
+
+  const { mutate, data, isError, isLoading } = usePost("/users", ["users"]);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -41,17 +48,26 @@ function CreateAcc() {
   });
 
   const onSubmit = (data) => {
+    if (!users) return;
+    const lastUser = users[users.length - 1];
+    const newUserId = lastUser ? Number(lastUser.id) + 1 : 1;
     const user = {
-      name: data.fullname,
+      id: newUserId,
+      userId: newUserId,
+      fullName: data.fullname,
       email: data.email,
       password: data.password,
+      addres: "",
     };
-    localStorage.setItem("user", JSON.stringify(user));
-    toast.success("Account created!");
-
-    setTimeout(() => {
-      window.location.href = "/login";
-    }, 1000);
+    mutate(user, {
+      onSuccess: (res) => {
+        toast.success("Account created!");
+        navigate("/auth/login");
+      },
+      onError: (err) => {
+        toast.error("Account not Created!");
+      },
+    });
   };
 
   return (
@@ -122,7 +138,7 @@ function CreateAcc() {
 
         <p className="text-center text-sm text-gray-600 mt-4">
           Already have an account?{" "}
-          <Link to="/login" className="text-blue-600 hover:underline">
+          <Link to="/auth/login" className="text-blue-600 hover:underline">
             sign in
           </Link>
         </p>
