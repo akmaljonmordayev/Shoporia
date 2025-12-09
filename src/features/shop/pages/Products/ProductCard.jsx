@@ -30,7 +30,7 @@ function ProductCard({ product, isWishlisted, onToggleWishlist, onAddToCart }) {
       {/* Product Image */}
       <div className="w-full h-56 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center mb-3">
         <img
-          src={product.image || "https://via.placeholder.com/200"}
+          src={product.image?.main || "https://via.placeholder.com/200"}
           alt={product.title}
           className="w-full h-full object-cover"
         />
@@ -94,8 +94,6 @@ function ProductCard({ product, isWishlisted, onToggleWishlist, onAddToCart }) {
           </div>
         </div>
       )}
-
-      {/* Add to Cart Button */}
       <button
         onClick={() => onAddToCart(product.id)}
         className="w-full bg-orange-500 hover:bg-orange-600 transition text-white font-semibold py-2 px-3 rounded-lg flex items-center justify-center gap-2"
