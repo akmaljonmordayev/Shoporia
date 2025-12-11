@@ -3,7 +3,7 @@ import { LuUserRound } from "react-icons/lu";
 import { PiKey } from "react-icons/pi";
 import { MdMailOutline } from "react-icons/md";
 import { BsTelephone } from "react-icons/bs";
-import { BiDirections,BiMessageSquareEdit  } from "react-icons/bi";
+import { BiDirections, BiMessageSquareEdit } from "react-icons/bi";
 import { TbSmartHome } from "react-icons/tb";
 
 function PersonalData({ name, mail, number, password, address, postCode }) {
@@ -13,7 +13,6 @@ function PersonalData({ name, mail, number, password, address, postCode }) {
       <p className="text-gray-500 text-sm">Verify your identity</p>
 
       <div className="grid grid-cols-2 gap-6 mt-4">
-
         <div className="flex flex-col gap-1">
           <label className="text-gray-500 text-sm">Full name</label>
           <div className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-xl py-3 px-4">
@@ -24,7 +23,7 @@ function PersonalData({ name, mail, number, password, address, postCode }) {
               className="flex-1 bg-transparent outline-none text-gray-700"
               disabled
             />
-            <BiMessageSquareEdit  className="text-blue-500 text-lg cursor-pointer" />
+            <BiMessageSquareEdit className="text-blue-500 text-lg cursor-pointer" />
           </div>
         </div>
 
@@ -38,7 +37,7 @@ function PersonalData({ name, mail, number, password, address, postCode }) {
               className="flex-1 bg-transparent outline-none text-gray-700"
               disabled
             />
-            <BiMessageSquareEdit  className="text-blue-500 text-lg cursor-pointer" />
+            <BiMessageSquareEdit className="text-blue-500 text-lg cursor-pointer" />
           </div>
         </div>
 
@@ -52,7 +51,7 @@ function PersonalData({ name, mail, number, password, address, postCode }) {
               className="flex-1 bg-transparent outline-none text-gray-700"
               disabled
             />
-            <BiMessageSquareEdit  className="text-blue-500 text-lg cursor-pointer" />
+            <BiMessageSquareEdit className="text-blue-500 text-lg cursor-pointer" />
           </div>
         </div>
 
@@ -66,7 +65,7 @@ function PersonalData({ name, mail, number, password, address, postCode }) {
               className="flex-1 bg-transparent outline-none text-gray-700"
               disabled
             />
-            <BiMessageSquareEdit  className="text-blue-500 text-lg cursor-pointer" />
+            <BiMessageSquareEdit className="text-blue-500 text-lg cursor-pointer" />
           </div>
         </div>
 
@@ -80,7 +79,7 @@ function PersonalData({ name, mail, number, password, address, postCode }) {
               className="flex-1 bg-transparent outline-none text-gray-700"
               disabled
             />
-            <BiMessageSquareEdit  className="text-blue-500 text-lg cursor-pointer" />
+            <BiMessageSquareEdit className="text-blue-500 text-lg cursor-pointer" />
           </div>
         </div>
 
@@ -94,10 +93,9 @@ function PersonalData({ name, mail, number, password, address, postCode }) {
               className="flex-1 bg-transparent outline-none text-gray-700"
               disabled
             />
-            <BiMessageSquareEdit  className="text-blue-500 text-lg cursor-pointer" />
+            <BiMessageSquareEdit className="text-blue-500 text-lg cursor-pointer" />
           </div>
         </div>
-
       </div>
     </div>
   );
