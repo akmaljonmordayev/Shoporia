@@ -1,4 +1,3 @@
-
 import axios from "axios";
 const axiosClient = axios.create({
   baseURL: "https://shoporia-o6ja.onrender.com/",

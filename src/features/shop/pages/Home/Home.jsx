@@ -173,7 +173,7 @@ export default function Home() {
               "--swiper-pagination-color": "#fff",
             }}
           >
-            {/* {discountedProducts?.map((product) => (
+            {discountedProducts?.map((product) => (
               <SwiperSlide key={product.id}>
                 <Link to={`/products/${product.id}`}>
                   <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
@@ -240,7 +240,7 @@ export default function Home() {
                   </div>
                 </Link>
               </SwiperSlide>
-            ))} */}
+            ))}
           </Swiper>
         </div>
       </div>
