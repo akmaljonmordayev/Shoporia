@@ -1899,17 +1899,17 @@
     {
       "id": 2,
       "categoryImage": "https://www.instaxcanada.ca/wp-content/uploads/2023/03/230118-Instax-Mini-12-360_2000px_v2.gif",
-      "categoryName": "Camera"
+      "categoryName": "Cameras"
     },
     {
       "id": 3,
       "categoryImage": "https://villman.com/product_photos/gif_ng155.gif",
-      "categoryName": "Laptop"
+      "categoryName": "Laptops"
     },
     {
       "id": 4,
       "categoryImage": "https://www.apple.com/newsroom/images/product/iphone/lifestyle/apple_iphone-12_mag-safe_10132020_inline.gif.large.gif",
-      "categoryName": "Smart Phone"
+      "categoryName": "Smart Phones"
     },
     {
       "id": 5,
@@ -1919,7 +1919,32 @@
     {
       "id": 6,
       "categoryImage": "https://castore.uz/upload/iblock/682/smart-chasy-amazfit-gts-blue.gif",
-      "categoryName": "Smart Watch"
+      "categoryName": "Smart Watches"
+    },
+    {
+      "id": 7,
+      "categoryImage": "https://png.pngtree.com/png-vector/20231007/ourmid/pngtree-modern-tower-heater-png-image_10140570.png",
+      "categoryName": "Heaters"
+    },
+    {
+      "id": 8,
+      "categoryImage": "https://media.tenor.com/HfH9H-SbjNgAAAAM/smart-tv.gif",
+      "categoryName": "TVs"
+    },
+    {
+      "id": 9,
+      "categoryImage": "https://media.tenor.com/-euv1sjdN_8AAAAM/washing-machine.gif",
+      "categoryName": "Washing Machines"
+    },
+    {
+      "id": 10,
+      "categoryImage": "https://media.tenor.com/fZDV4mQSSH0AAAAM/air-conditioner-cooling.gif",
+      "categoryName": "Air Conditioners"
+    },
+    {
+      "id": 11,
+      "categoryImage": "https://media.tenor.com/ue3EcmRiSyEAAAAM/speaker-audio.gif",
+      "categoryName": "Audio"
     }
   ],
   "youtubeVideos": [
