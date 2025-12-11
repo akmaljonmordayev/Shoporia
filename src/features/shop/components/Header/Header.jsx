@@ -39,8 +39,10 @@ function Header() {
   };
 
   return (
-    <div className="py-[50px] ">
-      <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+    <div className="py-[50px] w-full">
+
+      <header className="fixed top-0 left-0 right-0 w-full bg-white shadow-sm z-50">
+
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <NavLink to="/">
             <img
@@ -56,10 +58,9 @@ function Header() {
                 key={item.id}
                 to={item.path}
                 className={({ isActive }) =>
-                  `text-sm font-medium transition ${
-                    isActive
-                      ? "text-blue-600 border-b-2 border-blue-600"
-                      : "text-gray-700 hover:text-blue-600"
+                  `text-sm font-medium transition ${isActive
+                    ? "text-blue-600 border-b-2 border-blue-600"
+                    : "text-gray-700 hover:text-blue-600"
                   }`
                 }
               >
@@ -166,10 +167,9 @@ function Header() {
                 to={item.path}
                 onClick={() => setIsMenuOpen(false)}
                 className={({ isActive }) =>
-                  `block px-4 py-2 rounded-lg text-sm font-medium transition ${
-                    isActive
-                      ? "bg-blue-100 text-blue-600"
-                      : "text-gray-700 hover:bg-gray-100"
+                  `block px-4 py-2 rounded-lg text-sm font-medium transition ${isActive
+                    ? "bg-blue-100 text-blue-600"
+                    : "text-gray-700 hover:bg-gray-100"
                   }`
                 }
               >
