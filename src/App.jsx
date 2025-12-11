@@ -147,7 +147,7 @@ function App() {
           path="/profile/payment-instalments/instalments"
           element={
             <LayOut>
-              <Instalments/>
+              {/* <Instalments/> */}
             </LayOut>
           }
         />

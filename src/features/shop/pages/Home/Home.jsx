@@ -5,11 +5,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
-import useGetAll from "../../../../hooks/UseGetAll";
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
 import Ourblogs from "../../components/Our Blogs/ourBlogs";
 import Meta from "../../components/Meta/Meta";
 import Support from "../../components/Support/Support";
+import Img from "../../components/imgfayl/img";
+import useGetAll from "../../../../hooks/UseGetAll";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -25,11 +26,16 @@ export default function Home() {
     isError: isErrorSale,
     isLoading: isLoadingSale,
   } = useGetAll("/typeOfElectronics", ["typeOfElectronics"]);
+  const { data: blogData } = useGetAll("/blogCart", [`blogCart`]);
+
+
+  console.log(blogData);
+
 
   const discountedProducts = saleData?.length
     ? Object.values(saleData[0])
-        .flat()
-        .filter((item) => item.discount > 0)
+      .flat()
+      .filter((item) => item.discount > 0)
     : [];
 
   return (
@@ -83,23 +89,30 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-white px-6 py-8 md:px-8 md:py-12 border-b">
+      <div className="bg-[#f6f7f9] px-6 py-8 md:px-8 md:py-12 border-b">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {categoryData?.map(({ id, categoryImage, categoryName }) => (
               <Link
                 key={id}
                 to={`/${categoryName}`}
-                className="flex flex-col items-center gap-3 p-4 rounded-lg"
+                className="bg-white flex flex-col items-center justify-between gap-3 p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 border hover:border-gray-300 cursor-pointer"
               >
-                <div>
-                  <CategoryCard title={categoryName} image={categoryImage} />
-                </div>
+                <img
+                  src={categoryImage}
+                  alt={categoryName}
+                  className="w-16 h-16 object-contain"
+                />
+
+                <p className="text-sm font-medium text-gray-800 text-center">
+                  {categoryName}
+                </p>
               </Link>
             ))}
           </div>
         </div>
       </div>
+
 
       <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 py-12 px-6 md:py-16">
         <div className="max-w-7xl mx-auto">
@@ -134,7 +147,7 @@ export default function Home() {
               "--swiper-pagination-color": "#fff",
             }}
           >
-            {discountedProducts?.map((product) => (
+            {/* {discountedProducts?.map((product) => (
               <SwiperSlide key={product.id}>
                 <Link to={`/products/${product.id}`}>
                   <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
@@ -178,8 +191,8 @@ export default function Home() {
                             $
                             {product.discount
                               ? Math.round(
-                                  product.price * (1 - product.discount / 100)
-                                )
+                                product.price * (1 - product.discount / 100)
+                              )
                               : product.price}
                           </span>
                           {product.discount && (
@@ -201,14 +214,13 @@ export default function Home() {
                   </div>
                 </Link>
               </SwiperSlide>
-            ))}
+            ))} */}
           </Swiper>
-
         </div>
       </div>
-      <Ourblogs/>
-      <Meta/>
-      <Support/>
+      <Ourblogs />
+      <Meta />
+      <Support />
     </div>
   );
 }
