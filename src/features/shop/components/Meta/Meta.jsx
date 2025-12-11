@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import useGetAll from "../../../../hooks/UseGetAll";
 
 function Meta() {
-
-
   const { data: blogData, isLoading } = useGetAll("/blogCart", ["blogCart"]);
 
   const firstBlog = blogData?.[0];
