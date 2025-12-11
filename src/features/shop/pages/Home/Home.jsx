@@ -88,27 +88,53 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <div className="bg-[#f6f7f9] px-6 py-8 md:px-8 md:py-12 border-b">
+      <div className="px-4 py-6 md:px-8 md:py-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+
             {categoryData?.map(({ id, categoryImage, categoryName }) => (
               <Link
                 key={id}
                 to={`/${categoryName}`}
-                className="bg-white flex flex-col items-center justify-between gap-3 p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 border hover:border-gray-300 cursor-pointer"
+                className="
+            flex items-center justify-between
+            bg-white rounded-2xl
+            px-4 py-3
+            shadow-sm border
+            hover:shadow-md hover:border-gray-300
+            transition-all duration-200
+          "
               >
+                <p className="text-sm font-medium text-gray-800 w-[60%] leading-tight">
+                  {categoryName}
+                </p>
+
                 <img
                   src={categoryImage}
                   alt={categoryName}
                   className="w-16 h-16 object-contain"
                 />
-
-                <p className="text-sm font-medium text-gray-800 text-center">
-                  {categoryName}
-                </p>
               </Link>
             ))}
+
+            <Link
+              to="/categories"
+              className="
+          flex items-center justify-between
+          bg-white rounded-2xl
+          px-4 py-3
+          shadow-sm border
+          hover:shadow-md hover:border-gray-300
+          transition-all duration-200
+        "
+            >
+              <p className="text-sm font-medium text-gray-800">
+                Все категории
+              </p>
+
+              <span className="text-xl font-bold">→</span>
+            </Link>
+
           </div>
         </div>
       </div>
