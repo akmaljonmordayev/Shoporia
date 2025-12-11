@@ -1,7 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
-
-import { FaUserEdit, FaBox } from "react-icons/fa";
 import { CiDollar, CiShoppingBasket, CiHeart } from "react-icons/ci";
 import { AiOutlineSecurityScan } from "react-icons/ai";
 import { IoMdNotificationsOutline } from "react-icons/io";
@@ -36,7 +36,14 @@ export default function ProfileSidebar({ name, imgAva }) {
       icon: <LuMessageCircleWarning />,
     },
   ];
+  const navigate = useNavigate();
+  const [profile, setProfile] = useState(true);
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setProfile(false); 
+    navigate("/auth/login", { replace: true });
+  };
   return (
     <div className="w-[260px] bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
       <div className="flex flex-col items-center mb-8">
@@ -72,7 +79,10 @@ export default function ProfileSidebar({ name, imgAva }) {
         ))}
       </ul>
 
-      <button className="mt-6 w-full flex items-center gap-3 px-4 py-2 text-red-500 rounded-lg transition-colors duration-200 font-medium">
+      <button
+        onClick={handleLogout}
+        className="mt-6 w-full flex items-center gap-3 px-4 py-2 text-red-500 rounded-lg transition-colors duration-200 font-medium cursor-pointer"
+      >
         <FiLogOut className="text-xl" />
         Log out
       </button>
