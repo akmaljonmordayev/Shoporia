@@ -14,21 +14,17 @@ function ProductSidebar({
 }) {
   return (
     <>
-      {/* Overlay for mobile */}
       {sidebarOpen && (
         <div
           className="fixed inset-0 bg-black/50 lg:hidden z-30"
           onClick={onCloseSidebar}
         />
       )}
-
-      {/* Sidebar */}
       <div
         className={`fixed lg:static top-0 left-0 w-96 bg-white border-r border-gray-200 p-6 min-h-screen overflow-y-auto z-40 lg:z-auto transition-transform duration-300 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         }`}
       >
-        {/* Close button for mobile */}
         <button
           onClick={onCloseSidebar}
           className="lg:hidden absolute top-4 right-4 text-gray-600 hover:text-gray-900"
@@ -39,8 +35,6 @@ function ProductSidebar({
         <h2 className="text-xl font-bold text-[#0b2559] mb-6 mt-10 lg:mt-0">
           Filters
         </h2>
-
-        {/* Brands Filter */}
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Brands</h3>
           <div className="space-y-3">
@@ -66,8 +60,6 @@ function ProductSidebar({
             )}
           </div>
         </div>
-
-        {/* Price Range Filter */}
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-800 mb-4">
             Price Range
@@ -111,8 +103,6 @@ function ProductSidebar({
             </div>
           </div>
         </div>
-
-        {/* Features Filter */}
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Features</h3>
           <div className="space-y-3">
@@ -147,15 +137,13 @@ function ProductSidebar({
             </label>
           </div>
         </div>
-
-        {/* Reset Filters */}
         {(selectedBrands.length > 0 ||
           priceRange[0] > 0 ||
           priceRange[1] < 2500 ||
           selectedFeatures.length > 0) && (
           <button
             onClick={() => {
-              onBrandChange(null);
+              selectedBrands.forEach((brand) => onBrandChange(brand));
               onPriceChange([0, 2500]);
               selectedFeatures.forEach((f) => onFeatureChange(f));
             }}

@@ -18,15 +18,11 @@ function Product() {
   const [sortBy, setSortBy] = useState("latest");
   const [wishlist, setWishlist] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-
-  // Fetch products from JSON server
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
         const response = await axiosClient.get("/typeOfElectronics");
-
-        // Flatten products from all categories
         const allProducts = [];
         if (response[0]) {
           Object.keys(response[0]).forEach((category) => {
@@ -34,7 +30,7 @@ function Product() {
               response[0][category].forEach((product, index) => {
                 allProducts.push({
                   ...product,
-                  id: product.id || index,
+                  id: product.id || `${category}-${index}`,
                   category: category,
                 });
               });
@@ -98,13 +94,13 @@ function Product() {
 
     switch (sortBy) {
       case "priceLow":
-        filtered.sort((a, b) => a.price - b.price);
+        filtered = [...filtered].sort((a, b) => a.price - b.price);
         break;
       case "priceHigh":
-        filtered.sort((a, b) => b.price - a.price);
+        filtered = [...filtered].sort((a, b) => b.price - a.price);
         break;
       case "rating":
-        filtered.sort((a, b) => (b.star || 0) - (a.star || 0));
+        filtered = [...filtered].sort((a, b) => (b.star || 0) - (a.star || 0));
         break;
       case "latest":
       default:
@@ -122,8 +118,11 @@ function Product() {
   ]);
 
   const handleBrandChange = (brand) => {
+    const normalized = typeof brand === "string" ? brand.toLowerCase() : brand;
     setSelectedBrands((prev) =>
-      prev.includes(brand) ? prev.filter((b) => b !== brand) : [...prev, brand]
+      prev.includes(normalized)
+        ? prev.filter((b) => b !== normalized)
+        : [...prev, normalized]
     );
   };
 
@@ -192,28 +191,81 @@ function Product() {
         >
           <FiFilter size={20} />
         </button>
-
-        <ProductSidebar
-          brands={uniqueBrands}
-          selectedBrands={selectedBrands}
-          onBrandChange={handleBrandChange}
-          priceRange={priceRange}
-          onPriceChange={setPriceRange}
-          selectedFeatures={selectedFeatures}
-          onFeatureChange={handleFeatureChange}
-          sidebarOpen={sidebarOpen}
-          onCloseSidebar={() => setSidebarOpen(false)}
-        />
-
-        <div className="flex-1">
-          <div className="mb-6">
+        <div className="lg:hidden">
+          <ProductSidebar
+            brands={uniqueBrands}
+            selectedBrands={selectedBrands}
+            onBrandChange={handleBrandChange}
+            priceRange={priceRange}
+            onPriceChange={setPriceRange}
+            selectedFeatures={selectedFeatures}
+            onFeatureChange={handleFeatureChange}
+            sidebarOpen={sidebarOpen}
+            onCloseSidebar={() => setSidebarOpen(false)}
+          />
+        </div>
+        <div className="hidden lg:block w-80 sticky top-20 self-start h-[calc(100vh-5rem)] overflow-auto pr-4">
+          <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
             <div className="mb-4">
               <input
                 type="text"
                 placeholder="🔍 Search products by name or brand..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
+                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-600 focus:shadow-md hover:shadow-sm transition duration-150"
+              />
+            </div>
+
+            <div className="mb-4 flex items-center gap-2">
+              <label className="text-sm text-gray-600">Sort:</label>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="flex-1 border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-600 hover:shadow-sm transition duration-150"
+              >
+                <option value="latest">Latest</option>
+                <option value="priceLow">Price: Low to High</option>
+                <option value="priceHigh">Price: High to Low</option>
+                <option value="rating">Highest Rating</option>
+              </select>
+            </div>
+
+            <div className="mb-4 flex justify-between items-center">
+              <button
+                onClick={() => {
+                  setSelectedBrands([]);
+                  setPriceRange([0, 2500]);
+                  setSelectedFeatures([]);
+                  setSearchQuery("");
+                  setSortBy("latest");
+                }}
+                className="text-sm text-white bg-red-500 hover:bg-red-600 active:bg-red-700 px-3 py-2 rounded-md transition"
+              >
+                Clear filters
+              </button>
+            </div>
+
+            <ProductSidebar
+              brands={uniqueBrands}
+              selectedBrands={selectedBrands}
+              onBrandChange={handleBrandChange}
+              priceRange={priceRange}
+              onPriceChange={setPriceRange}
+              selectedFeatures={selectedFeatures}
+              onFeatureChange={handleFeatureChange}
+            />
+          </div>
+        </div>
+
+        <div className="flex-1">
+          <div className="mb-6">
+            <div className="mb-4 lg:hidden">
+              <input
+                type="text"
+                placeholder="🔍 Search products by name or brand..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 focus:shadow-md hover:shadow-sm transition duration-150"
               />
             </div>
 
@@ -224,7 +276,7 @@ function Product() {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-600"
+                className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-600 lg:hidden"
               >
                 <option value="latest">Latest</option>
                 <option value="priceLow">Price: Low to High</option>
@@ -243,7 +295,12 @@ function Product() {
               <div className="text-gray-500">No products found</div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+            <div
+              key={
+                filteredProducts.map((p) => p.id).join("_") || "products-grid"
+              }
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6"
+            >
               {filteredProducts.map((product) => (
                 <ProductCard
                   key={product.id}
