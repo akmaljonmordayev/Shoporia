@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -15,9 +15,11 @@ import FrameImage from "./img/Frame 26086940.png";
 import CategoryImage from "./img/image.png";
 import IamImage from "./img/iam.png";
 import QwertyImage from "./img/qwerty.png";
-import useGetAll from "../../../../hooks/UseGetAll";
-import CategoryCard from "../../components/CategoryCard/CategoryCard";
+import axiosClient from "../../../../api/axiosClient";
 import { Link } from "react-router-dom";
+import Ourblogs from "../../components/Our Blogs/ourBlogs";
+import Meta from "../../components/Meta/Meta";
+import Support from "../../components/Support/Support";
 
 const heroImages = [Photo1, Photo2, Photo3, Photo4, Photo5];
 
@@ -31,43 +33,56 @@ const categories = [
 ];
 
 export default function Home() {
-  const { data: sliderData } = useGetAll("/Slider", ["slider"]);
-  const { data: categoryData } = useGetAll("/CategoryCarts", ["categories"]);
-  const { data: electronics } = useGetAll("/typeOfElectronics", [
-    "electronics",
-  ]);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const products = React.useMemo(() => {
-    if (!electronics || !Array.isArray(electronics) || !electronics[0]) {
-      return [];
-    }
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        setLoading(true);
+        const response = await axiosClient.get("/typeOfElectronics");
 
-    const allProducts = [];
-    const cats = electronics[0];
+        // Get products from different categories
+        const allProducts = [];
+        if (response && response[0]) {
+          // Mobile phones
+          if (response[0].mobile && Array.isArray(response[0].mobile)) {
+            allProducts.push(...response[0].mobile);
+          }
+          // Laptops
+          if (response[0].laptop && Array.isArray(response[0].laptop)) {
+            allProducts.push(...response[0].laptop);
+          }
+          // Other categories
+          [
+            "washingmachines",
+            "heaters",
+            "TVs",
+            "airconditioners",
+            "Smartwatches",
+            "audio",
+            "Laptopaccessories",
+          ].forEach((category) => {
+            if (Array.isArray(response[0][category])) {
+              allProducts.push(...response[0][category]);
+            }
+          });
+        }
 
-    [
-      "mobile",
-      "laptop",
-      "washingmachines",
-      "heaters",
-      "TVs",
-      "airconditioners",
-      "Smartwatches",
-      "audio",
-      "Laptopaccessories",
-    ].forEach((category) => {
-      if (Array.isArray(cats[category])) {
-        allProducts.push(...cats[category]);
+        setProducts(allProducts);
+        console.log("Products loaded:", allProducts);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      } finally {
+        setLoading(false);
       }
-    });
+    };
 
-    return allProducts;
-  }, [electronics]);
+    fetchProducts();
+  }, []);
 
   const discountedProducts = products.filter((p) => p.discount > 0).slice(0, 8);
-
   const bestSellers = products.filter((p) => p.star >= 4.5).slice(0, 8);
-
   const newProducts = [...products]
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 8);
@@ -107,17 +122,14 @@ export default function Home() {
                 "--swiper-pagination-color": "#0b2559",
               }}
             >
-              {(
-                sliderData ||
-                heroImages.map((img, i) => ({ id: i, imageSlider: img }))
-              ).map((slide) => (
+              {heroImages.map((img, index) => (
                 <SwiperSlide
-                  key={slide.id}
+                  key={index}
                   className="flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-4 md:p-6"
                 >
                   <img
-                    src={slide.imageSlider}
-                    alt={`Hero Slide ${slide.id}`}
+                    src={img}
+                    alt={`Hero Slide ${index + 1}`}
                     className="w-full h-auto max-h-80 md:max-h-96 object-contain rounded-lg"
                   />
                 </SwiperSlide>
@@ -127,39 +139,29 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Categories */}
+      {/* Category Section */}
       <div className="bg-white px-6 py-8 md:px-8 md:py-12 border-b">
         <div className="max-w-7xl mx-auto">
-          <Swiper
-            modules={[Autoplay]}
-            autoplay={{ delay: 5000, disableOnInteraction: false }}
-            loop
-            spaceBetween={20}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 2, spaceBetween: 15 },
-              1024: { slidesPerView: 4, spaceBetween: 20 },
-              1280: { slidesPerView: 6, spaceBetween: 20 },
-            }}
-            className="w-full"
-          >
-            {(categoryData || categories).map((cat, index) => {
-              const name = cat.categoryName || cat.name || cat;
-              const image =
-                cat.categoryImage ||
-                cat.image ||
-                (typeof cat === "object"
-                  ? cat.image
-                  : categories[index]?.image);
-              return (
-                <SwiperSlide key={index} className="flex justify-center">
-                  <Link to={`/category/${encodeURIComponent(name)}`}>
-                    <CategoryCard title={name} image={image} />
-                  </Link>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+            {categories.map((category, index) => (
+              <Link
+                key={index}
+                to="/products"
+                className="flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-gray-50 transition"
+              >
+                <div className="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                  <img
+                    src={category.image}
+                    alt={category.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <span className="text-sm font-semibold text-gray-700 text-center">
+                  {category.name}
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -179,198 +181,100 @@ export default function Home() {
               </button>
             </Link>
           </div>
-          <Swiper
-            modules={[Autoplay, Navigation, Pagination]}
-            autoplay={{ delay: 4000, disableOnInteraction: false }}
-            navigation
-            pagination={{ clickable: true, type: "bullets" }}
-            loop
-            spaceBetween={20}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 2, spaceBetween: 15 },
-              1024: { slidesPerView: 4, spaceBetween: 20 },
-            }}
-            className="w-full"
-            style={{
-              "--swiper-navigation-color": "#fff",
-              "--swiper-pagination-color": "#fff",
-            }}
-          >
-            {discountedProducts.map((product) => (
-              <SwiperSlide key={product.id}>
-                <Link to={`/product/${product.id}`}>
-                  <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
-                    <div className="relative h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
-                      {product.discount && (
-                        <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
-                          -{product.discount}%
-                        </div>
-                      )}
-                      <img
-                        src={
-                          product.image?.main ||
-                          product.image ||
-                          "https://via.placeholder.com/200"
-                        }
-                        alt={product.title}
-                        className="w-full h-full object-contain p-3"
-                      />
-                    </div>
 
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-[2.5rem]">
-                        {product.title}
-                      </h3>
-
-                      <div className="flex flex-wrap gap-1 mb-3">
-                        {product.guaranteed && (
-                          <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
-                            ✓ Guaranteed
-                          </span>
+          {loading ? (
+            <div className="flex justify-center items-center h-64">
+              <div className="text-white text-lg">Loading products...</div>
+            </div>
+          ) : (
+            <Swiper
+              modules={[Autoplay, Navigation, Pagination]}
+              autoplay={{ delay: 4000, disableOnInteraction: false }}
+              navigation
+              pagination={{ clickable: true, type: "bullets" }}
+              loop
+              spaceBetween={20}
+              slidesPerView={1}
+              breakpoints={{
+                640: { slidesPerView: 2, spaceBetween: 15 },
+                1024: { slidesPerView: 4, spaceBetween: 20 },
+              }}
+              className="w-full"
+              style={{
+                "--swiper-navigation-color": "#fff",
+                "--swiper-pagination-color": "#fff",
+              }}
+            >
+              {products.map((product) => (
+                <SwiperSlide key={product.id}>
+                  <Link to={`/product/${product.id}`}>
+                    <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
+                      {/* Image Container */}
+                      <div className="relative h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
+                        {product.discount && (
+                          <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
+                            -{product.discount}%
+                          </div>
                         )}
-                        {product.freeDelivery && (
-                          <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
-                            🚚 Free
-                          </span>
-                        )}
+                        <img
+                          src={
+                            product.image || "https://via.placeholder.com/200"
+                          }
+                          alt={product.title}
+                          className="w-full h-full object-contain p-3"
+                        />
                       </div>
 
-                      <div className="mt-auto">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl font-bold text-gray-900">
-                            $
-                            {product.discount
-                              ? Math.round(
-                                  product.price * (1 - product.discount / 100)
-                                )
-                              : product.price}
-                          </span>
-                          {product.discount && (
-                            <span className="text-sm text-gray-400 line-through">
-                              ${product.price}
+                      <div className="p-4 flex flex-col flex-grow">
+                        <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-[2.5rem]">
+                          {product.title}
+                        </h3>
+
+                        <div className="flex flex-wrap gap-1 mb-3">
+                          {product.guaranteed && (
+                            <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
+                              ✓ Guaranteed
+                            </span>
+                          )}
+                          {product.freeDelivery && (
+                            <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
+                              🚚 Free
                             </span>
                           )}
                         </div>
-                        {product.star && (
-                          <div className="flex items-center gap-1">
-                            <span className="text-yellow-400">★</span>
-                            <span className="text-sm text-gray-700">
-                              {product.star}
+
+                        <div className="mt-auto">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="text-xl font-bold text-gray-900">
+                              $
+                              {product.discount
+                                ? Math.round(
+                                    product.price * (1 - product.discount / 100)
+                                  )
+                                : product.price}
                             </span>
+                            {product.discount && (
+                              <span className="text-sm text-gray-400 line-through">
+                                ${product.price}
+                              </span>
+                            )}
                           </div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </div>
-
-      {/* Best Sellers */}
-      <div className="bg-white py-12 px-6 md:py-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0b2559]">
-              Best Sellers
-            </h2>
-            <Link to="/products?bestSeller=true">
-              <button className="text-[#0b2559] font-semibold text-lg hover:text-orange-500 transition flex items-center gap-2">
-                View all <span className="text-2xl">›</span>
-              </button>
-            </Link>
-          </div>
-          <Swiper
-            modules={[Autoplay, Navigation, Pagination]}
-            autoplay={{ delay: 4000, disableOnInteraction: false }}
-            navigation
-            pagination={{ clickable: true, type: "bullets" }}
-            loop
-            spaceBetween={20}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 2, spaceBetween: 15 },
-              1024: { slidesPerView: 4, spaceBetween: 20 },
-            }}
-            className="w-full"
-            style={{
-              "--swiper-navigation-color": "#0b2559",
-              "--swiper-pagination-color": "#0b2559",
-            }}
-          >
-            {bestSellers.map((product) => (
-              <SwiperSlide key={product.id}>
-                <Link to={`/product/${product.id}`}>
-                  <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
-                    <div className="relative h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
-                      {product.discount && (
-                        <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
-                          -{product.discount}%
-                        </div>
-                      )}
-                      <img
-                        src={
-                          product.image?.main ||
-                          product.image ||
-                          "https://via.placeholder.com/200"
-                        }
-                        alt={product.title}
-                        className="w-full h-full object-contain p-3"
-                      />
-                    </div>
-
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-[2.5rem]">
-                        {product.title}
-                      </h3>
-
-                      <div className="flex flex-wrap gap-1 mb-3">
-                        {product.guaranteed && (
-                          <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
-                            ✓ Guaranteed
-                          </span>
-                        )}
-                        {product.freeDelivery && (
-                          <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
-                            🚚 Free
-                          </span>
-                        )}
-                      </div>
-
-                      <div className="mt-auto">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl font-bold text-gray-900">
-                            $
-                            {product.discount
-                              ? Math.round(
-                                  product.price * (1 - product.discount / 100)
-                                )
-                              : product.price}
-                          </span>
-                          {product.discount && (
-                            <span className="text-sm text-gray-400 line-through">
-                              ${product.price}
-                            </span>
+                          {product.star && (
+                            <div className="flex items-center gap-1">
+                              <span className="text-yellow-400">★</span>
+                              <span className="text-sm text-gray-700">
+                                {product.star}
+                              </span>
+                            </div>
                           )}
                         </div>
-                        {product.star && (
-                          <div className="flex items-center gap-1">
-                            <span className="text-yellow-400">★</span>
-                            <span className="text-sm text-gray-700">
-                              {product.star}
-                            </span>
-                          </div>
-                        )}
                       </div>
                     </div>
-                  </div>
-                </Link>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
         </div>
       </div>
 
@@ -387,96 +291,220 @@ export default function Home() {
               </button>
             </Link>
           </div>
-          <Swiper
-            modules={[Autoplay, Navigation, Pagination]}
-            autoplay={{ delay: 4000, disableOnInteraction: false }}
-            navigation
-            pagination={{ clickable: true, type: "bullets" }}
-            loop
-            spaceBetween={20}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 2, spaceBetween: 15 },
-              1024: { slidesPerView: 4, spaceBetween: 20 },
-            }}
-            className="w-full"
-            style={{
-              "--swiper-navigation-color": "#0b2559",
-              "--swiper-pagination-color": "#0b2559",
-            }}
-          >
-            {newProducts.map((product) => (
-              <SwiperSlide key={product.id}>
-                <Link to={`/product/${product.id}`}>
-                  <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
-                    <div className="relative h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
-                      {product.discount && (
-                        <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
-                          -{product.discount}%
-                        </div>
-                      )}
-                      <img
-                        src={
-                          product.image?.main ||
-                          product.image ||
-                          "https://via.placeholder.com/200"
-                        }
-                        alt={product.title}
-                        className="w-full h-full object-contain p-3"
-                      />
-                    </div>
-
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-[2.5rem]">
-                        {product.title}
-                      </h3>
-
-                      <div className="flex flex-wrap gap-1 mb-3">
-                        {product.guaranteed && (
-                          <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
-                            ✓ Guaranteed
-                          </span>
+          {loading ? (
+            <div className="flex justify-center items-center h-64">
+              <div className="text-gray-500 text-lg">
+                Loading new products...
+              </div>
+            </div>
+          ) : (
+            <Swiper
+              modules={[Autoplay, Navigation, Pagination]}
+              autoplay={{ delay: 4000, disableOnInteraction: false }}
+              navigation
+              pagination={{ clickable: true, type: "bullets" }}
+              loop
+              spaceBetween={20}
+              slidesPerView={1}
+              breakpoints={{
+                640: { slidesPerView: 2, spaceBetween: 15 },
+                1024: { slidesPerView: 4, spaceBetween: 20 },
+              }}
+              className="w-full"
+              style={{
+                "--swiper-navigation-color": "#0b2559",
+                "--swiper-pagination-color": "#0b2559",
+              }}
+            >
+              {newProducts.map((product) => (
+                <SwiperSlide key={product.id}>
+                  <Link to={`/product/${product.id}`}>
+                    <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
+                      <div className="relative h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
+                        {product.discount && (
+                          <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
+                            -{product.discount}%
+                          </div>
                         )}
-                        {product.freeDelivery && (
-                          <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
-                            🚚 Free
-                          </span>
-                        )}
+                        <img
+                          src={
+                            product.image?.main ||
+                            product.image ||
+                            "https://via.placeholder.com/200"
+                          }
+                          alt={product.title}
+                          className="w-full h-full object-contain p-3"
+                        />
                       </div>
 
-                      <div className="mt-auto">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl font-bold text-gray-900">
-                            $
-                            {product.discount
-                              ? Math.round(
-                                  product.price * (1 - product.discount / 100)
-                                )
-                              : product.price}
-                          </span>
-                          {product.discount && (
-                            <span className="text-sm text-gray-400 line-through">
-                              ${product.price}
+                      <div className="p-4 flex flex-col flex-grow">
+                        <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-[2.5rem]">
+                          {product.title}
+                        </h3>
+
+                        <div className="flex flex-wrap gap-1 mb-3">
+                          {product.guaranteed && (
+                            <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
+                              ✓ Guaranteed
+                            </span>
+                          )}
+                          {product.freeDelivery && (
+                            <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
+                              🚚 Free
                             </span>
                           )}
                         </div>
-                        {product.star && (
-                          <div className="flex items-center gap-1">
-                            <span className="text-yellow-400">★</span>
-                            <span className="text-sm text-gray-700">
-                              {product.star}
+
+                        <div className="mt-auto">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="text-xl font-bold text-gray-900">
+                              $
+                              {product.discount
+                                ? Math.round(
+                                    product.price * (1 - product.discount / 100)
+                                  )
+                                : product.price}
                             </span>
+                            {product.discount && (
+                              <span className="text-sm text-gray-400 line-through">
+                                ${product.price}
+                              </span>
+                            )}
                           </div>
-                        )}
+                          {product.star && (
+                            <div className="flex items-center gap-1">
+                              <span className="text-yellow-400">★</span>
+                              <span className="text-sm text-gray-700">
+                                {product.star}
+                              </span>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
         </div>
       </div>
+
+      {/* Best Sellers */}
+      <div className="bg-white py-12 px-6 md:py-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0b2559]">
+              Best Sellers
+            </h2>
+            <Link to="/products?bestSeller=true">
+              <button className="text-[#0b2559] font-semibold text-lg hover:text-orange-500 transition flex items-center gap-2">
+                View all <span className="text-2xl">›</span>
+              </button>
+            </Link>
+          </div>
+          {loading ? (
+            <div className="flex justify-center items-center h-64">
+              <div className="text-gray-500 text-lg">
+                Loading best sellers...
+              </div>
+            </div>
+          ) : (
+            <Swiper
+              modules={[Autoplay, Navigation, Pagination]}
+              autoplay={{ delay: 4000, disableOnInteraction: false }}
+              navigation
+              pagination={{ clickable: true, type: "bullets" }}
+              loop
+              spaceBetween={20}
+              slidesPerView={1}
+              breakpoints={{
+                640: { slidesPerView: 2, spaceBetween: 15 },
+                1024: { slidesPerView: 4, spaceBetween: 20 },
+              }}
+              className="w-full"
+              style={{
+                "--swiper-navigation-color": "#0b2559",
+                "--swiper-pagination-color": "#0b2559",
+              }}
+            >
+              {bestSellers.map((product) => (
+                <SwiperSlide key={product.id}>
+                  <Link to={`/product/${product.id}`}>
+                    <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
+                      <div className="relative h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
+                        {product.discount && (
+                          <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
+                            -{product.discount}%
+                          </div>
+                        )}
+                        <img
+                          src={
+                            product.image?.main ||
+                            product.image ||
+                            "https://via.placeholder.com/200"
+                          }
+                          alt={product.title}
+                          className="w-full h-full object-contain p-3"
+                        />
+                      </div>
+
+                      <div className="p-4 flex flex-col flex-grow">
+                        <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-[2.5rem]">
+                          {product.title}
+                        </h3>
+
+                        <div className="flex flex-wrap gap-1 mb-3">
+                          {product.guaranteed && (
+                            <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
+                              ✓ Guaranteed
+                            </span>
+                          )}
+                          {product.freeDelivery && (
+                            <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
+                              🚚 Free
+                            </span>
+                          )}
+                        </div>
+
+                        <div className="mt-auto">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="text-xl font-bold text-gray-900">
+                              $
+                              {product.discount
+                                ? Math.round(
+                                    product.price * (1 - product.discount / 100)
+                                  )
+                                : product.price}
+                            </span>
+                            {product.discount && (
+                              <span className="text-sm text-gray-400 line-through">
+                                ${product.price}
+                              </span>
+                            )}
+                          </div>
+                          {product.star && (
+                            <div className="flex items-center gap-1">
+                              <span className="text-yellow-400">★</span>
+                              <span className="text-sm text-gray-700">
+                                {product.star}
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+        </div>
+      </div>
+
+      <Ourblogs />
+      <Meta />
+      <Support />
     </div>
   );
 }

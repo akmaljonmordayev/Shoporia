@@ -34,12 +34,12 @@
           "id": 1,
           "title": "Smartfon Samsung Galaxy A23 4/64 GB White",
           "image": {
-            "main": "",
+            "main": "https://cdn.mediapark.uz/imgs/48136613-dfb5-4858-b1e0-222e9593629b.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://cdn.mediapark.uz/imgs/82b165d1-1c60-42bc-a568-bd6bbc30cdef.webp",
+              "https://www.prom.uz/_ipx/f_webp/https://devel.prom.uz/upload/product_logos/56/b6/56b6c4947dd521a47d338f43cfe182ac.jpeg",
+              "https://cdn.mediapark.uz/imgs/dd2e4ecd-ce19-49ba-93bd-ffa9b1f22235.webp",
+              "https://msk-katalog.ru/image/cache/catalog/Samsung/Samsung%20Galaxy%20A23/%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-07-04%20114524.png_702.webp"
             ]
           },
           "price": 200,
@@ -47,7 +47,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 30,
+          "discount": 0,
           "brand": "samsung",
           "ram": 4,
           "screenSize": 6.6,
@@ -62,12 +62,12 @@
           "id": 2,
           "title": "Apple iPhone 15 Pro Max 256GB",
           "image": {
-            "main": "",
+            "main": "https://castore.uz/upload/iblock/00d/k4gghus37wmhycgjirpvopn4mb2r6q13/smartfon-apple-iphone-15-pro-max-256gb-black-titanium.jpeg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://castore.uz/upload/iblock/440/6ljoz9sn8tdybqgaup5gewt0i26m11cg/smartfon-apple-iphone-15-pro-max-256gb-black-titanium-2.jpeg",
+              "https://yabloki.ua/media/cache/sylius_shop_product_original/2a/7a/iphone-15-pro-max-space-black-256-mb-4.png.webp",
+              "https://castore.uz/upload/iblock/11e/6u96i5q6zav02rxme3iw4hk3gbm1svyg/smartfon-apple-iphone-15-pro-max-256gb-black-titanium-9.jpeg",
+              "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/6081594975a764c8e3a691fa2b3a321d2023092315051040999HBm6OKJ4v8.png.webp"
             ]
           },
           "price": 999,
@@ -75,7 +75,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 15,
+          "discount": 0,
           "brand": "apple",
           "ram": 8,
           "screenSize": 6.7,
@@ -90,12 +90,12 @@
           "id": 3,
           "title": "Xiaomi 13 Ultra 512GB",
           "image": {
-            "main": "",
+            "main": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWQOGb6hiHDNY3iJd7CD0dHaSq6wrzrgi3NA&s",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://asset.openshop.uz/storage/uploads/products/photos/202308/VSTDRv8H0IwsybRMGo5AMvM94sr8domCkdlJTP0L.jpg",
+              "https://olcha.uz/image/700x700/products/supplier/stores/1/2023-08-19/HUFQqpEGp47HrvTuojtgzhWRZFu1d6ieZWlwDd5JTC3baD9Jl4a1L0XO4Opp.jpg",
+              "https://best-magazin.com/image/cache/catalog/product/Telephone/Xiaomi/2023/13-ultra/smartfon-xiaomi-13-ultra-black-otzivi-800x800.jpg",
+              "https://api.2droida.ru/storage/descriptions/t8340/moskva/smartfon_xiaomi_13_ultra_16_512gb_black_global_rom_moskva_kupit_nedorogo_8636.jpg"
             ]
           },
           "price": 650,
@@ -103,7 +103,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 20,
+          "discount": 0,
           "brand": "xiaomi",
           "ram": 12,
           "screenSize": 6.8,
@@ -118,12 +118,12 @@
           "id": 4,
           "title": "Huawei Mate 50 Pro 256GB",
           "image": {
-            "main": "",
+            "main": "https://images-cdn.ubuy.co.in/65a665b9f9ecd50e7e7339ba-huawei-mate-50-pro-6-74-8-256gb.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://cactus.site/image/cache/catalog/VladimirGorchakov/HuaweiMate50Pro/ora/3-800x800.jpg",
+              "https://s.alicdn.com/@sc04/kf/Afb58f453cceb472fb15b46b89d142e974.jpg",
+              "https://a.allegroimg.com/s512/12c1d3/8cec89484be19986eef7959f1f65",
+              "https://lombard24.ee/storage/products/40780/normal/5f913acb-d3cf-4333-9e2d-55291b79cb7c.webp"
             ]
           },
           "price": 800,
@@ -146,20 +146,20 @@
           "id": 5,
           "title": "Honor Magic 5 Pro 512GB",
           "image": {
-            "main": "",
+            "main": "https://bestmobilephone.com.au/wp-content/uploads/2023/09/honor-magic-5-Pro-Purple.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://imgservice.suning.cn/uimg1/b2c/image/SWoFX0Mp2kuBKf805KTnxg.jpg_400w_400h_4e",
+              "https://i.ebayimg.com/images/g/D50AAOSwz7JkkTTP/s-l1600.jpg ",
+              "https://ae01.alicdn.com/kf/S5f3cf46d702444fbbb2b9db4b00b6207Z.jpg_960x960.jpg",
+              "https://imgservice.suning.cn/uimg1/b2c/image/SWoFX0Mp2kuBKf805KTnxg.jpg_400w_400h_4e"
             ]
           },
           "price": 550,
-          "color": "silver",
+          "color": "purple",
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 25,
+          "discount": 0,
           "brand": "honor",
           "ram": 12,
           "screenSize": 6.81,
@@ -174,12 +174,12 @@
           "id": 6,
           "title": "Vivo V27 Pro 256GB",
           "image": {
-            "main": "",
+            "main": "https://slot.ng/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/v/i/vivo_v30_lite-removebg-preview.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://fdn.gsmarena.com/imgroot/news/23/02/vivo-v27-v27pro-v27e-ofic/v27e/-1200x900m/gsmarena_003.jpg",
+              "https://s.ek.ua/jpg/2867769.jpg",
+              "https://fdn.gsmarena.com/imgroot/news/23/02/vivo-v27-v27pro-v27e-ofic/v27e/-1200x900m/gsmarena_003.jpg",
+              "https://slot.ng/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/v/i/vivo_v30_lite-removebg-preview.png"
             ]
           },
           "price": 480,
@@ -187,7 +187,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 22,
+          "discount": 0,
           "brand": "vivo",
           "ram": 8,
           "screenSize": 6.78,
@@ -202,12 +202,12 @@
           "id": 7,
           "title": "OnePlus 12 512GB",
           "image": {
-            "main": "",
+            "main": "https://avatars.mds.yandex.net/get-mpic/5242361/2a000001938cd55fbeff0c2ac4797994d605/9hq",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://www.hemfrance.com/38170-thickbox_default/oneplus-12-5g-682-512-gb-16-gb-ram-black.jpg",
+              "https://m.media-amazon.com/images/I/61N5mujsDJL._AC_UF350,350_QL80_.jpg",
+              "https://image01.oneplus.net/media/202405/28/f8085f0019df6133fb41ee707f45aa51.png?x-amz-process=image/format,webp/quality,Q_80",
+              "https://pcshop.ua/image/catalog/FotoOpis/OnePlus/Oneplus%2012%2003.jpg"
             ]
           },
           "price": 799,
@@ -215,7 +215,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 16,
+          "discount": 0,
           "brand": "oneplus",
           "ram": 12,
           "screenSize": 6.82,
@@ -230,12 +230,12 @@
           "id": 8,
           "title": "Motorola Edge 50 Pro",
           "image": {
-            "main": "",
+            "main": "https://www.yaphone.com/6832-large_default/motorola-edge-50-pro-5g.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://dakauf.eu/wp-content/uploads/2024/09/Motorola-Edge-50-Pro-5G-12GB-RAM-512GB-Caneel-Bay.png",
+              "https://rukminim2.flixcart.com/image/480/640/xif0q/mobile/p/o/i/-original-imah4kfuzzxz6tvn.jpeg?q=90",
+              "https://ak-asset.jarir.com/akeneo-prod/asset/0/9/d/2/09d2dbab2430ea0a526ce267c3b5dd7a4311acb9_641114.jpg",
+              "https://motorolain.vtexassets.com/arquivos/ids/159179-800-auto?width=800&height=auto&aspect=true"
             ]
           },
           "price": 599,
@@ -243,7 +243,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 14,
+          "discount": 0,
           "brand": "motorola",
           "ram": 12,
           "screenSize": 6.7,
@@ -258,12 +258,12 @@
           "id": 9,
           "title": "Samsung Galaxy S24 Ultra",
           "image": {
-            "main": "",
+            "main": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/4ffce04d92a4d6cb21c1494cdfcd6dc12024012013362683201jqRctSTla2.png.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://mini-io-api.texnomart.uz/catalog/product/3567/356714/195143/81185d6e-5278-4424-bcfd-be9f77cd6496.webp",
+              "https://assets.asaxiy.uz/product/items/desktop/a885652bcc2e98dcf0a9f500436ecbd82024031512260481756lCZ3C9dkqg.png.webp",
+              "https://gadgetbd.com/wp-content/uploads/2024/01/Samsung-S24-Ultra-Titanium-Grey.jpg",
+              "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/9b698eb3105bd82528f23d0c92dedfc02024012013362790770JCdrQZfTxz.png.webp"
             ]
           },
           "price": 1299,
@@ -286,12 +286,12 @@
           "id": 10,
           "title": "Google Pixel 8 Pro",
           "image": {
-            "main": "",
+            "main": "https://m.media-amazon.com/images/I/7170fmWL9EL._AC_UF1000,1000_QL80_.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://assets.asaxiy.uz/product/items/desktop/00935f9e261262027d6d65637df10ab52025041521572016824tFf9oAzLGG.jpg.webp",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2sYhuokAonKXYxM9hEO_kOIc74Fxt8seONA&s",
+              "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Pixel_8_in_Obsidian.max-936x936.format-webp.webp",
+              "https://a.428.ua/img/4085436/3000/2000/mobilnyy_telefon_google_pixel_8_pro_12_256gb_obsidian~864~1024.jpg"
             ]
           },
           "price": 999,
@@ -299,7 +299,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 11,
+          "discount": 0,
           "brand": "google",
           "ram": 12,
           "screenSize": 6.7,
@@ -314,12 +314,12 @@
           "id": 11,
           "title": "Samsung Galaxy A54 256GB",
           "image": {
-            "main": "",
+            "main": "https://pimcdn.sharafdg.com/cdn-cgi/image/width=600,height=600,fit=pad,format=webp,quality=70/images/S300852934_1?1708687564",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://mini-io-api.texnomart.uz/catalog/product/3553/355348/194616/7bd872ac-a61c-45cf-92f4-f78d3729ee69.webp",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4NKc8dJCdFBW7DHOQBjAuS4YvZ_1f7xF_mQ&s",
+              "https://images.samsung.com/is/image/samsung/assets/de/galaxy-a54-5g/color-section/galaxy-a54-light-violet.jpgq",
+              "https://static.insales-cdn.com/images/products/1/4992/790786944/import_files_fe_feaf0a866de211eea2b900155d883509_d4b3e69a949711eea2bb00155d883509.png"
             ]
           },
           "price": 420,
@@ -342,12 +342,12 @@
           "id": 12,
           "title": "Apple iPhone 14 Pro",
           "image": {
-            "main": "",
+            "main": "https://minapi.beemarket.uz/prod-media/productImages/1718099428hENpsJcAbGK8.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://mini-io-api.texnomart.uz/catalog/product/3547/354761/186232/56ff59c5-5d11-46f0-ba7d-7ef697857296.jpg",
+              "https://api.idea.uz/storage/products/November2022/OCQCqIY2YLc1QZvixFiO.png",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW-bFH0-xsrVjubTyJ5zAHrN5rkNYvChMNOg&s",
+              "https://cdn.mediapark.uz/imgs/8bd540bb-7acc-4997-b33d-ed58e3f352ab_2_@1300.webp"
             ]
           },
           "price": 899,
@@ -355,7 +355,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 17,
+          "discount": 0,
           "brand": "apple",
           "ram": 6,
           "screenSize": 6.1,
@@ -370,12 +370,12 @@
           "id": 13,
           "title": "Xiaomi Redmi Note 13",
           "image": {
-            "main": "",
+            "main": "https://mini-io-api.texnomart.uz/catalog/product/3566/356659/204394/c181d607-acf2-4e59-a432-eddbffd0f6eb.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://mini-io-api.texnomart.uz/catalog/product/3566/356659/197034/41833e09-2f58-4713-96c0-952ff977aace.webp",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoPYAP_V-ZW8HhwQXTM03F84Cl9axQQBVmIw&s",
+              "https://mini-io-api.texnomart.uz/catalog/product/3566/356655/204390/8782a0bc-fec1-4589-ae93-08c9ff243d6e.webp",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZhp1r4Z7ESbE_gqHBc_n71bmBpN8IriSPgA&s"
             ]
           },
           "price": 350,
@@ -383,7 +383,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 32,
+          "discount": 0,
           "brand": "xiaomi",
           "ram": 8,
           "screenSize": 6.67,
@@ -393,62 +393,6 @@
           "star": 4.4,
           "date": "17.11.2025",
           "energy": 5000
-        },
-        {
-          "id": 14,
-          "title": "Nokia G42 5G",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 299,
-          "color": "dark cyan",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 24,
-          "brand": "nokia",
-          "ram": 6,
-          "screenSize": 6.58,
-          "processor": "Android 13",
-          "gpuBrand": "MediaTek Dimensity 820",
-          "driveSize": 128,
-          "star": 4.3,
-          "date": "16.11.2025",
-          "energy": 5000
-        },
-        {
-          "id": 15,
-          "title": "Realme 12 Pro Plus",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 599,
-          "color": "gold",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 19,
-          "brand": "realme",
-          "ram": 12,
-          "screenSize": 6.7,
-          "processor": "Android 14",
-          "gpuBrand": "Snapdragon 7 Gen 3 Lead",
-          "driveSize": 512,
-          "star": 4.6,
-          "date": "15.11.2025",
-          "energy": 5000
         }
       ],
       "laptop": [
@@ -456,12 +400,12 @@
           "id": 1,
           "title": "MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch",
           "image": {
-            "main": "",
+            "main": "https://macbro.uz/cdn/shop/files/3_c273a2d7-2549-4b29-85f0-34bacaa38f94.png?v=1744802965",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://macbro.uz/cdn/shop/files/4_179e8c1c-ddf3-42c4-aa47-c1bebcc22cb1.png?v=1744802965",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeREXQRo1XCggxAzDvbnX6fRxfoUYM_Va8XA&s",
+              "https://oechsle.vteximg.com.br/arquivos/ids/10033188-1000-1000/imageUrl_4.jpg?v=637941776950200000",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQo9dGgUYFVSOP0RTmxdb7uevynCqa9PC5Cw&s"
             ]
           },
           "price": 1499,
@@ -469,7 +413,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 20,
+          "discount": 0,
           "brand": "apple",
           "ram": 32,
           "screenSize": 15,
@@ -485,12 +429,12 @@
           "id": 2,
           "title": "Dell XPS 13 Plus",
           "image": {
-            "main": "",
+            "main": "https://m.media-amazon.com/images/I/71Bc0CG6RkL.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://microless.com/cdn/products/e3b2609ddcc42c3e8ded2732982e2f4b-hi.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDfv2qK5bfJDVl29L-orN4rrmff0yDZIftDQ&s",
+              "https://www.dpreview.com/files/p/articles/0504567219/dell-xps-13-plus-2.jpeg",
+              "https://www.dpreview.com/files/p/articles/4837578893/Dell_XPS_13_Plus_1.png"
             ]
           },
           "price": 1199,
@@ -498,7 +442,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 12,
+          "discount": 0,
           "brand": "dell",
           "ram": 16,
           "screenSize": 13.4,
@@ -514,12 +458,12 @@
           "id": 3,
           "title": "HP Pavilion 15",
           "image": {
-            "main": "",
+            "main": "https://nout.uz/wp-content/uploads/2023/02/84-1-1024x769.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://nout.uz/wp-content/uploads/2023/02/87-1024x769.png",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS01Mt-PXe-kiyhsm30zAHJVB6f6VV-Sgi6qQ&s",
+              "https://m.media-amazon.com/images/I/81NF8kgcsZL._AC_UF894,1000_QL80_.jpg",
+              "https://nout.uz/wp-content/uploads/2023/02/86-1024x769.png"
             ]
           },
           "price": 599,
@@ -527,7 +471,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 18,
+          "discount": 0,
           "brand": "hp",
           "ram": 8,
           "screenSize": 15.6,
@@ -543,12 +487,12 @@
           "id": 4,
           "title": "Lenovo ThinkPad X1 Carbon",
           "image": {
-            "main": "",
+            "main": "https://pcmarket.uz/wp-content/uploads/2024/12/0-1.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://pcmarket.uz/wp-content/uploads/2024/12/5.png",
+              "https://pcmarket.uz/wp-content/uploads/2024/12/3.png",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXkg7iSkGB7bbynNDwkWsDPUQKydQZSo0DbA&s",
+              "https://techforgood.com.au/cdn/shop/files/lenovo-thinkpad-x1-carbon-intel-intel-core-i7-155u-laptop-14-16gb-or-512gb-ssd-or-black-techforgood-12.jpg?v=1717667702"
             ]
           },
           "price": 1299,
@@ -572,12 +516,12 @@
           "id": 5,
           "title": "ASUS VivoBook 15",
           "image": {
-            "main": "",
+            "main": "https://nout.uz/wp-content/uploads/2024/07/1-1-1.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://dl.bs365.uz/storage/products/28833/S6P2Jh4SFr3TJqXOHMyz-medium_default.jpg",
+              "https://dl.bs365.uz/storage/products/28833/LZCNHB2wQcTqMYTEP9Ik-medium_default.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMcA5XyuuD4-S6NWq1ank8IgkYvc8NdWv8nw&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYy4PwMvnFf72U3dQkSC2Sr5fx4MSqlkRvUQ&s"
             ]
           },
           "price": 749,
@@ -585,7 +529,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 21,
+          "discount": 0,
           "brand": "asus",
           "ram": 16,
           "screenSize": 15.6,
@@ -596,238 +540,6 @@
           "date": "25.11.2025",
           "height": 1.8,
           "widht": 35.8
-        },
-        {
-          "id": 6,
-          "title": "Acer Aspire 5",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 699,
-          "color": "blue",
-          "guaranteed": true,
-          "freeDelivery": false,
-          "inStock": true,
-          "discount": 19,
-          "brand": "acer",
-          "ram": 8,
-          "screenSize": 15.6,
-          "processor": "Intel Core i5",
-          "gpuBrand": "NVIDIA GeForce",
-          "driveSize": 256,
-          "star": 4.4,
-          "date": "24.11.2025",
-          "height": 1.9,
-          "widht": 36.2
-        },
-        {
-          "id": 7,
-          "title": "MSI Modern 15",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 899,
-          "color": "gray",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 13,
-          "brand": "msi",
-          "ram": 16,
-          "screenSize": 15.6,
-          "processor": "Intel Core i7",
-          "gpuBrand": "Intel Iris Xe",
-          "driveSize": 512,
-          "star": 4.6,
-          "date": "23.11.2025",
-          "height": 1.75,
-          "widht": 35.9
-        },
-        {
-          "id": 8,
-          "title": "Razer Blade 15",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 1899,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 9,
-          "brand": "razer",
-          "ram": 32,
-          "screenSize": 15.6,
-          "processor": "Intel Core i9",
-          "gpuBrand": "RTX 4080",
-          "driveSize": 1024,
-          "star": 4.8,
-          "date": "22.11.2025",
-          "height": 1.99,
-          "widht": 35.7
-        },
-        {
-          "id": 9,
-          "title": "ASUS ROG Zephyrus",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 2199,
-          "color": "transparent",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": false,
-          "discount": 7,
-          "brand": "asus",
-          "ram": 32,
-          "screenSize": 14,
-          "processor": "Intel Core i9",
-          "gpuBrand": "RTX 4090",
-          "driveSize": 2048,
-          "star": 4.9,
-          "date": "21.11.2025",
-          "height": 1.99,
-          "widht": 30.9
-        },
-        {
-          "id": 10,
-          "title": "Gigabyte Aero 15",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 1599,
-          "color": "midnight black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 11,
-          "brand": "gigabyte",
-          "ram": 16,
-          "screenSize": 15.6,
-          "processor": "Intel Core i7",
-          "gpuBrand": "RTX 4070",
-          "driveSize": 512,
-          "star": 4.7,
-          "date": "20.11.2025",
-          "height": 2,
-          "widht": 35.8
-        },
-        {
-          "id": 11,
-          "title": "LG Gram 17",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 1299,
-          "color": "silver",
-          "guaranteed": true,
-          "freeDelivery": false,
-          "inStock": true,
-          "discount": 10,
-          "brand": "lg",
-          "ram": 16,
-          "screenSize": 17,
-          "processor": "Intel Core i7",
-          "gpuBrand": "Intel Iris Xe",
-          "driveSize": 512,
-          "star": 4.6,
-          "date": "19.11.2025",
-          "height": 1.5,
-          "widht": 37.8
-        },
-        {
-          "id": 12,
-          "title": "Alienware m15 R7",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 1799,
-          "color": "dark gray",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 12,
-          "brand": "alienware",
-          "ram": 32,
-          "screenSize": 15.6,
-          "processor": "Intel Core i9",
-          "gpuBrand": "RTX 4080",
-          "driveSize": 1024,
-          "star": 4.8,
-          "date": "18.11.2025",
-          "height": 2.5,
-          "widht": 36
-        },
-        {
-          "id": 13,
-          "title": "Framework Laptop",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 1299,
-          "color": "aluminum",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 6,
-          "brand": "framework",
-          "ram": 16,
-          "screenSize": 13.3,
-          "processor": "Intel Core i7",
-          "gpuBrand": "Iris Xe Graphics",
-          "driveSize": 512,
-          "star": 4.7,
-          "date": "17.11.2025",
-          "height": 1.3,
-          "widht": 29.8
         }
       ],
       "washingmachines": [
@@ -848,7 +560,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 10,
+          "discount": 0,
           "brand": "samsung",
           "capacity": 8,
           "rpm": 1400,
@@ -876,7 +588,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 12,
+          "discount": 0,
           "brand": "lg",
           "capacity": 9,
           "rpm": 1400,
@@ -904,7 +616,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 8,
+          "discount": 0,
           "brand": "bosch",
           "capacity": 8,
           "rpm": 1600,
@@ -932,7 +644,7 @@
           "guaranteed": false,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 5,
+          "discount": 0,
           "brand": "haier",
           "capacity": 8,
           "rpm": 1400,
@@ -960,7 +672,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 15,
+          "discount": 0,
           "brand": "beko",
           "capacity": 7,
           "rpm": 1200,
@@ -970,146 +682,6 @@
           "date": "14.11.2025",
           "height": 84,
           "widht": 59
-        },
-        {
-          "id": 6,
-          "title": "Indesit MTWE 81483",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 380,
-          "color": "white",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": false,
-          "discount": 9,
-          "brand": "indesit",
-          "capacity": 8,
-          "rpm": 1400,
-          "energyClass": "A++",
-          "noiseLevel": 76,
-          "star": 4.3,
-          "date": "15.11.2025",
-          "height": 85,
-          "widht": 60
-        },
-        {
-          "id": 7,
-          "title": "Siemens iQ500 WM14UT75PL",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 710,
-          "color": "silver",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 6,
-          "brand": "siemens",
-          "capacity": 9,
-          "rpm": 1400,
-          "energyClass": "A+++",
-          "noiseLevel": 67,
-          "star": 4.9,
-          "date": "16.11.2025",
-          "height": 85,
-          "widht": 60
-        },
-        {
-          "id": 8,
-          "title": "Candy Smart CS 1292D3",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 320,
-          "color": "white",
-          "guaranteed": false,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 20,
-          "brand": "candy",
-          "capacity": 9,
-          "rpm": 1200,
-          "energyClass": "A",
-          "noiseLevel": 78,
-          "star": 4.1,
-          "date": "17.11.2025",
-          "height": 85,
-          "widht": 60
-        },
-        {
-          "id": 9,
-          "title": "Hisense WFVC6010S",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 295,
-          "color": "grey",
-          "guaranteed": true,
-          "freeDelivery": false,
-          "inStock": true,
-          "discount": 11,
-          "brand": "hisense",
-          "capacity": 6,
-          "rpm": 1000,
-          "energyClass": "A+",
-          "noiseLevel": 79,
-          "star": 4,
-          "date": "18.11.2025",
-          "height": 85,
-          "widht": 59
-        },
-        {
-          "id": 10,
-          "title": "Ariston Hotpoint Natis RSG 825",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 470,
-          "color": "white",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 7,
-          "brand": "hotpoint",
-          "capacity": 8,
-          "rpm": 1200,
-          "energyClass": "A++",
-          "noiseLevel": 74,
-          "star": 4.4,
-          "date": "19.11.2025",
-          "height": 85,
-          "widht": 60
         }
       ],
       "heaters": [
@@ -1117,12 +689,12 @@
           "id": 1,
           "title": "Ballu Electric Heater BEC/EZER-1000",
           "image": {
-            "main": "",
+            "main": "https://prom-partner.com/upload/iblock/517/5171127eb4ddcbd8f637f1bfc25d72e3.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://rkcdn.ru/products/32ab2589-f3e3-11ed-b736-005056013a69/src.jpg",
+              "https://ir.ozone.ru/s3/multimedia-3/c400/6703372119.jpg",
+              "https://7745.by/img/imagecache/card_medium_image_for_product/uploads/products/153931/042a174a62faec8336f2e60ebeaedbdb.jpg",
+              "https://cdn2.domotekhnika.ru/images/products/008/366/882/big/21100868_1.jpg"
             ]
           },
           "price": 89,
@@ -1130,7 +702,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 10,
+          "discount": 0,
           "brand": "ballu",
           "capacity": 15,
           "power": 1000,
@@ -1145,12 +717,12 @@
           "id": 2,
           "title": "UFO Infrared Heater Star 2400",
           "image": {
-            "main": "",
+            "main": "https://farro.shop/wp-content/uploads/2020/11/UFO-Star-2400-farro.shop-4.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://farro.shop/wp-content/uploads/2020/11/UFO-Star-2400-leg-farro.shop-2.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBxvDE-RmvQYgqRfH3cHdu0z4YKegakiP7Kw&s",
+              "https://i.greatcatalog.net/v/2/2204/2204-588@2x.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-kncCc7s5qqkIKqpslV1eYNz9R4gyIHuFpQ&s"
             ]
           },
           "price": 120,
@@ -1158,7 +730,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 12,
+          "discount": 0,
           "brand": "ufo",
           "capacity": 25,
           "power": 2400,
@@ -1173,12 +745,12 @@
           "id": 3,
           "title": "Timberk Convector TEC.PC M2000",
           "image": {
-            "main": "",
+            "main": "https://www.timberk.ru/upload/resize_cache/webp/iblock/23f/700_700_0/23f8dbf7d590fe1c20667536f85861b0.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaoM9sKE4ivOb8AkwlfLFLcvyAaRfXSW8xqQ&s",
+              "https://www.timberk.ru/upload/resize_cache/webp/iblock/0a8/1000_1000_0/0a86ec98a8b93ad77467331bf0dbd815.webp",
+              "https://main-cdn.sbermegamarket.ru/big2/hlr-system/166/024/711/111/114/49/100030129422b1.jpg",
+              "https://cdn2.domotekhnika.ru/images/products/008/367/800/big/21101242_4.jpg"
             ]
           },
           "price": 110,
@@ -1186,7 +758,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": false,
-          "discount": 8,
+          "discount": 0,
           "brand": "timberk",
           "capacity": 20,
           "power": 2000,
@@ -1201,12 +773,12 @@
           "id": 4,
           "title": "Royal Clima Oil Heater RC-OH1500M",
           "image": {
-            "main": "",
+            "main": "https://masinternational.uk/image/cache/catalog/Electronics/Winter%20Heater/259-oil-heater-1500w-1-1200x1200.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://masinternational.uk/image/cache/catalog/Electronics/Winter%20Heater/259-oil-heater-1500w-2-1200x1200.jpg",
+              "https://productimages.biltema.com/v1/Image/product/xlarge/2000051695/4",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQXGuVqmEUNCAs25iAfl53jfXOCWU82RrV_w&s",
+              "https://masinternational.uk/image/cache/catalog/Electronics/Winter%20Heater/259-oil-heater-1500w-3-1200x1200.jpg"
             ]
           },
           "price": 95,
@@ -1214,7 +786,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 5,
+          "discount": 15,
           "brand": "royal clima",
           "capacity": 18,
           "power": 1500,
@@ -1229,12 +801,12 @@
           "id": 5,
           "title": "Electrolux Air Heat ECH/AG-1500",
           "image": {
-            "main": "",
+            "main": "https://euroclimate.org/image/cache/data/ElectrAIRGATEEF-777x777.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqBGpJnCo6UaE-Lm_BpfPVqmlnJ5Dhdjpl7w&s",
+              "https://euroclimate.org/image/cache/data/ElectrolAIRGATE1-777x777.jpg",
+              "https://ir.ozone.ru/s3/multimedia-1-e/c400/8230346150.jpg",
+              "https://electrolux-home.ru/upload/iblock/55d/wqjqaczkav9peaa1dt4ot5ghpnpr020i/komplekt_electrolux_air_gate_transformer_s_blokom_upravleniya_ech_ag2_1500_t_tu.jpg"
             ]
           },
           "price": 130,
@@ -1242,7 +814,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 15,
+          "discount": 0,
           "brand": "electrolux",
           "capacity": 22,
           "power": 1500,
@@ -1257,12 +829,12 @@
           "id": 6,
           "title": "Polaris Oil Radiator PRE W 0715",
           "image": {
-            "main": "",
+            "main": "https://avatars.mds.yandex.net/get-mpic/15307636/2a00000199f500e5f721fdf48647ddf9dbff/orig",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://cdn2.domotekhnika.ru/images/products/008/367/121/big/21100999_1.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9nUuySwsqZ_90t2zuLthfwiRJg9wQJF1PYg&s",
+              "https://cdn.citilink.ru/rYHoNF0Egakrek-CwP7ud_OBrqwgi1f02nSD9WwUUVU/resizing_type:fit/gravity:sm/width:1200/height:1200/plain/product-images/aeb780cb-c1aa-41c1-915c-688f70c3d575.jpg",
+              "https://shop-polaris.ru/upload/_thumbs/129/CLASSIC_300x300_95d2fbf5193965612b56680fbe277bf2.jpg"
             ]
           },
           "price": 75,
@@ -1270,7 +842,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 20,
+          "discount": 0,
           "brand": "polaris",
           "capacity": 12,
           "power": 1500,
@@ -1280,118 +852,6 @@
           "date": "15.11.2025",
           "height": 62,
           "widht": 45
-        },
-        {
-          "id": 7,
-          "title": "Midea Convector Heater MCH2000",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 115,
-          "color": "white",
-          "guaranteed": false,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 6,
-          "brand": "midea",
-          "capacity": 20,
-          "power": 2000,
-          "energyClass": "A",
-          "noiseLevel": 0,
-          "star": 4.5,
-          "date": "16.11.2025",
-          "height": 40,
-          "widht": 75
-        },
-        {
-          "id": 8,
-          "title": "Sharp Ceramic Heater SH-CH1500",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 99,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 9,
-          "brand": "sharp",
-          "capacity": 15,
-          "power": 1500,
-          "energyClass": "A",
-          "noiseLevel": 28,
-          "star": 4.3,
-          "date": "17.11.2025",
-          "height": 55,
-          "widht": 48
-        },
-        {
-          "id": 9,
-          "title": "Zanussi Fan Heater ZFH120",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 40,
-          "color": "white",
-          "guaranteed": false,
-          "freeDelivery": false,
-          "inStock": true,
-          "discount": 11,
-          "brand": "zanussi",
-          "capacity": 10,
-          "power": 1200,
-          "energyClass": "C",
-          "noiseLevel": 45,
-          "star": 4.1,
-          "date": "18.11.2025",
-          "height": 28,
-          "widht": 22
-        },
-        {
-          "id": 10,
-          "title": "Delonghi Oil Heater TRRS0920",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 150,
-          "color": "white",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 7,
-          "brand": "delonghi",
-          "capacity": 25,
-          "power": 2000,
-          "energyClass": "A",
-          "noiseLevel": 30,
-          "star": 4.8,
-          "date": "19.11.2025",
-          "height": 65,
-          "widht": 50
         }
       ],
       "TVs": [
@@ -1399,12 +859,12 @@
           "id": 1,
           "title": "Samsung QLED Q60B 55-inch",
           "image": {
-            "main": "",
+            "main": "https://images.samsung.com/is/image/samsung/p6pim/ru/qe55q60bauxru/gallery/ru-qled-tv-qe55q60bauxru-r-perspective--black-534976874?$Q90_1248_936_F_PNG$",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://i5.walmartimages.com/asr/e01bb521-a630-4470-a2c5-27c645cbb9c4.5d0bda1c03b1a4960c752a5b3974f2c3.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+              "https://www.laptopsdirect.co.uk/Images/QE55Q60BAUXXU_6_Supersize.jpg?v=3",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLybvMRu2uXAi19BjWUaN7ZsNdRmLZwZYhEw&s",
+              "https://i5.walmartimages.com/asr/39491990-e18a-43eb-b05d-01fdb097b11d.b12de7082746c0f6fbe28445a1bac58a.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
             ]
           },
           "price": 799,
@@ -1412,7 +872,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 12,
+          "discount": 0,
           "brand": "samsung",
           "resolution": "4K",
           "screenSize": 55,
@@ -1427,12 +887,12 @@
           "id": 2,
           "title": "LG OLED C2 48-inch",
           "image": {
-            "main": "",
+            "main": "https://m.media-amazon.com/images/I/81mc1pl2T+L.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://www.lg.com/ru/images/televisions/md07548659/gallery/medium07.jpg",
+              "https://m.media-amazon.com/images/I/51WxpJnSsgL.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDG30Mns-EMB0LuN_hHaWY8ymVZlcqZZzZpQ&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK9ZFVTnf4tRf1XnGDpvFLJzXxHwXia-kCxg&s"
             ]
           },
           "price": 999,
@@ -1455,12 +915,12 @@
           "id": 3,
           "title": "Sony Bravia X90J 65-inch",
           "image": {
-            "main": "",
+            "main": "https://www.atlanticelectrics.co.uk/cdn/shop/products/sony-bravia-xr-xr65x90j-2021-led-hdr-4k-ultra-hd-smart-google-tv-65-inch-with-freeview-hd-freesat-hd-dolby-atmos-black-951706.jpg?v=1675438227&width=813",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnV6yRdPGnZnXPjWGx8awtcd79dzuZHLn-bQ&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9sQNL1A4bjX3uXFQyqatwqTJYHDli50Nabg&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWpa2XS-r3zp62vVV3O9FAaOB9Hwh4g2eG3Q&s",
+              "https://shrimeenakshifanhouse.com/cdn/shop/files/03-X90J-tv-feature.jpg?v=1711010439"
             ]
           },
           "price": 1199,
@@ -1468,7 +928,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 8,
+          "discount": 0,
           "brand": "sony",
           "resolution": "4K",
           "screenSize": 65,
@@ -1483,12 +943,12 @@
           "id": 4,
           "title": "Hisense U7H 55-inch",
           "image": {
-            "main": "",
+            "main": "https://m.media-amazon.com/images/I/51LVRonYxnL._AC_UF1000,1000_QL80_.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://www.jiomart.com/images/product/original/493666713/hisense-164-cm-65-inch-ultra-hd-4k-qled-smart-tv-u7h-series-65u7h-digital-o493666713-p598744909-1-202511150257.jpeg?im=Resize=(1000,1000)",
+              "https://m.media-amazon.com/images/I/61BUKztlKNL.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT77Uriucj-D6hMpukFKgg98SFCLtyqrngk9g&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdg4Ss-grVVkWSwiDtZVOBUEW4jIz0DDW0Iw&s"
             ]
           },
           "price": 650,
@@ -1496,7 +956,7 @@
           "guaranteed": false,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 5,
+          "discount": 0,
           "brand": "hisense",
           "resolution": "4K",
           "screenSize": 55,
@@ -1511,12 +971,12 @@
           "id": 5,
           "title": "TCL Q6 QLED 50-inch",
           "image": {
-            "main": "",
+            "main": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSGGFLaClyuyYOwg-IY1XXlSzp2NooGl7oMA&s",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfsZ0rbybtq-NhCop1z1Gt17C2IeqDF6I-ag&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgMP7HA12cYcZrefyS0_WYGuspHsIJLRVKUQ&s",
+              "https://www.dolby.com/globalassets/catalogassets/cc08a5560fea20b61d900ad0b1aa06ce9ea83823.jpg?mode=pad&width=1440&heightratio=0.5625&bgcolor=fff&quality=80",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCzSylpE0xQtHmY3Rkc0z839ECh8uAx514jA&s"
             ]
           },
           "price": 480,
@@ -1539,12 +999,12 @@
           "id": 6,
           "title": "Xiaomi Mi TV P1 43-inch",
           "image": {
-            "main": "",
+            "main": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSibH6u2oxlLEqJJOXfrLyr4u5pxFLw7KCmw&s",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_UbWej2WhNIeEvwbxmFfmORhypdvzG0NjXA&s",
+              "https://api.idea.uz/storage/products/October2022/Eszwn9E79933IpGqt6AM.png",
+              "https://interbrands.uz/image/cache/catalog/ventilyator/XiaomiMiTVP132GL3-1000x600.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI0Mqj7LA-EOQIihjj7FrgB8nu4uD-WOJp4w&s"
             ]
           },
           "price": 320,
@@ -1552,7 +1012,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 17,
+          "discount": 0,
           "brand": "xiaomi",
           "resolution": "4K",
           "screenSize": 43,
@@ -1567,12 +1027,12 @@
           "id": 7,
           "title": "Philips Ambilight 58-inch",
           "image": {
-            "main": "",
+            "main": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU656MgV-G18BwhfM32AwtR91OaWKG6zqrBg&s",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://images.philips.com/is/image/philipsconsumer/f9c9f3c43d15435fb34eafb9007969ea?$pnglarge$&wid=1250",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmmwHY5Pzrq8qg_4OP1DoOhLy0okLyUhlF8A&s",
+              "https://www.buyitdirect.ie/Images/43PUS855612_2_Supersize.jpg?v=33",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUmWVPFSvahnetdUqbk0PVx_LdUJBWw-U2vg&s"
             ]
           },
           "price": 720,
@@ -1580,7 +1040,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 6,
+          "discount": 0,
           "brand": "philips",
           "resolution": "4K",
           "screenSize": 58,
@@ -1595,12 +1055,12 @@
           "id": 8,
           "title": "Panasonic HX700 40-inch",
           "image": {
-            "main": "",
+            "main": "https://www.flatpanelshd.com/pictures/panasonichx700_tvd_small.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfKCUNsHHQJZjmEos5vyZ66uodicq_zrtnMQ&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpYSy9uGzDofkfZPTiy8gElS6fY7E3CsOdig&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNxFNtvAFg6ehBRg6ecIJ9oD06ngqwEA9aNQ&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLKNOTHTqXPZ0A5czj5hikr74WlotV6qgkg&s"
             ]
           },
           "price": 410,
@@ -1618,62 +1078,6 @@
           "date": "17.11.2025",
           "height": 52,
           "widht": 90
-        },
-        {
-          "id": 9,
-          "title": "Sharp 4T-C65DL1X 65-inch",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 950,
-          "color": "black",
-          "guaranteed": false,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 11,
-          "brand": "sharp",
-          "resolution": "4K",
-          "screenSize": 65,
-          "displayType": "LED",
-          "refreshRate": 120,
-          "star": 4.5,
-          "date": "18.11.2025",
-          "height": 84,
-          "widht": 146
-        },
-        {
-          "id": 10,
-          "title": "JVC Fire TV 55-inch",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 530,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 7,
-          "brand": "jvc",
-          "resolution": "4K",
-          "screenSize": 55,
-          "displayType": "LED",
-          "refreshRate": 60,
-          "star": 4.4,
-          "date": "19.11.2025",
-          "height": 71,
-          "widht": 123
         }
       ],
       "airconditioners": [
@@ -1681,12 +1085,12 @@
           "id": 1,
           "title": "LG Dual Inverter 12k BTU",
           "image": {
-            "main": "",
+            "main": "https://atljamaica.com/media/catalog/product/cache/5724eff9bb828d0850e43c87f0366245/w/e/web_product_resize_1100x1100_8__2_21.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://www.opalnet.co.ke/media/catalog/product/cache/d349dbc46a4092e8dfd5f7908cd360f7/d/z/dz-01_5_9_1_1.jpg",
+              "https://www.opalnet.co.ke/media/catalog/product/cache/d349dbc46a4092e8dfd5f7908cd360f7/d/z/dz-13_8_8_1_1.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Fc-WKM2Ts4yYbWNtylzKWcakqyUZa05Nrg&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKowT_B7_KA5uZWFpiGfoAoy5IchwbTqKaDg&s"
             ]
           },
           "price": 520,
@@ -1694,7 +1098,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 10,
+          "discount": 0,
           "brand": "lg",
           "coolingCapacity": 12000,
           "energyClass": "A++",
@@ -1709,12 +1113,12 @@
           "id": 2,
           "title": "Samsung WindFree AR12",
           "image": {
-            "main": "",
+            "main": "https://images.samsung.com/is/image/samsung/p6pim/za/ar12bshcmwk-fa/gallery/za-wind-free-ar9500t-542541-ar12bshcmwk-fa-545618794?$Q90_1248_936_F_PNG$",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://www.keroclima.pt/WebRoot/epagesUK/Shops/960844166/6911/B190/B81E/91AE/D046/0A0C/05B9/876C/AR09TXFCAWK_ext_m.png",
+              "https://www.climamania.com/10142-medium_default/air-conditioning-samsung-f-ar12nxt-wind-free-comfort.jpg",
+              "https://www.transtel.co.ug/2808-large_default/samsung-ar12bshcmw-12kbtu-wind-free%E2%84%A2-ar6500t-wall-mount-ac-.jpg",
+              "https://images.samsung.com/is/image/samsung/p6pim/au/ar12dxeanwknsa/gallery/au-ar9500tar10dyeabwknst-ar12dxeanwknsa-544293316?$Q90_1248_936_F_PNG$"
             ]
           },
           "price": 560,
@@ -1722,7 +1126,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 12,
+          "discount": 0,
           "brand": "samsung",
           "coolingCapacity": 12000,
           "energyClass": "A+",
@@ -1737,20 +1141,20 @@
           "id": 3,
           "title": "Midea Inverter Mission II 18k BTU",
           "image": {
-            "main": "",
+            "main": "https://www.reylenferna.com/wp-content/uploads/2023/09/Midea-MSXTBU-12HRFN8-QRD6GW.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://andreascharalambouscy.com/wp-content/uploads/2024/09/optimizedAG16_left_on_%E9%95%9C%E9%9D%A2.jpg1718429620-scaled.jpg",
+              "https://appliancehub.mt/content/products/additional/33063/images/AC.jpg",
+              "https://www.midea.com.ua/sites/default/files/media/images/2025-03/xt-front.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQhIoe8DUTXfy1X96lDNzFXKo7GYOcJsvVJQ&s"
             ]
           },
           "price": 690,
-          "color": "white",
+          "color": "black",
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": false,
-          "discount": 8,
+          "discount": 0,
           "brand": "midea",
           "coolingCapacity": 18000,
           "energyClass": "A+",
@@ -1765,12 +1169,12 @@
           "id": 4,
           "title": "Artel Crystal AC 09HM",
           "image": {
-            "main": "",
+            "main": "https://olcha.uz/image/original/products/2018-04-23/konditsioner-artel-09-hm-2915-0.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://artel-avesto.tj/wp-content/uploads/2020/06/12hm_oQDVoVw.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ48ByPbL79Koj8Wf5jDCVVEWCArzLiHFusCw&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzp6SORFtJ4hCpWXwlsbbbXZXgIasPpsPX-A&s",
+              "https://onbir.kg/components/com_jshopping/files/img_products/Artel_ART-09HM_MONTANA_2.webp"
             ]
           },
           "price": 330,
@@ -1778,7 +1182,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 5,
+          "discount": 0,
           "brand": "artel",
           "coolingCapacity": 9000,
           "energyClass": "A",
@@ -1793,12 +1197,12 @@
           "id": 5,
           "title": "Hisense Silent Pro 12k BTU",
           "image": {
-            "main": "",
+            "main": "https://www.tehnomedia.rs/image/107400.jpg?tip=webp&tip_slike=3",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKD_vYUcPvAdj8aHeR9jqHk9zdRCvO6sVDTQ&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe1VE9Z0ndCi-U_05xFhmbW1EAaiJWuHMzSQ&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD3golycCSJVIZU5lS9LpIsvJ0qq5oubZiTg&s",
+              "https://img.ep-cdn.com/i/500/500/qa/qajyzgdorfpnmcvubsti/hisense-klima-energy-pro-x-black-12k-qh35xv3b-cene.webp"
             ]
           },
           "price": 470,
@@ -1806,7 +1210,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 14,
+          "discount": 15,
           "brand": "hisense",
           "coolingCapacity": 12000,
           "energyClass": "A+",
@@ -1821,12 +1225,12 @@
           "id": 6,
           "title": "Gree Bora Inverter 24k BTU",
           "image": {
-            "main": "",
+            "main": "https://maxcom.uz/storage/product/3llt4Hk1hR1ybIRkiyLMxEdv4Zj4BKtLV0R8RVOV.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://assets.asaxiy.uz/product/items/desktop/5e15bd5daa403.png.webp",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUGBMaqQ1CfYThZU48r1xf__B1YwXFAkytmw&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGN7v1__4BSnWpyt3gIbpb0a_dBNjYQ1_LqA&s",
+              "https://maxcom.uz/storage/product/thumb/352TIx93Jbz0m4BizV29at9vFv0DLvDo1adoCOfi.png"
             ]
           },
           "price": 880,
@@ -1834,7 +1238,7 @@
           "guaranteed": false,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 9,
+          "discount": 0,
           "brand": "gree",
           "coolingCapacity": 24000,
           "energyClass": "A++",
@@ -1844,118 +1248,6 @@
           "date": "15.11.2025",
           "height": 33,
           "widht": 110
-        },
-        {
-          "id": 7,
-          "title": "TCL Elite Series 12k BTU",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 440,
-          "color": "white",
-          "guaranteed": true,
-          "freeDelivery": false,
-          "inStock": true,
-          "discount": 7,
-          "brand": "tcl",
-          "coolingCapacity": 12000,
-          "energyClass": "A",
-          "noiseLevel": 26,
-          "areaCoverage": 30,
-          "star": 4.3,
-          "date": "16.11.2025",
-          "height": 27,
-          "widht": 82
-        },
-        {
-          "id": 8,
-          "title": "Panasonic Aero Series 18k BTU",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 720,
-          "color": "white",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 11,
-          "brand": "panasonic",
-          "coolingCapacity": 18000,
-          "energyClass": "A++",
-          "noiseLevel": 19,
-          "areaCoverage": 50,
-          "star": 4.7,
-          "date": "17.11.2025",
-          "height": 30,
-          "widht": 102
-        },
-        {
-          "id": 9,
-          "title": "Sharp J-Tech Inverter 12k BTU",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 495,
-          "color": "white",
-          "guaranteed": false,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 10,
-          "brand": "sharp",
-          "coolingCapacity": 12000,
-          "energyClass": "A+",
-          "noiseLevel": 23,
-          "areaCoverage": 35,
-          "star": 4.4,
-          "date": "18.11.2025",
-          "height": 28,
-          "widht": 87
-        },
-        {
-          "id": 10,
-          "title": "Bosch Climate 5000 9k BTU",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 430,
-          "color": "white",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 6,
-          "brand": "bosch",
-          "coolingCapacity": 9000,
-          "energyClass": "A+",
-          "noiseLevel": 21,
-          "areaCoverage": 25,
-          "star": 4.5,
-          "date": "19.11.2025",
-          "height": 26,
-          "widht": 80
         }
       ],
       "Smartwatches": [
@@ -1963,12 +1255,12 @@
           "id": 1,
           "title": "Apple Watch Series 9",
           "image": {
-            "main": "",
+            "main": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-45-cell-alum-silver-sport-band-storm-blue-s9?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=SWVwd2Q3em9qR2w5RTZiVWtmcWQ1dmVCTG9NMHlueFhURk5adlNYTU9xejR3VHd0VHdHL2srZlNWc2NFbDMzQ0FtWVJCbTFqbVlJVmw3ZkRFUGZoZ0YzaTQrYy82TUg0cFZQeUN1eC9DMlZNQkJEMXc0aklkVno5c3lHT1ZQU0EwSHduS0lxbEtSaGM2RlNKTjVURWRn",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://assets.asaxiy.uz/product/main_image/mobile/654d0acc94058.jpg.webp",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQAybm46UcwjI1h_iAbUB9c-IHah9GIMp8Tw&s",
+              "https://m.media-amazon.com/images/I/71ZHQHOtqLL._AC_UF350,350_QL80_.jpg",
+              "https://www.theioutlet.com/wp-content/uploads/2024/04/Silver-Series-9.png"
             ]
           },
           "price": 399,
@@ -1976,7 +1268,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 5,
+          "discount": 25,
           "brand": "apple",
           "screenSize": 1.9,
           "batteryLife": 18,
@@ -1991,12 +1283,12 @@
           "id": 2,
           "title": "Samsung Galaxy Watch 6",
           "image": {
-            "main": "",
+            "main": "https://mini-io-api.texnomart.uz/catalog/product/3561/356118/194807/4252da07-633f-42a3-8e62-29875efedaea.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://images.samsung.com/nz/galaxy-watch6-classic/feature/galaxy-watch6-classic-screen-scene01-mo.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCIWB6057mOdudIPUmTX3utRfYuqhtninWpQ&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTntGxA7b6t1v4aup3kWhz91pI2qso1A_0hUg&s",
+              "https://mini-io-api.texnomart.uz/catalog/product/3561/356118/206052/7dc53a84-5e38-45fb-a406-c42ad5380d34-small.webp"
             ]
           },
           "price": 359,
@@ -2004,7 +1296,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 7,
+          "discount": 0,
           "brand": "samsung",
           "screenSize": 1.8,
           "batteryLife": 20,
@@ -2019,12 +1311,12 @@
           "id": 3,
           "title": "Garmin Venu 3",
           "image": {
-            "main": "",
+            "main": "https://www.vanarensbergen.nl/wp-content/uploads/2024/10/garmin-venu-3s-010-02785-55-811922.png",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ1mmpLaOIxdMnVS5IEAbJpl4Kf_ucCzxM5g&s",
+              "https://www.garmincyprus.com/wp-content/uploads/2023/09/6-MORNING-REPORT-1-600x675.webp",
+              "https://ph.garmin.com/m/ph/g/products/venu-3s-ivory-pd-02-lg.jpg",
+              "https://garmin.com.uz/uploads/products/xTT9cCnAj2.jpeg"
             ]
           },
           "price": 299,
@@ -2032,7 +1324,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 6,
+          "discount": 0,
           "brand": "garmin",
           "screenSize": 1.3,
           "batteryLife": 21,
@@ -2047,12 +1339,12 @@
           "id": 4,
           "title": "Fitbit Versa 4",
           "image": {
-            "main": "",
+            "main": "https://m.media-amazon.com/images/I/61EDq8HCXgL._AC_SL1500_.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbcW50NtQj9wVCKoXv4HjRp5LdGbyBbvCrkg&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzdZAjJhOoGr4UlSFJUoP8gHy6ZgD8J32n2A&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYHW9Oui2VR7OOSbfgqgmxdJ_uJ5FD7Bl9oA&s",
+              "https://digitalcontent.api.tesco.com/v2/media/marketplace/caa473e3-e1f5-455f-8f37-c2aef4ccc118/Wphp6C0MRmMz2tZdFzyWydUyI_471572440.jpeg?h=960&w=960"
             ]
           },
           "price": 199,
@@ -2060,7 +1352,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 10,
+          "discount": 0,
           "brand": "fitbit",
           "screenSize": 1.34,
           "batteryLife": 18,
@@ -2075,12 +1367,12 @@
           "id": 5,
           "title": "Amazfit GTR 4",
           "image": {
-            "main": "",
+            "main": "https://mini-io-api.texnomart.uz/catalog/product/3549/354918/186731/a882e963-dee9-4b59-8d93-cbf92a9aefaf.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://mini-io-api.texnomart.uz/catalog/product/3549/354918/186727/dad33da7-4bd9-4a35-8e04-20d211165d07.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpqLviKltarvKQczdrTTEFjd8uS5yA0ac8VQ&s",
+              "https://joybox.uz/wp-content/uploads/2022/12/032b2cc936860b03048302d991c3498f_120722120607.jpeg",
+              "https://olcha.uz/image/700x700/products/2022-11-22/umnye-chasy-amazfit-gtr-4-170844-1.jpeg"
             ]
           },
           "price": 179,
@@ -2088,7 +1380,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 12,
+          "discount": 30,
           "brand": "amazfit",
           "screenSize": 1.43,
           "batteryLife": 24,
@@ -2103,12 +1395,12 @@
           "id": 6,
           "title": "Huawei Watch GT 3",
           "image": {
-            "main": "",
+            "main": "https://xstore.md/images/product/2023/06/xstore.md-Ceas-Huawei-Watch-GT3-Elite-(1).jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://assets.asaxiy.uz/product/items/desktop/f90f295076a877191698f847a18cad7c2024041514520920860gIQgzWdXSr.jpg.webp  ",
+              "https://play-lh.googleusercontent.com/fMGYxwYJk0j15aW7Vyv-JChu5r05fhkKBh2mKWVOg5I0G4pC0lueFD7eSMbaPKzmBfw=w526-h296-rw",
+              "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt3/img/2/huawei-watch-gt-3-watch-faces-2.png",
+              "https://cdn03.ciceksepeti.com/cicek/kcm52007484-1/L/huawei-watch-gt3-46-mm-ekran-koruyucu-seffaf-tpu-film-2-adet-kcm52007484-1-c68d1dbb6aee4d29a6411130645896d9.jpg"
             ]
           },
           "price": 219,
@@ -2116,7 +1408,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": false,
-          "discount": 8,
+          "discount": 0,
           "brand": "huawei",
           "screenSize": 1.32,
           "batteryLife": 21,
@@ -2131,12 +1423,12 @@
           "id": 7,
           "title": "Fossil Gen 6",
           "image": {
-            "main": "",
+            "main": "https://images-cdn.ubuy.qa/66ae3acb4d96ae6426704435-fossil-mens-gen-6-smartwatch-brown.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://genuinegorgeous.com/cdn/shop/files/FTW4062_onwrist.webp?v=1724879891&width=1000  ",
+              "https://www.ditur.com/media/catalog/product/cache/9213dd647401eec95bc47dd3b1622a89/f/t/ftw4062-1.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdQWRouYvQnHN4gsIaD7Z6UV-uueD0LKhqSA&s",
+              "https://www.fieldandtrek.com/images/products/38371890_l_a6.jpg"
             ]
           },
           "price": 249,
@@ -2144,7 +1436,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 9,
+          "discount": 0,
           "brand": "fossil",
           "screenSize": 1.28,
           "batteryLife": 24,
@@ -2154,90 +1446,6 @@
           "date": "16.11.2025",
           "height": 44,
           "widht": 44
-        },
-        {
-          "id": 8,
-          "title": "TicWatch Pro 5",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 299,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": false,
-          "inStock": true,
-          "discount": 7,
-          "brand": "ticwatch",
-          "screenSize": 1.39,
-          "batteryLife": 48,
-          "waterResistant": true,
-          "heartRateMonitor": true,
-          "star": 4.5,
-          "date": "17.11.2025",
-          "height": 47,
-          "widht": 47
-        },
-        {
-          "id": 9,
-          "title": "Samsung Galaxy Watch Active 3",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 199,
-          "color": "grey",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 11,
-          "brand": "samsung",
-          "screenSize": 1.4,
-          "batteryLife": 20,
-          "waterResistant": true,
-          "heartRateMonitor": true,
-          "star": 4.4,
-          "date": "18.11.2025",
-          "height": 42,
-          "widht": 42
-        },
-        {
-          "id": 10,
-          "title": "Garmin Forerunner 965",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 399,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 6,
-          "brand": "garmin",
-          "screenSize": 1.4,
-          "batteryLife": 30,
-          "waterResistant": true,
-          "heartRateMonitor": true,
-          "star": 4.7,
-          "date": "19.11.2025",
-          "height": 46,
-          "widht": 46
         }
       ],
       "audio": [
@@ -2245,12 +1453,12 @@
           "id": 1,
           "title": "Bose SoundLink Revolve",
           "image": {
-            "main": "",
+            "main": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRBxygU_JlNeSEZgJ7U3Y_R8qjBa2ITNj71g&s",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREMvZq_7uA8T1qumiN6QfKep9-1wjrB3IL7Q&s",
+              "https://m.media-amazon.com/images/I/71Qy-HGlgvL._AC_SL1500_.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJl1PhN8qqAVD1S-wRUpeq_eU2bJl6_PFQcg&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWdRHfLFGUbNuu5AlDs6VoDVTmmzVtuHG86g&s"
             ]
           },
           "price": 199,
@@ -2258,7 +1466,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 10,
+          "discount": 15,
           "brand": "bose",
           "type": "portable speaker",
           "connectivity": "Bluetooth",
@@ -2272,12 +1480,12 @@
           "id": 2,
           "title": "Sony WH-1000XM5",
           "image": {
-            "main": "",
+            "main": "https://mini-io-api.texnomart.uz/catalog/product/3578/357891/203415/86873617-6238-44f8-a907-7afb86db5b7d.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQa-pjqTNzcDUJo19mmzw2WO1-3w_OtrhlKg&s",
+              "https://mini-io-api.texnomart.uz/catalog/product/3578/357891/203414/2927944c-8183-454f-afe6-b92e586c68c5.webp",
+              "https://joybox.uz/wp-content/uploads/2023/08/032b2cc936860b03048302d991c3498f_081923092830.jpeg",
+              "https://i5.walmartimages.com/asr/73965559-506d-4438-97ea-cf89fea41da7.0e036a8e077b4eecd94cf321b6013d6c.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
             ]
           },
           "price": 349,
@@ -2285,7 +1493,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 7,
+          "discount": 0,
           "brand": "sony",
           "type": "headphones",
           "connectivity": "Bluetooth",
@@ -2299,12 +1507,12 @@
           "id": 3,
           "title": "JBL Flip 6",
           "image": {
-            "main": "",
+            "main": "https://assets.asaxiy.uz/product/items/desktop/438a6c10fbff2064c1d7c9e3f7cb9a572023031615274440659BussJlgagl.png.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://assets.asaxiy.uz/product/items/desktop/ee0dc655da02e88747edcd64313856a32023031615274467584HTCaxIBVGl.png.webp",
+              "https://castore.uz/upload/iblock/0b8/6dxbq1ndwjei8z580b1wzabtphlfcoju/portativnaya-kolonka-jbl-flip-6-blue-jblflip6blu-1.webp",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDP30uTqxdl9t3wvTj2m2jNF_w0puuzOyZhw&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKuu9QvCNDQLmMeETLekuNgj4hTSNoqTe9Bg&s"
             ]
           },
           "price": 129,
@@ -2312,7 +1520,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 12,
+          "discount": 50,
           "brand": "jbl",
           "type": "portable speaker",
           "connectivity": "Bluetooth",
@@ -2326,12 +1534,12 @@
           "id": 4,
           "title": "Apple AirPods Pro 2",
           "image": {
-            "main": "",
+            "main": "https://castore.uz/upload/iblock/21f/n3ik5lagbxqzk61n9g3a05juic2tvl65/besprovodnye-naushniki-airpods-pro-2nd-generation-mtjv3ru-a.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj92AWwUXnm__lQAbY2jD9NqDBKWLD_DwCHg&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQayv1KYhuSrM2lBpXTKRdtEsC-qgqlHFuhJw&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqKYzLJ8LdohrW51q6b-lCP3pFpqg3OOluUg&s",
+              "https://cdn.flymart.uz/file/hub/file/2024/12/26/2qkEDPtAaTiXSzN6mdbBYK2mOhM.jpg"
             ]
           },
           "price": 249,
@@ -2339,7 +1547,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 6,
+          "discount": 70,
           "brand": "apple",
           "type": "earbuds",
           "connectivity": "Bluetooth",
@@ -2353,12 +1561,12 @@
           "id": 5,
           "title": "Bowers & Wilkins Formation Wedge",
           "image": {
-            "main": "",
+            "main": "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw78c5d989/bowers/PDP/Formation-Wedge/Formation-Wedge-Black/Formation-Wedge-Black_Image_1.png?sw=768",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7d5caed2/bowers/Rich-Content/bw_fw_hero_mobil.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVIzlpaJurc8xjylToP-eq8sOYoG1m0JOxoA&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLPcaIOKbkm17LzEaPtbS4TI3RSlCo9DTVLw&sv",
+              "https://www.smarthomesounds.co.uk/wp/wp-content/uploads/2019/08/Low-Formation-Wedge-Black-Right-Side-View-1024x746.png"
             ]
           },
           "price": 999,
@@ -2366,7 +1574,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": false,
-          "discount": 5,
+          "discount": 0,
           "brand": "bowers & wilkins",
           "type": "wireless speaker",
           "connectivity": "Wi-Fi/Bluetooth",
@@ -2380,12 +1588,12 @@
           "id": 6,
           "title": "Sony SRS-XB43",
           "image": {
-            "main": "",
+            "main": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_JfPA1WDGHRXVntX1UQ8jAG7mQkGJjBDsHw&s",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp71i63uT7N9Q7OBt1Pu-L1zXJThiBFKTr0w&s",
+              "https://image.dhgate.com/webp/m/0x0/f2/albu/g22/M01/C2/57/rBVaEmLWWk-ACyTyAAJasF3BLZw189.jpg",
+              "https://m.media-amazon.com/images/I/71Ewymy9I4L.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpj6osNVHz_eQkNvOXUYayvT9v0P2k_bPYJA&s"
             ]
           },
           "price": 199,
@@ -2393,7 +1601,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 8,
+          "discount": 0,
           "brand": "sony",
           "type": "portable speaker",
           "connectivity": "Bluetooth",
@@ -2407,12 +1615,12 @@
           "id": 7,
           "title": "Bang & Olufsen Beoplay A9",
           "image": {
-            "main": "",
+            "main": "https://m.media-amazon.com/images/I/61cgt67STVL._AC_UF894,1000_QL80_.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://www.on-off-on.ru/upload/iblock/58a/58aabf9a0b1541dd927630ee451eae8e.jpg",
+              "https://www.hausdorf.ru/upload/iblock/ec1/besprovodnaya_akusticheskaya_sistema_bang_olufsen_beoplay_a9_white_11.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnaWBzMnSTTNqbujmfmxTfNhKGD6IFKzAl4w&s",
+              "https://soundlab.com.ua/upload/iblock/447/6swqu80h0nq4x7snlx6rnusnwwzkdnuj.png"
             ]
           },
           "price": 2999,
@@ -2429,87 +1637,6 @@
           "date": "16.11.2025",
           "height": 70,
           "widht": 70
-        },
-        {
-          "id": 8,
-          "title": "JBL PartyBox 310",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 399,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": false,
-          "inStock": true,
-          "discount": 10,
-          "brand": "jbl",
-          "type": "party speaker",
-          "connectivity": "Bluetooth",
-          "power": 240,
-          "star": 4.7,
-          "date": "17.11.2025",
-          "height": 70,
-          "widht": 33
-        },
-        {
-          "id": 9,
-          "title": "Marshall Stanmore II",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 349,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 6,
-          "brand": "marshall",
-          "type": "wireless speaker",
-          "connectivity": "Bluetooth",
-          "power": 50,
-          "star": 4.8,
-          "date": "18.11.2025",
-          "height": 35,
-          "widht": 23
-        },
-        {
-          "id": 10,
-          "title": "Anker Soundcore Flare 2",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 79,
-          "color": "grey",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 15,
-          "brand": "anker",
-          "type": "portable speaker",
-          "connectivity": "Bluetooth",
-          "power": 20,
-          "star": 4.5,
-          "date": "19.11.2025",
-          "height": 7,
-          "widht": 18
         }
       ],
       "Laptopaccessories": [
@@ -2517,12 +1644,12 @@
           "id": 1,
           "title": "Logitech MX Master 3 Mouse",
           "image": {
-            "main": "",
+            "main": "https://files.ox-sys.com/cache/800x_/image/66/cf/68/66cf68f3a163d474015728343f191dd5ea24e1f57dff44e36945f6755a82b76a.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://maxcom.uz/storage/product/Ndpb9X55vGoMVKCI1LWwBENn3dxHFVNXAr204xWJ.png",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJwx7X1mXaIbfuhdWzU68m5M6TCaCnkoZLfw&s",
+              "https://globaliraq.net/cdn/shop/files/1_f88f49ff-cff0-4aec-bdd3-b0294448437a.png?v=1702725313&width=2048",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzgLUEAwpNyNIYv9sZJaV7SAGfhafiKSFDsg&s"
             ]
           },
           "price": 99,
@@ -2530,7 +1657,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 10,
+          "discount": 30,
           "brand": "logitech",
           "type": "mouse",
           "compatibility": "Windows/Mac",
@@ -2543,12 +1670,12 @@
           "id": 2,
           "title": "Anker USB-C Hub 7-in-1",
           "image": {
-            "main": "",
+            "main": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKPdynzSj1KLE8QbMVKKhC0TgXIViLCxzrpg&s",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://m.media-amazon.com/images/I/71ZzUx9bwlL._AC_UF350,350_QL80_.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH73dK67NaTg10l1c6U2oUTryyH4jzDwZd_A&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKlCmV-0XBhnQ7uHWVsVH59E59NzjUQnwTIw&s",
+              "https://cdn.shopify.com/s/files/1/0493/9834/9974/files/Main-06_dd396e2a-4f53-414d-ba1c-6851f6bf5486.jpg?v=1749638404"
             ]
           },
           "price": 49,
@@ -2556,7 +1683,7 @@
           "guaranteed": true,
           "freeDelivery": false,
           "inStock": true,
-          "discount": 12,
+          "discount": 0,
           "brand": "anker",
           "type": "hub",
           "compatibility": "USB-C laptops",
@@ -2569,12 +1696,12 @@
           "id": 3,
           "title": "Dell Laptop Sleeve 15-inch",
           "image": {
-            "main": "",
+            "main": "https://m.media-amazon.com/images/I/61Rk44rYn-L._AC_UF894,1000_QL80_.jpg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://m.media-amazon.com/images/I/41rAGuAfBdL.jpg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHRrE-DqhxDD-sNbQ3AHeFxWLwnc4CabRTuw&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuoK_lMhWRsZLi8rx6y3jqLxVTgI8fAR2jjQ&s",
+              "https://m.media-amazon.com/images/I/61+3SlCu8oL._AC_UF894,1000_QL80_.jpg"
             ]
           },
           "price": 29,
@@ -2582,7 +1709,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 5,
+          "discount": 0,
           "brand": "dell",
           "type": "sleeve",
           "compatibility": "15-inch laptops",
@@ -2595,12 +1722,12 @@
           "id": 4,
           "title": "Apple Magic Keyboard",
           "image": {
-            "main": "",
+            "main": "https://cdn0.it4profit.com/s3size/el:t/rt:fill/plain/s3://cms/product/bd/7a/bd7ae17194b646e22cd493a532d79a8e/250410160021423008.webp",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://olcha.uz/image/700x700/products/2022-12-07/klaviatura-apple-magic-keyboard-for-ipad-pro-129-ru-belyy-174917-2.jpeg",
+              "https://cdn0.it4profit.com/s3size/el:t/rt:fill/plain/s3://cms/product/48/27/4827284180573fcd7a5aae10da73cc63/250415160012489455.webp",
+              "https://cdn.mediapark.uz/imgs/2e689d09-9d1f-4533-a600-d1c0b0881601_Artboard-1.webp",
+              "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MWR43B_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=M0lUVHExbmowelhNbHhDY1lRc0lFQlF3c3l3NWtpOWN3dXlCL3pTWlJXTXpIV3RHbE5qdS8zMStVUzZUdGp5bExhQVR6VldCWVVQMkpmQTVCZEM5VFE"
             ]
           },
           "price": 99,
@@ -2608,7 +1735,7 @@
           "guaranteed": true,
           "freeDelivery": true,
           "inStock": true,
-          "discount": 8,
+          "discount": 15,
           "brand": "apple",
           "type": "keyboard",
           "compatibility": "MacBooks",
@@ -2621,12 +1748,12 @@
           "id": 5,
           "title": "HyperX Cloud II Headset",
           "image": {
-            "main": "",
+            "main": "https://maxcom.uz/storage/product/mqa567M3tPhks1yXxdI8FYjzYsWRiz731NrQciSZ.jpeg",
             "images": [
-              "",
-              "",
-              "",
-              ""
+              "https://dl.bs365.uz/storage/products/10042/7L1rtADkctJ35FZH0FNA-medium_default.jpg",
+              "https://row.hyperx.com/cdn/shop/files/hyperx_cloud_ii_red_2_main_mixer.jpg?v=1764893483&width=1445",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBPp4gse7sls9K1ssH-BPM2kdrJkdNPj9cIg&s",
+              "https://hyperx.com/cdn/shop/files/hyperx_cloud_ii_wireless_5_bottom.jpg?v=1763563198"
             ]
           },
           "price": 79,
@@ -2642,136 +1769,6 @@
           "date": "14.11.2025",
           "height": 18,
           "widht": 20
-        },
-        {
-          "id": 6,
-          "title": "Razer Basilisk V3 Mouse",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 69,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 10,
-          "brand": "razer",
-          "type": "mouse",
-          "compatibility": "Windows/Mac",
-          "star": 4.7,
-          "date": "15.11.2025",
-          "height": 5,
-          "widht": 8
-        },
-        {
-          "id": 7,
-          "title": "Microsoft Surface Dock 2",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 199,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 9,
-          "brand": "microsoft",
-          "type": "dock",
-          "compatibility": "Surface laptops",
-          "star": 4.6,
-          "date": "16.11.2025",
-          "height": 4,
-          "widht": 20
-        },
-        {
-          "id": 8,
-          "title": "Corsair K100 RGB Keyboard",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 159,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": false,
-          "discount": 6,
-          "brand": "corsair",
-          "type": "keyboard",
-          "compatibility": "Windows/Mac",
-          "star": 4.8,
-          "date": "17.11.2025",
-          "height": 3,
-          "widht": 45
-        },
-        {
-          "id": 9,
-          "title": "Satechi Aluminum Stand",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 49,
-          "color": "silver",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 10,
-          "brand": "satechi",
-          "type": "stand",
-          "compatibility": "All laptops",
-          "star": 4.5,
-          "date": "18.11.2025",
-          "height": 5,
-          "widht": 25
-        },
-        {
-          "id": 10,
-          "title": "TP-Link USB Wi-Fi Adapter",
-          "image": {
-            "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
-          },
-          "price": 29,
-          "color": "black",
-          "guaranteed": true,
-          "freeDelivery": true,
-          "inStock": true,
-          "discount": 8,
-          "brand": "tp-link",
-          "type": "adapter",
-          "compatibility": "Windows/Mac",
-          "star": 4.4,
-          "date": "19.11.2025",
-          "height": 2,
-          "widht": 6
         }
       ]
     }
@@ -2904,23 +1901,23 @@
   "CategoryCarts": [
     {
       "id": 1,
-      "categoryImage": "https://png.pngtree.com/png-vector/20250609/ourmid/pngtree-essential-android-mobile-accessories-to-enhance-your-smartphone-experience-and-performance-png-image_15985754.png",
+      "categoryImage": "https://icon2.cleanpng.com/20180920/fth/kisspng-kingston-hyperx-cloud-ii-headset-kingston-hyperx-c-5ba36f3dee1f84.5132701015374375019754.jpg",
       "categoryName": "Accessories"
     },
     {
       "id": 2,
       "categoryImage": "https://png.pngtree.com/png-vector/20240905/ourmid/pngtree-black-dslr-camera-with-large-lens-clipart-illustration-stock-photo-png-image_13758787.png",
-      "categoryName": "Camera"
+      "categoryName": "Cameras"
     },
     {
       "id": 3,
-      "categoryImage": "https://macfinder.co.uk/wp-content/uploads/2022/12/img-MacBook-Pro-Retina-14-Inch-72383-scaled-1250x1250.jpg",
-      "categoryName": "Laptop"
+      "categoryImage": "https://p1.hiclipart.com/preview/700/848/941/laptop-computer-hardware-asus-rog-strix-scar-ii-gl504-i7-8750h-asus-tuf-gaming-512gb-ssd-1920-x-1080-nvidia-gsync-png-clipart.jpg",
+      "categoryName": "Laptops"
     },
     {
       "id": 4,
-      "categoryImage": "https://www.mygsm.me/media/catalog/product/cache/ef6f11193807a024d850d5d2f9b6fc6c/image/243882fab/apple-iphone-17-pro-max-256gb-nano-sim-and-esim.png",
-      "categoryName": "Smart Phone"
+      "categoryImage": "https://www.pngall.com/wp-content/uploads/20/iPhone-17-Pro-Max-Concept-Art-PNG-thumb.png",
+      "categoryName": "Smart Phones"
     },
     {
       "id": 5,
@@ -2929,8 +1926,33 @@
     },
     {
       "id": 6,
-      "categoryImage": "https://mini-io-api.texnomart.uz/catalog/product/3585/358548/210157/b1f2af34-018f-46f5-8ef6-865f5ab9a5c5.webp",
-      "categoryName": "Smart Watch"
+      "categoryImage": "https://castore.uz/upload/iblock/682/smart-chasy-amazfit-gts-blue.gif",
+      "categoryName": "Smart Watches"
+    },
+    {
+      "id": 7,
+      "categoryImage": "https://media.wired.com/photos/67d1cb470812b26fdc3ded0f/master/w_1600%2Cc_limit/Vornado-Sensa-Cribside-Heater-(front)-Reviewer-Photo-SOURCE-Matthew-Korfhage.jpg",
+      "categoryName": "Heaters"
+    },
+    {
+      "id": 8,
+      "categoryImage": "https://img.freepik.com/free-psd/stunning-mountain-landscape-displayed-modern-smart-tv_191095-80909.jpg?semt=ais_hybrid&w=740&q=80",
+      "categoryName": "TVs"
+    },
+    {
+      "id": 9,
+      "categoryImage": "https://png.pngtree.com/png-vector/20240528/ourlarge/pngtree-white-loading-washing-machine-png-image_12531231.png",
+      "categoryName": "Washing Machines"
+    },
+    {
+      "id": 10,
+      "categoryImage": "https://png.pngtree.com/png-clipart/20210509/original/pngtree-air-conditioner-with-cold-wind-effect-png-image_6275498.jpg",
+      "categoryName": "Air Conditioners"
+    },
+    {
+      "id": 11,
+      "categoryImage": "https://png.pngtree.com/png-vector/20250120/ourmid/pngtree-professional-studio-microphone-with-pop-filter-and-headphones-on-an-isolated-png-image_15285561.png",
+      "categoryName": "Audio"
     }
   ],
   "youtubeVideos": [
@@ -2941,18 +1963,18 @@
     },
     {
       "id": 2,
-      "videoCode": "https://www.youtube.com/embed/jjpjjcMeujM?si=18n-owlgr-oPoW_2",
-      "videoTitle": "Ronaldo"
+      "videoCode": "https://www.youtube.com/embed/2QgyjeeWanE?si=4UkvnJ4ECbR5at39",
+      "videoTitle": "Khabib Vs Gaethje"
     },
     {
       "id": 3,
-      "videoCode": "https://www.youtube.com/embed/jjpjjcMeujM?si=18n-owlgr-oPoW_2",
-      "videoTitle": "Ronaldo"
+      "videoCode": "https://www.youtube.com/embed/IE5nITBvM0c?si=iFpYjJdC_EjSzD9b",
+      "videoTitle": "Donk vs Kyousuke"
     },
     {
       "id": 4,
-      "videoCode": "https://www.youtube.com/embed/jjpjjcMeujM?si=18n-owlgr-oPoW_2",
-      "videoTitle": "Ronaldo"
+      "videoCode": "https://www.youtube.com/embed/GDOumy3_UI4?si=0n1Nr5lCTJ58Qdp_",
+      "videoTitle": "S1mple N1"
     },
     {
       "id": 5,
