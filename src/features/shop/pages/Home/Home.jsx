@@ -28,14 +28,12 @@ export default function Home() {
   } = useGetAll("/typeOfElectronics", ["typeOfElectronics"]);
   const { data: blogData } = useGetAll("/blogCart", [`blogCart`]);
 
-
   console.log(blogData);
-
 
   const discountedProducts = saleData?.length
     ? Object.values(saleData[0])
-      .flat()
-      .filter((item) => item.discount > 0)
+        .flat()
+        .filter((item) => item.discount > 0)
     : [];
 
   return (
@@ -91,7 +89,6 @@ export default function Home() {
       <div className="px-4 py-6 md:px-8 md:py-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-
             {categoryData?.map(({ id, categoryImage, categoryName }) => (
               <Link
                 key={id}
@@ -128,17 +125,13 @@ export default function Home() {
           transition-all duration-200
         "
             >
-              <p className="text-sm font-medium text-gray-800">
-                Все категории
-              </p>
+              <p className="text-sm font-medium text-gray-800">Все категории</p>
 
               <span className="text-xl font-bold">→</span>
             </Link>
-
           </div>
         </div>
       </div>
-
 
       <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 py-12 px-6 md:py-16">
         <div className="max-w-7xl mx-auto">
@@ -217,8 +210,8 @@ export default function Home() {
                             $
                             {product.discount
                               ? Math.round(
-                                product.price * (1 - product.discount / 100)
-                              )
+                                  product.price * (1 - product.discount / 100)
+                                )
                               : product.price}
                           </span>
                           {product.discount && (
