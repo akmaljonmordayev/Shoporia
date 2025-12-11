@@ -121,7 +121,6 @@ function Header() {
 
       {profile && (
         <div className="w-64 bg-white shadow-lg rounded-xl p-4 fixed right-[70px] top-14 z-10 pt-[40px] ">
-          {isLoading && <p>Loading...</p>}
           {isError && <p>Error loading user data</p>}
           {user && (
             <Link onClick={() => setProfile(false)} to={"/profile"}>

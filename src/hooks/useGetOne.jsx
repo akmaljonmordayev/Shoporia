@@ -4,7 +4,7 @@ import axiosClient from "../api/axiosClient";
 const useGetOne = (endpoint, id, queryKey = ["item"]) => {
   const fetchData = async () => {
     const res = await axiosClient.get(`${endpoint}/${id}`);
-    return res;
+    return res.data;
   };
 
   const { data, isLoading, isError, refetch } = useQuery({
