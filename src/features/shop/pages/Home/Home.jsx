@@ -72,16 +72,6 @@ export default function Home() {
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 8);
 
-  const brandCounts = {};
-  products.forEach((p) => {
-    if (p.brand) {
-      brandCounts[p.brand] = (brandCounts[p.brand] || 0) + 1;
-    }
-  });
-  const topBrands = Object.keys(brandCounts)
-    .sort((a, b) => brandCounts[b] - brandCounts[a])
-    .slice(0, 6);
-
   return (
     <div className="w-full bg-white">
       {/* Hero Section */}
@@ -485,34 +475,6 @@ export default function Home() {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
-      </div>
-
-      {/* Top Brands */}
-      <div className="bg-white py-12 px-6 md:py-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0b2559]">
-              Top Brands
-            </h2>
-            <Link to="/brands">
-              <button className="text-[#0b2559] font-semibold text-lg hover:text-orange-500 transition flex items-center gap-2">
-                View all <span className="text-2xl">›</span>
-              </button>
-            </Link>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {topBrands.map((brand, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-lg p-6 flex items-center justify-center hover:bg-gray-100 transition cursor-pointer"
-              >
-                <span className="text-lg font-semibold text-[#0b2559] text-center">
-                  {brand}
-                </span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>
