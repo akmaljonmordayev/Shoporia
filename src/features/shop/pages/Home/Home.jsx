@@ -5,11 +5,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
-import useGetAll from "../../../../hooks/UseGetAll";
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
 import Ourblogs from "../../components/Our Blogs/ourBlogs";
 import Meta from "../../components/Meta/Meta";
 import Support from "../../components/Support/Support";
+import Img from "../../components/imgfayl/img";
+import useGetAll from "../../../../hooks/UseGetAll";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -25,6 +26,11 @@ export default function Home() {
     isError: isErrorSale,
     isLoading: isLoadingSale,
   } = useGetAll("/typeOfElectronics", ["typeOfElectronics"]);
+  const { data: blogData } = useGetAll("/blogCart", [`blogCart`]);
+
+
+  console.log(blogData);
+
 
   const discountedProducts = saleData?.length
     ? Object.values(saleData[0])
@@ -141,7 +147,7 @@ export default function Home() {
               "--swiper-pagination-color": "#fff",
             }}
           >
-            {discountedProducts?.map((product) => (
+            {/* {discountedProducts?.map((product) => (
               <SwiperSlide key={product.id}>
                 <Link to={`/products/${product.id}`}>
                   <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
@@ -208,9 +214,8 @@ export default function Home() {
                   </div>
                 </Link>
               </SwiperSlide>
-            ))}
+            ))} */}
           </Swiper>
-
         </div>
       </div>
       <Ourblogs />
