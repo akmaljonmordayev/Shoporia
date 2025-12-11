@@ -8,6 +8,8 @@ function BlogSingle () {
     `blogCart/${id}`
   ])
 
+
+
   if (isLoading) return <h1>loading...</h1>
   console.log(data)
   return (
