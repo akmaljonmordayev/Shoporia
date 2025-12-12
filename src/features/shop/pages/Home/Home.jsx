@@ -1,144 +1,206 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { Link } from "react-router-dom";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
 import Ourblogs from "../../components/Our Blogs/ourBlogs";
 import Meta from "../../components/Meta/Meta";
 import Support from "../../components/Support/Support";
-import Img from "../../components/imgfayl/img";
 import useGetAll from "../../../../hooks/UseGetAll";
+import DailyProduct from "../../components/DailyProduct/DalyProduct";
+import { Link } from "react-router-dom";
 
 export default function Home() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const { data, isError, isLoading } = useGetAll("/Slider", ["slider"]);
-  const {
-    data: categoryData,
-    isError: isErrorCategoryData,
-    isLoading: isLoadingCategoryData,
-  } = useGetAll("/CategoryCarts", ["categoryCart"]);
-  const {
-    data: saleData,
-    isError: isErrorSale,
-    isLoading: isLoadingSale,
-  } = useGetAll("/typeOfElectronics", ["typeOfElectronics"]);
-  const { data: blogData } = useGetAll("/blogCart", [`blogCart`]);
+  const { data: sliderData } = useGetAll("/Slider", ["slider"]);
+  const { data: categoryData } = useGetAll("/CategoryCarts", ["categoryCart"]);
+  const { data: electronicsData } = useGetAll("/typeOfElectronics", [
+    "typeOfElectronics",
+  ]);
 
-
-  console.log(blogData);
-
-
-  const discountedProducts = saleData?.length
-    ? Object.values(saleData[0])
-      .flat()
-      .filter((item) => item.discount > 0)
+  const discountedProducts = electronicsData?.length
+    ? Object.values(electronicsData[0])
+        .flat()
+        .filter((item) => item.discount > 0)
     : [];
+
+  const fiveProducts = discountedProducts.slice(0, 5);
+
+  const heroPrevRef = useRef(null);
+  const heroNextRef = useRef(null);
+
+  const dailyPrevRef = useRef(null);
+  const dailyNextRef = useRef(null);
+
+  const [isHeroReady, setHeroReady] = useState(false);
+  const [isDailyReady, setDailyReady] = useState(false);
+
+  useEffect(() => {
+    setHeroReady(true);
+    setDailyReady(true);
+  }, []);
 
   return (
     <div className="w-full bg-white">
-      <div className="py-10 px-6 md:py-16 md:px-8">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10">
-          <div className="flex flex-col gap-8 md:gap-10 max-w-md order-2 md:order-1">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0b2559] leading-tight">
-              Shoporia
-            </h1>
-            <p className="text-base md:text-lg text-gray-600 font-medium leading-relaxed">
-              "Join the{" "}
-              <span className="text-orange-500 font-bold">
-                digital revolution
-              </span>
-              "
-            </p>
-            <Link to={"/products"}>
-              <button className="bg-orange-500 hover:bg-orange-600 transition text-white font-semibold py-3 px-8 md:px-10 rounded-lg w-fit mt-4 cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105 duration-300">
-                Explore More
+      <div className="bg-white border-gray-200">
+        <div className="max-w-7xl mx-auto relative">
+          <div className="flex items-center overflow-x-auto scrollbar-hide">
+            <div className="flex space-x-6 px-2">
+              {categoryData?.map(({ id, categoryName }) => (
+                <Link
+                  key={id}
+                  to={`/${categoryName}`}
+                  className="text-gray-700 hover:text-blue-600 whitespace-nowrap text-sm font-medium px-3 py-1.5 rounded-lg transition-colors"
+                >
+                  {categoryName}
+                </Link>
+              ))}
+              <Link
+                to="/categories"
+                className="text-gray-700 hover:text-blue-600 whitespace-nowrap text-sm font-medium px-3 py-1.5 rounded-lg transition-colors flex items-center"
+              >
+                Все категории
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="px-6 md:py-14 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="relative lg:col-span-2 rounded-3xl overflow-hidden">
+            {isHeroReady && (
+              <Swiper
+                modules={[Autoplay, Navigation, Pagination]}
+                loop
+                autoplay={{ delay: 4000, disableOnInteraction: false }}
+                pagination={{ clickable: true }}
+                navigation={{
+                  prevEl: heroPrevRef.current,
+                  nextEl: heroNextRef.current,
+                }}
+                onSwiper={(swiper) => {
+                  setTimeout(() => {
+                    swiper.params.navigation.prevEl = heroPrevRef.current;
+                    swiper.params.navigation.nextEl = heroNextRef.current;
+                    swiper.navigation.destroy();
+                    swiper.navigation.init();
+                    swiper.navigation.update();
+                  });
+                }}
+                className="rounded-3xl"
+              >
+                {sliderData?.map(({ imageSlider, id }) => (
+                  <SwiperSlide key={id}>
+                    <img
+                      src={imageSlider}
+                      className="w-full h-[400px] md:h-[420px] object-cover rounded-3xl"
+                      alt=""
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            )}
+            <button
+              ref={heroPrevRef}
+              className="absolute top-1/2 -translate-y-1/2 left-4 z-20 w-11 h-11 bg-white rounded-full shadow flex items-center justify-center"
+            >
+              <FaChevronLeft />
+            </button>
+            <button
+              ref={heroNextRef}
+              className="absolute top-1/2 -translate-y-1/2 right-4 z-20 w-11 h-11 bg-white rounded-full shadow flex items-center justify-center"
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+
+          <div className="relative bg-white rounded-3xl shadow-md">
+            <Link to="/products" className="block h-full">
+              {isDailyReady && (
+                <Swiper
+                  modules={[Autoplay, Navigation, Pagination]}
+                  loop
+                  slidesPerView={1}
+                  autoplay={{ delay: 4000, disableOnInteraction: false }}
+                  pagination={{ clickable: true }}
+                  navigation={{
+                    prevEl: dailyPrevRef.current,
+                    nextEl: dailyNextRef.current,
+                  }}
+                  onSwiper={(swiper) => {
+                    setTimeout(() => {
+                      swiper.params.navigation.prevEl = dailyPrevRef.current;
+                      swiper.params.navigation.nextEl = dailyNextRef.current;
+                      swiper.navigation.destroy();
+                      swiper.navigation.init();
+                      swiper.navigation.update();
+                    });
+                  }}
+                  className="rounded-3xl h-full"
+                >
+                  {fiveProducts.map((item) => (
+                    <SwiperSlide key={item.id}>
+                      <DailyProduct
+                        discount={item.discount}
+                        productName={item.title}
+                        price={item.price}
+                        oldPrice={Math.round(
+                          item.price / (1 - item.discount / 100)
+                        )}
+                        monthlyPrice={Math.round(item.price / 12)}
+                        image={item.image?.main}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
+              <button
+                ref={dailyPrevRef}
+                className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-white rounded-full shadow flex items-center justify-center z-20"
+              >
+                <FaChevronLeft />
+              </button>
+              <button
+                ref={dailyNextRef}
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-white rounded-full shadow flex items-center justify-center z-20"
+              >
+                <FaChevronRight />
               </button>
             </Link>
           </div>
-
-          <div className="flex justify-center w-full md:w-auto order-1 md:order-2">
-            <Swiper
-              modules={[Autoplay, Navigation, Pagination]}
-              autoplay={{ delay: 2000, disableOnInteraction: false }}
-              pagination={{ clickable: true }}
-              loop
-              className="w-full md:w-[500px] lg:w-[600px]"
-              style={{
-                "--swiper-navigation-color": "#0b2559",
-                "--swiper-pagination-color": "#0b2559",
-              }}
-            >
-              {data?.map(({ imageSlider, id }) => (
-                <SwiperSlide
-                  key={id}
-                  className="flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-4 md:p-6"
-                >
-                  <img
-                    src={imageSlider}
-                    alt={`Hero Slide ${id + 1}`}
-                    className="w-full h-auto max-h-80 md:max-h-96 object-contain rounded-lg"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
         </div>
       </div>
+
       <div className="px-4 py-6 md:px-8 md:py-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-
-            {categoryData?.map(({ id, categoryImage, categoryName }) => (
-              <Link
-                key={id}
-                to={`/${categoryName}`}
-                className="
-            flex items-center justify-between
-            bg-white rounded-2xl
-            px-4 py-3
-            shadow-sm border
-            hover:shadow-md hover:border-gray-300
-            transition-all duration-200
-          "
-              >
-                <p className="text-sm font-medium text-gray-800 w-[60%] leading-tight">
-                  {categoryName}
-                </p>
-
-                <img
-                  src={categoryImage}
-                  alt={categoryName}
-                  className="w-16 h-16 object-contain"
-                />
-              </Link>
-            ))}
-
+        <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+          {categoryData?.map(({ id, categoryImage, categoryName }) => (
             <Link
-              to="/categories"
-              className="
-          flex items-center justify-between
-          bg-white rounded-2xl
-          px-4 py-3
-          shadow-sm border
-          hover:shadow-md hover:border-gray-300
-          transition-all duration-200
-        "
+              key={id}
+              to={`/${categoryName}`}
+              className="flex items-center justify-between bg-white rounded-2xl px-4 py-3 shadow-sm border hover:shadow-md hover:border-gray-300 transition-all duration-200"
             >
-              <p className="text-sm font-medium text-gray-800">
-                Все категории
+              <p className="text-sm font-medium text-gray-800 w-[60%] leading-tight">
+                {categoryName}
               </p>
-
-              <span className="text-xl font-bold">→</span>
+              <img
+                src={categoryImage}
+                alt={categoryName}
+                className="w-16 h-16 object-contain"
+              />
             </Link>
-
-          </div>
+          ))}
+          <Link
+            to="/categories"
+            className="flex items-center justify-between bg-white rounded-2xl px-4 py-3 shadow-sm border hover:shadow-md hover:border-gray-300 transition-all duration-200"
+          >
+            <p className="text-sm font-medium text-gray-800">Все категории</p>
+            <span className="text-xl font-bold">→</span>
+          </Link>
         </div>
       </div>
-
 
       <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 py-12 px-6 md:py-16">
         <div className="max-w-7xl mx-auto">
@@ -157,10 +219,10 @@ export default function Home() {
           </div>
           <Swiper
             modules={[Autoplay, Navigation, Pagination]}
+            loop
             autoplay={{ delay: 4000, disableOnInteraction: false }}
             navigation
             pagination={{ clickable: true, type: "bullets" }}
-            loop
             spaceBetween={20}
             slidesPerView={1}
             breakpoints={{
@@ -177,7 +239,7 @@ export default function Home() {
               <SwiperSlide key={product.id}>
                 <Link to={`/products/${product.id}`}>
                   <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
-                    <div className="relative h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
+                    <div className="relative h-48 bg-gray-100 flex items-center justify-center">
                       {product.discount && (
                         <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
                           -{product.discount}%
@@ -192,12 +254,10 @@ export default function Home() {
                         className="w-full h-full object-contain p-3"
                       />
                     </div>
-
                     <div className="p-4 flex flex-col flex-grow">
                       <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-[2.5rem]">
                         {product.title}
                       </h3>
-
                       <div className="flex flex-wrap gap-1 mb-3">
                         {product.guaranteed && (
                           <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
@@ -210,15 +270,14 @@ export default function Home() {
                           </span>
                         )}
                       </div>
-
                       <div className="mt-auto">
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-xl font-bold text-gray-900">
                             $
                             {product.discount
                               ? Math.round(
-                                product.price * (1 - product.discount / 100)
-                              )
+                                  product.price * (1 - product.discount / 100)
+                                )
                               : product.price}
                           </span>
                           {product.discount && (
@@ -244,6 +303,7 @@ export default function Home() {
           </Swiper>
         </div>
       </div>
+
       <Ourblogs />
       <Meta />
       <Support />
