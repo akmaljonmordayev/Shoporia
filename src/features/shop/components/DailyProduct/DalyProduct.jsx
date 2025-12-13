@@ -24,19 +24,16 @@ export default function DailyProduct({
 
   return (
     <div className="bg-white rounded-3xl p-6">
+      <h3 className="text-xl font-bold mb-4">Deal of the Day</h3>
 
-      <h3 className="text-xl font-bold text-gray-900 mb-4">
-        Deal of the Day
-      </h3>
-
-      <div className="flex items-center gap-1 mb-4">
+      <div className="flex gap-1 mb-4">
         {[h[0], h[1], ":", m[0], m[1], ":", s[0], s[1]].map((v, i) =>
           v === ":" ? (
-            <span key={i} className="text-lg font-bold mx-1">:</span>
+            <span key={i} className="mx-1 font-bold">:</span>
           ) : (
             <div
               key={i}
-              className="w-10 h-12 bg-white border rounded-md shadow-sm flex items-center justify-center text-lg font-bold"
+              className="w-10 h-12 border rounded flex items-center justify-center font-bold"
             >
               {v}
             </div>
@@ -44,50 +41,35 @@ export default function DailyProduct({
         )}
       </div>
 
-      <div className="flex gap-4 items-start">
-
-        <div className="flex flex-col gap-3 w-[55%]">
-
+      <div className="flex gap-4">
+        <div className="w-[55%] flex flex-col gap-3">
           <div className="flex gap-2">
-            <span className="bg-yellow-400 text-black px-2 py-1 rounded-md text-xs font-bold">
+            <span className="bg-yellow-400 px-2 py-1 text-xs font-bold rounded">
               -{discount}%
             </span>
-            <span className="bg-red-500 text-white px-3 py-1 rounded-md text-xs font-bold">
+            <span className="bg-red-500 text-white px-2 py-1 text-xs font-bold rounded">
               Sale
             </span>
           </div>
 
-          <p className="text-gray-900 font-medium text-sm leading-tight">
-            {productName}
-          </p>
+          <p className="text-sm font-medium">{productName}</p>
 
-          <div className="text-blue-600 font-semibold text-sm px-3 py-1 border rounded-lg bg-blue-50 w-fit">
+          <div className="text-blue-600 text-sm font-semibold">
             ${monthlyPrice}/month
           </div>
 
           <div>
-            <p className="line-through text-gray-400 text-sm">
-              ${oldPrice}
-            </p>
-            <p className="text-3xl font-bold text-gray-900">
-              ${price}
-            </p>
+            <p className="line-through text-gray-400 text-sm">${oldPrice}</p>
+            <p className="text-3xl font-bold">${price}</p>
           </div>
-
         </div>
 
-        <div className="relative w-[45%] flex items-center justify-center">
-          <img
-            src={image}
-            alt={productName}
-            className="w-32 h-40 object-contain"
-          />
-
-          <button className="absolute bottom-0 right-0 bg-red-500 hover:bg-red-600 text-white p-3 rounded-full shadow-lg transition">
+        <div className="w-[45%] relative flex justify-center items-center">
+          <img src={image} className="w-32 h-40 object-contain" />
+          <button className="absolute bottom-0 right-0 bg-red-500 text-white p-3 rounded-full">
             <FiShoppingCart size={20} />
           </button>
         </div>
-
       </div>
     </div>
   );
