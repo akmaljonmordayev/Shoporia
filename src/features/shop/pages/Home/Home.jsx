@@ -125,16 +125,18 @@ export default function Home() {
               >
                 {fiveProducts.map((item) => (
                   <SwiperSlide key={item.id}>
-                    <DailyProduct
-                      discount={item.discount}
-                      productName={item.title}
-                      price={item.price}
-                      oldPrice={Math.round(
-                        item.price / (1 - item.discount / 100)
-                      )}
-                      monthlyPrice={Math.round(item.price / 12)}
-                      image={item.image?.main}
-                    />
+                    <Link to="/products">
+                      <DailyProduct
+                        discount={item.discount}
+                        productName={item.title}
+                        price={item.price}
+                        oldPrice={Math.round(
+                          item.price / (1 - item.discount / 100)
+                        )}
+                        monthlyPrice={Math.round(item.price / 12)}
+                        image={item.image?.main}
+                      />
+                    </Link>
                   </SwiperSlide>
                 ))}
               </Swiper>
