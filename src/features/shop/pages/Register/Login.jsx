@@ -1,125 +1,199 @@
-import "../../../../index.css";
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as Yup from "yup";
-import {
-  AiOutlineMail,
-  AiOutlineEyeInvisible,
-  AiOutlineEye,
-} from "react-icons/ai";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { Link, useNavigate } from "react-router-dom";
-import useGetAll from "../../../../hooks/UseGetAll";
+import React, { useState, useEffect } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { FiSearch, FiShoppingCart, FiUser, FiMenu, FiX, FiShoppingBag } from "react-icons/fi";
+import { AiOutlineHeart, AiOutlineDollarCircle } from "react-icons/ai";
+import { BiLogOut } from "react-icons/bi";
+import LogoShoporia from "../../../../assets/LogoImages/SHOPORIA-logo-transparent.png";
+import useGetOne from "../../../../hooks/useGetOne";
 
-const schema = Yup.object({
-  email: Yup.string()
-    .email("Invalid email")
-    .required("Please enter your email"),
-  password: Yup.string().required("Please enter your password"),
-});
-
-function Login() {
-  const [showPassword, setShowPassword] = useState(false);
-  const { data: userData, isLoading, isError } = useGetAll("users", ["users"]);
+function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [profile, setProfile] = useState(false);
+  const [userId, setUserId] = useState(null);
   const navigate = useNavigate();
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
+  const navItems = [
+    { id: 1, name: "Home", path: "/" },
+    { id: 2, name: "Products", path: "/products" },
+    { id: 3, name: "Blog", path: "/blog" },
+    { id: 4, name: "FAQ", path: "/faq" },
+    { id: 5, name: "Contact Us", path: "/contact-us" },
+  ];
 
-  const onSubmit = (data) => {
-    if (!userData || userData.length === 0) {
-      toast.error("Users not found!");
-      return;
+  // Получаем userId из localStorage при монтировании
+  useEffect(() => {
+    const storedToken = JSON.parse(localStorage.getItem("token"));
+    if (storedToken?.userId) {
+      setUserId(storedToken.userId);
     }
+  }, []);
 
-    const foundUser = userData.find(
-      (user) => user.email === data.email && user.password === data.password
-    );
+  // Получаем данные пользователя
+  const { data: user, isLoading, isError } = useGetOne(
+    "/users",
+    userId,
+    ["user", userId]
+  );
 
-    if (!foundUser) {
-      toast.error("Incorrect email or password!");
-      reset();
-      return;
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+      setSearchQuery("");
     }
+  };
 
-    const token = crypto.randomUUID();
-
-    localStorage.setItem(
-      "token",
-      JSON.stringify({
-        token: token,
-        userId: foundUser.id,
-      })
-    );
-
-    toast.success("Login successful!");
-    reset();
-
-    setTimeout(() => {
-      navigate("/", { replace: true });
-    }, 800);
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setProfile(false);
+    setUserId(null);
+    navigate("/auth/login", { replace: true });
   };
 
   return (
-    <div className="w-[420px] p-8">
-      <h2 className="text-2xl font-semibold mb-6 text-center">
-        Log in to Shoporia
-      </h2>
+    <div className="py-[50px] w-full">
+      <header className="fixed top-0 left-0 right-0 w-full bg-white shadow-sm z-50">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+          <NavLink to="/">
+            <img
+              src={LogoShoporia}
+              alt="Shoporia Logo"
+              className="h-[45px] w-auto object-contain scale-[3.5] origin-left"
+            />
+          </NavLink>
 
-      <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
-        <div className="relative">
-          <AiOutlineMail className="absolute left-3 top-3 text-gray-500 text-xl" />
-          <input
-            {...register("email")}
-            type="email"
-            placeholder="E-mail"
-            className="w-full border rounded-lg pl-10 pr-4 py-2 outline-none focus:border-blue-500"
-          />
-          <p className="text-red-500 text-sm">{errors.email?.message}</p>
+          <nav className="hidden md:flex gap-8 items-center">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.id}
+                to={item.path}
+                className={({ isActive }) =>
+                  `text-sm font-medium transition ${
+                    isActive
+                      ? "text-blue-600 border-b-2 border-blue-600"
+                      : "text-gray-700 hover:text-blue-600"
+                  }`
+                }
+              >
+                {item.name}
+              </NavLink>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-4">
+            <form
+              onSubmit={handleSearch}
+              className="hidden md:flex items-center bg-gray-100 rounded-lg px-3 py-2"
+            >
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="bg-transparent outline-none text-sm w-32"
+              />
+              <button type="submit" className="text-gray-600 hover:text-gray-900">
+                <FiSearch className="text-lg" />
+              </button>
+            </form>
+
+            <NavLink
+              to="/cart"
+              className="text-gray-700 hover:text-blue-600 transition relative"
+            >
+              <FiShoppingCart className="text-xl" />
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                0
+              </span>
+            </NavLink>
+
+            <FiUser
+              onClick={() => setProfile(!profile)}
+              className="text-xl cursor-pointer"
+            />
+
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden text-gray-700 hover:text-blue-600"
+            >
+              {isMenuOpen ? <FiX className="text-xl" /> : <FiMenu className="text-xl" />}
+            </button>
+          </div>
         </div>
 
-        <div className="relative">
-          <input
-            {...register("password")}
-            type={showPassword ? "text" : "password"}
-            placeholder="Password"
-            className="w-full border rounded-lg pl-4 pr-10 py-2 outline-none focus:border-blue-500"
-          />
-          <span
-            onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-3 top-3 text-gray-500 text-xl cursor-pointer"
-          >
-            {showPassword ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
-          </span>
-          <p className="text-red-500 text-sm">{errors.password?.message}</p>
+        {isMenuOpen && (
+          <nav className="md:hidden bg-gray-50 border-t border-gray-200 px-4 py-3 space-y-2">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.id}
+                to={item.path}
+                onClick={() => setIsMenuOpen(false)}
+                className={({ isActive }) =>
+                  `block px-4 py-2 rounded-lg text-sm font-medium transition ${
+                    isActive
+                      ? "bg-blue-100 text-blue-600"
+                      : "text-gray-700 hover:bg-gray-100"
+                  }`
+                }
+              >
+                {item.name}
+              </NavLink>
+            ))}
+          </nav>
+        )}
+      </header>
+
+      {/* Profile dropdown */}
+      {profile && (
+        <div className="w-64 bg-white shadow-lg rounded-xl p-4 fixed right-[70px] top-14 z-10 pt-[40px]">
+          {isError && <p>Error loading user data</p>}
+          {isLoading && <p>Loading...</p>}
+          {user && (
+            <Link onClick={() => setProfile(false)} to={"/profile"}>
+              <div className="mb-4">
+                <h3 className="text-lg font-semibold text-blue-600 cursor-pointer hover:underline">
+                  {user.fullName}
+                </h3>
+                <p className="text-sm text-gray-600">{user.email}</p>
+              </div>
+            </Link>
+          )}
+
+          <ul className="text-gray-700 flex flex-col gap-4">
+            <Link onClick={() => setProfile(false)} to={"/profile/orders"}>
+              <li className="flex items-center gap-3 cursor-pointer hover:text-blue-600">
+                <FiShoppingBag size={20} />
+                <span className="text-base">Orders</span>
+              </li>
+            </Link>
+            <Link onClick={() => setProfile(false)} to={"/profile/wish-list"}>
+              <li className="flex items-center gap-3 cursor-pointer hover:text-blue-600">
+                <AiOutlineHeart size={20} />
+                <span className="text-base">Wish List</span>
+              </li>
+            </Link>
+            <Link
+              onClick={() => setProfile(false)}
+              to={"/profile/payment-instalments"}
+            >
+              <li className="flex items-center gap-3 cursor-pointer hover:text-blue-600">
+                <AiOutlineDollarCircle size={20} />
+                <span className="text-base">Payments</span>
+              </li>
+            </Link>
+            <li
+              onClick={handleLogout}
+              className="flex items-center gap-3 cursor-pointer hover:text-red-500 mt-2"
+            >
+              <BiLogOut size={20} />
+              <span className="text-base">Log out</span>
+            </li>
+          </ul>
         </div>
-
-        <button
-          type="submit"
-          className="w-full py-2 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition"
-        >
-          Log In
-        </button>
-
-        <p className="text-center text-sm text-gray-600 mt-4">
-          Don’t have an account?{" "}
-          <Link to="/auth/register" className="text-blue-600 hover:underline">
-            sign up
-          </Link>
-        </p>
-      </form>
-
-      <ToastContainer position="top-right" autoClose={2000} />
+      )}
     </div>
   );
 }
 
-export default Login;
+export default Header;
