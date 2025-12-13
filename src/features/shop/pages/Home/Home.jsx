@@ -41,6 +41,13 @@ export default function Home() {
     setHeroReady(true);
     setDailyReady(true);
   }, []);
+  console.log(blogData);
+
+  const discountedProducts = saleData?.length
+    ? Object.values(saleData[0])
+        .flat()
+        .filter((item) => item.discount > 0)
+    : [];
 
   return (
     <div className="w-full bg-white">
@@ -91,6 +98,21 @@ export default function Home() {
                   });
                 }}
                 className="rounded-3xl"
+      <div className="px-4 py-6 md:px-8 md:py-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+            {categoryData?.map(({ id, categoryImage, categoryName }) => (
+              <Link
+                key={id}
+                to={`/${categoryName}`}
+                className="
+            flex items-center justify-between
+            bg-white rounded-2xl
+            px-4 py-3
+            shadow-sm border
+            hover:shadow-md hover:border-gray-300
+            transition-all duration-200
+          "
               >
                 {sliderData?.map(({ imageSlider, id }) => (
                   <SwiperSlide key={id}>
@@ -199,6 +221,11 @@ export default function Home() {
             <p className="text-sm font-medium text-gray-800">Все категории</p>
             <span className="text-xl font-bold">→</span>
           </Link>
+              <p className="text-sm font-medium text-gray-800">Все категории</p>
+
+              <span className="text-xl font-bold">→</span>
+            </Link>
+          </div>
         </div>
       </div>
 

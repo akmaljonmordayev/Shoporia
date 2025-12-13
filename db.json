@@ -21,7 +21,7 @@
   ],
   "typeOfElectronics": [
     {
-      "mobile": [
+      "Smart Phones": [
         {
           "id": 1,
           "title": "Smartfon Samsung Galaxy A23 4/64 GB White",
@@ -387,7 +387,7 @@
           "energy": 5000
         }
       ],
-      "laptop": [
+      "Laptops": [
         {
           "id": 1,
           "title": "MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch",
@@ -534,7 +534,7 @@
           "widht": 35.8
         }
       ],
-      "washingmachines": [
+      "Washing Machines": [
         {
           "id": 1,
           "title": "Samsung EcoBubble WW80T554DAW",
@@ -676,7 +676,7 @@
           "widht": 59
         }
       ],
-      "heaters": [
+      "Heaters": [
         {
           "id": 1,
           "title": "Ballu Electric Heater BEC/EZER-1000",
@@ -1072,7 +1072,7 @@
           "widht": 90
         }
       ],
-      "airconditioners": [
+      "Air Conditioners": [
         {
           "id": 1,
           "title": "LG Dual Inverter 12k BTU",
@@ -1440,7 +1440,7 @@
           "widht": 44
         }
       ],
-      "audio": [
+      "Audio": [
         {
           "id": 1,
           "title": "Bose SoundLink Revolve",
@@ -1631,7 +1631,7 @@
           "widht": 70
         }
       ],
-      "Laptopaccessories": [
+      "Gaming": [
         {
           "id": 1,
           "title": "Logitech MX Master 3 Mouse",
@@ -1893,56 +1893,46 @@
   "CategoryCarts": [
     {
       "id": 1,
-      "categoryImage": "https://icon2.cleanpng.com/20180920/fth/kisspng-kingston-hyperx-cloud-ii-headset-kingston-hyperx-c-5ba36f3dee1f84.5132701015374375019754.jpg",
-      "categoryName": "Accessories"
-    },
-    {
-      "id": 2,
-      "categoryImage": "https://png.pngtree.com/png-vector/20240905/ourmid/pngtree-black-dslr-camera-with-large-lens-clipart-illustration-stock-photo-png-image_13758787.png",
-      "categoryName": "Cameras"
-    },
-    {
-      "id": 3,
       "categoryImage": "https://p1.hiclipart.com/preview/700/848/941/laptop-computer-hardware-asus-rog-strix-scar-ii-gl504-i7-8750h-asus-tuf-gaming-512gb-ssd-1920-x-1080-nvidia-gsync-png-clipart.jpg",
       "categoryName": "Laptops"
     },
     {
-      "id": 4,
+      "id": 2,
       "categoryImage": "https://www.pngall.com/wp-content/uploads/20/iPhone-17-Pro-Max-Concept-Art-PNG-thumb.png",
       "categoryName": "Smart Phones"
     },
     {
-      "id": 5,
+      "id": 3,
       "categoryImage": "https://castore.uz/upload/iblock/37b/pult-upravleniya-sony-ps5-joystick-white.gif",
       "categoryName": "Gaming"
     },
     {
-      "id": 6,
+      "id": 4,
       "categoryImage": "https://castore.uz/upload/iblock/682/smart-chasy-amazfit-gts-blue.gif",
       "categoryName": "Smart Watches"
     },
     {
-      "id": 7,
+      "id": 5,
       "categoryImage": "https://media.wired.com/photos/67d1cb470812b26fdc3ded0f/master/w_1600%2Cc_limit/Vornado-Sensa-Cribside-Heater-(front)-Reviewer-Photo-SOURCE-Matthew-Korfhage.jpg",
       "categoryName": "Heaters"
     },
     {
-      "id": 8,
+      "id": 6,
       "categoryImage": "https://img.freepik.com/free-psd/stunning-mountain-landscape-displayed-modern-smart-tv_191095-80909.jpg?semt=ais_hybrid&w=740&q=80",
       "categoryName": "TVs"
     },
     {
-      "id": 9,
+      "id": 7,
       "categoryImage": "https://png.pngtree.com/png-vector/20240528/ourlarge/pngtree-white-loading-washing-machine-png-image_12531231.png",
       "categoryName": "Washing Machines"
     },
     {
-      "id": 10,
+      "id": 8,
       "categoryImage": "https://png.pngtree.com/png-clipart/20210509/original/pngtree-air-conditioner-with-cold-wind-effect-png-image_6275498.jpg",
       "categoryName": "Air Conditioners"
     },
     {
-      "id": 11,
+      "id": 9,
       "categoryImage": "https://png.pngtree.com/png-vector/20250120/ourmid/pngtree-professional-studio-microphone-with-pop-filter-and-headphones-on-an-isolated-png-image_15285561.png",
       "categoryName": "Audio"
     }
