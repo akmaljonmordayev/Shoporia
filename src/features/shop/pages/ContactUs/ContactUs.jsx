@@ -23,11 +23,25 @@ function ContactUs() {
     reset,
   } = useForm({ resolver: yupResolver(schema) });
 
-  const submitForm = (data) => {
-    console.log(data);
-    alert("Message sent!");
-    reset();
-  };
+  const submitForm = async (data) => {
+  try {
+    const res = await fetch("http://localhost:3001/api/request", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (res.ok) {
+      alert("Ваша заявка была отправлена");
+    } else {
+      alert("Ошибка");
+    }
+  } catch (e) {
+    alert("Сервер не работает");
+  }
+};
   return <div>
      <div>
       <div className="contact-container px-20 py-10 font-sans mt-20">
