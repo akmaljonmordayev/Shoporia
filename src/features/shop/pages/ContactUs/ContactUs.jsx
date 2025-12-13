@@ -80,12 +80,7 @@ function ContactUs() {
           </div>
 
           <div className="form-section w-[45%]">
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="mb-4 px-6 py-3 bg-[#2d7cff] text-white rounded-lg font-semibold hover:bg-[#1f5acc] transition-all w-full"
-            >
-              Leave a Comment
-            </button>
+        
             <form className="flex flex-col gap-3" onSubmit={handleSubmit(submitForm)}>
               <input
                 type="text"

@@ -10,12 +10,13 @@ const Product = React.lazy(() =>
 const Faq = React.lazy(() => import("./features/shop/pages/FAQ/Faq"));
 const Home = React.lazy(() => import("./features/shop/pages/Home/Home"));
 const Blog = React.lazy(() => import("./features/shop/pages/Blog/Blog"));
+const OurCommand = React.lazy(() =>
+  import("./features/shop/pages/OurCommand/OurCommand")
+);
 const ContactUs = React.lazy(() =>
   import("./features/shop/pages/ContactUs/ContactUs")
 );
-const Register = React.lazy(() =>
-  import("./features/shop/pages/Register/Register")
-);
+
 const Cart = React.lazy(() => import("./features/shop/pages/Cart/Cart"));
 const About = React.lazy(() => import("./features/shop/pages/About/About"));
 const Profile = React.lazy(() =>
@@ -41,8 +42,22 @@ const Notification = React.lazy(() =>
   import("./features/shop/pages/Notification/Notification")
 );
 
+const BlogSingle = React.lazy(() =>
+  import("./features/shop/pages/BlogSingle/BlogSingle")
+);
+const ProductSingle = React.lazy(() =>
+  import("./features/shop/pages/ProductSingle/ProductSingle")
+);
+const CategorySingle = React.lazy(() =>
+  import("./features/shop/pages/CategorySingle/CategorySingle")
+);
 import ProfileLayout from "./features/shop/components/SideBar/ProfileLayout";
 import Skeleton from "./features/shop/Skeleton/Skeleton";
+import ProtectedRoute from "./features/shop/components/ProtectedRoute/ProtectedRoute";
+import LoginLayout from "./features/shop/components/LoginLayout.jsx/LoginLayout";
+import Login from "./features/shop/pages/Register/Login";
+import CreateAcc from "./features/shop/pages/Register/CreateAcc";
+import Instalments from "./features/shop/pages/PaymentInstalments/Instalments";
 
 function App() {
   return (
@@ -51,59 +66,75 @@ function App() {
         <Route
           path="/"
           element={
-            <LayOut>
-              <Home />
-            </LayOut>
+            <ProtectedRoute>
+              <LayOut>
+                <Home />
+              </LayOut>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/blog"
           element={
+            <ProtectedRoute>
+              <LayOut>
+                <Blog />
+              </LayOut>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/ourcommand"
+          element={
             <LayOut>
-              <Blog />
+              <OurCommand />
             </LayOut>
           }
         />
         <Route
           path="/faq"
           element={
-            <LayOut>
-              <Faq />
-            </LayOut>
+            <ProtectedRoute>
+              <LayOut>
+                <Faq />
+              </LayOut>
+            </ProtectedRoute>
           }
         />
         <Route
-          path="/product"
+          path="/products"
           element={
-            <LayOut>
-              <Product />
-            </LayOut>
+            <ProtectedRoute>
+              <LayOut>
+                <Product />
+              </LayOut>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/contact-us"
           element={
-            <LayOut>
-              <ContactUs />
-            </LayOut>
+            <ProtectedRoute>
+              <LayOut>
+                <ContactUs />
+              </LayOut>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/cart"
           element={
-            <LayOut>
-              <Cart />
-            </LayOut>
+            <ProtectedRoute>
+              <LayOut>
+                <Cart />
+              </LayOut>
+            </ProtectedRoute>
           }
         />
-        <Route
-          path="/register"
-          element={
-            <LayOut>
-              <Register />
-            </LayOut>
-          }
-        />
+        <Route path="/auth" element={<LoginLayout />}>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<CreateAcc />} />
+        </Route>
         <Route
           path="/about"
           element={
@@ -112,7 +143,38 @@ function App() {
             </LayOut>
           }
         />
-
+        <Route
+          path="/profile/payment-instalments/instalments"
+          element={
+            <LayOut>
+              {/* <Instalments/> */}
+            </LayOut>
+          }
+        />
+        <Route
+          path="/blog/:id"
+          element={
+            <LayOut>
+              <BlogSingle />
+            </LayOut>
+          }
+        />
+        <Route
+          path="/products/:id"
+          element={
+            <LayOut>
+              <ProductSingle />
+            </LayOut>
+          }
+        />
+        <Route
+          path="/:categoryName"
+          element={
+            <LayOut>
+              <CategorySingle />
+            </LayOut>
+          }
+        />
         <Route path="/profile" element={<ProfileLayout />}>
           <Route index element={<Profile />} />
           <Route path="personal-data" element={<PersonalData />} />
