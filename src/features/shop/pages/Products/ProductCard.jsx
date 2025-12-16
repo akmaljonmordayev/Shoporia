@@ -26,8 +26,6 @@ function ProductCard({ product, isWishlisted, onToggleWishlist, onAddToCart }) {
           )}
         </button>
       </div>
-
-      {/* Product Image */}
       <div className="w-full h-56 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center mb-3">
         <img
           src={product.image?.main || "https://via.placeholder.com/200"}
@@ -35,14 +33,10 @@ function ProductCard({ product, isWishlisted, onToggleWishlist, onAddToCart }) {
           className="w-full h-full object-cover"
         />
       </div>
-
-      {/* Product Info */}
       <div className="mb-3">
         <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-2">
           {product.title}
         </h3>
-
-        {/* Features */}
         <div className="flex flex-wrap gap-1 mb-2">
           {product.guaranteed && (
             <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
@@ -61,8 +55,6 @@ function ProductCard({ product, isWishlisted, onToggleWishlist, onAddToCart }) {
           )}
         </div>
       </div>
-
-      {/* Price */}
       <div className="mb-3">
         <div className="flex items-center gap-2 mb-1">
           <span className="text-xl font-bold text-gray-900">
@@ -84,7 +76,6 @@ function ProductCard({ product, isWishlisted, onToggleWishlist, onAddToCart }) {
         )}
       </div>
 
-      {/* Specs */}
       {(product.ram || product.screenSize || product.processor) && (
         <div className="text-xs text-gray-600 mb-3 pb-3 border-t">
           <div className="mt-2 space-y-1">
