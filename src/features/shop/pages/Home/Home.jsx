@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
 import Ourblogs from "../../components/Our Blogs/ourBlogs";
 import Meta from "../../components/Meta/Meta";
 import Support from "../../components/Support/Support";
@@ -19,14 +18,26 @@ export default function Home() {
   const { data: electronicsData } = useGetAll("/typeOfElectronics", [
     "typeOfElectronics",
   ]);
+  const [fiveProducts, setFiveProducts] = useState([]);
 
-  const discountedProducts = electronicsData?.length
-    ? Object.values(electronicsData[0])
-        .flat()
-        .filter((item) => item.discount > 0)
-    : [];
+  useEffect(() => {
+  if (!electronicsData?.length) return;
 
-  const fiveProducts = discountedProducts.slice(0, 5);
+  const updateProducts = () => {
+    const discountedProducts = Object.values(electronicsData[0])
+      .flat()
+      .filter((item) => item.discount > 0);
+
+    const shuffled = [...discountedProducts].sort(
+      () => 0.5 - Math.random()
+    );
+    setFiveProducts(shuffled.slice(0, 5));
+  };
+  updateProducts(); 
+  const interval = setInterval(updateProducts, 16_200_000); 
+  return () => clearInterval(interval);
+}, [electronicsData]);
+
 
   const heroPrevRef = useRef(null);
   const heroNextRef = useRef(null);
