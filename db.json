@@ -540,12 +540,7 @@
           "title": "Samsung EcoBubble WW80T554DAW",
           "image": {
             "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
+            "images": ["", "", "", ""]
           },
           "price": 499,
           "color": "white",
@@ -568,12 +563,7 @@
           "title": "LG TurboWash F4WV309S3E",
           "image": {
             "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
+            "images": ["", "", "", ""]
           },
           "price": 560,
           "color": "silver",
@@ -596,12 +586,7 @@
           "title": "Bosch Serie 6 WAT2848XPL",
           "image": {
             "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
+            "images": ["", "", "", ""]
           },
           "price": 650,
           "color": "dark grey",
@@ -624,12 +609,7 @@
           "title": "Haier I-Pro Series 7 HW80",
           "image": {
             "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
+            "images": ["", "", "", ""]
           },
           "price": 430,
           "color": "white",
@@ -652,12 +632,7 @@
           "title": "Beko WTE7611BWR",
           "image": {
             "main": "",
-            "images": [
-              "",
-              "",
-              "",
-              ""
-            ]
+            "images": ["", "", "", ""]
           },
           "price": 350,
           "color": "white",
