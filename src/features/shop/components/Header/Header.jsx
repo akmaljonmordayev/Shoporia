@@ -11,6 +11,11 @@ function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const [profile, setProfile] = useState(false);
   const [userId, setUserId] = useState(null);
+  const [placeholder, setPlaceholder] = useState("Search...");
+  const [charIndex, setCharIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
   const navigate = useNavigate();
 
   const navItems = [
@@ -23,16 +28,39 @@ function Header() {
 
   useEffect(() => {
     const storedToken = JSON.parse(localStorage.getItem("token"));
-    if (storedToken?.userId) {
-      setUserId(storedToken.userId);
-    }
+    if (storedToken?.userId) setUserId(storedToken.userId);
   }, []);
 
-  const { data: user, isLoading, isError } = useGetOne(
-    "/users",
-    userId,
-    ["user", userId]
-  );
+  const { data: user, isLoading, isError } = useGetOne("/users", userId, ["user", userId]);
+
+  const { data: electronicsData } = useGetOne("/typeOfElectronics", "all", ["typeOfElectronics"]);
+
+  const productTitles = electronicsData
+    ? Object.values(electronicsData[0]).flat().map((item) => item.title)
+    : [];
+
+  useEffect(() => {
+    if (!productTitles.length) return;
+
+    const fullText = productTitles[currentIndex];
+
+    const timeout = setTimeout(() => {
+      if (!deleting) {
+        setPlaceholder(fullText.slice(0, charIndex + 1));
+        setCharIndex(charIndex + 1);
+        if (charIndex + 1 === fullText.length) setDeleting(true);
+      } else {
+        setPlaceholder(fullText.slice(0, charIndex - 1));
+        setCharIndex(charIndex - 1);
+        if (charIndex - 1 === 0) {
+          setDeleting(false);
+          setCurrentIndex((currentIndex + 1) % productTitles.length);
+        }
+      }
+    }, deleting ? 50 : 150);
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, deleting, currentIndex, productTitles]);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -52,7 +80,7 @@ function Header() {
   return (
     <div className="py-[50px] w-full">
       <header className="fixed top-0 left-0 right-0 w-full bg-white shadow-sm z-50">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <NavLink to="/">
             <img
               src={LogoShoporia}
@@ -68,9 +96,7 @@ function Header() {
                 to={item.path}
                 className={({ isActive }) =>
                   `text-sm font-medium transition ${
-                    isActive
-                      ? "text-blue-600 border-b-2 border-blue-600"
-                      : "text-gray-700 hover:text-blue-600"
+                    isActive ? "text-blue-600 border-b-2 border-blue-600" : "text-gray-700 hover:text-blue-600"
                   }`
                 }
               >
@@ -85,36 +111,27 @@ function Header() {
               className="hidden md:flex items-center bg-gray-100 rounded-lg px-3 py-2"
             >
               <input
-                type="text"
-                placeholder="Search..."
+                type="search"
+                placeholder={placeholder}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-transparent outline-none text-sm w-32"
+                className="bg-transparent outline-none text-sm w-72 transition-all duration-300"
               />
               <button type="submit" className="text-gray-600 hover:text-gray-900">
                 <FiSearch className="text-lg" />
               </button>
             </form>
 
-            <NavLink
-              to="/cart"
-              className="text-gray-700 hover:text-blue-600 transition relative"
-            >
+            <NavLink to="/cart" className="text-gray-700 hover:text-blue-600 transition relative">
               <FiShoppingCart className="text-xl" />
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                 0
               </span>
             </NavLink>
 
-            <FiUser
-              onClick={() => setProfile(!profile)}
-              className="text-xl cursor-pointer"
-            />
+            <FiUser onClick={() => setProfile(!profile)} className="text-xl cursor-pointer" />
 
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-gray-700 hover:text-blue-600"
-            >
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-gray-700 hover:text-blue-600">
               {isMenuOpen ? <FiX className="text-xl" /> : <FiMenu className="text-xl" />}
             </button>
           </div>
@@ -129,9 +146,7 @@ function Header() {
                 onClick={() => setIsMenuOpen(false)}
                 className={({ isActive }) =>
                   `block px-4 py-2 rounded-lg text-sm font-medium transition ${
-                    isActive
-                      ? "bg-blue-100 text-blue-600"
-                      : "text-gray-700 hover:bg-gray-100"
+                    isActive ? "bg-blue-100 text-blue-600" : "text-gray-700 hover:bg-gray-100"
                   }`
                 }
               >
@@ -144,8 +159,6 @@ function Header() {
 
       {profile && (
         <div className="w-64 bg-white shadow-lg rounded-xl p-4 fixed right-[70px] top-14 z-10 pt-[40px]">
-          {isError && <p>Error loading user data</p>}
-          {isLoading && <p>Loading...</p>}
           {user && (
             <Link onClick={() => setProfile(false)} to={"/profile"}>
               <div className="mb-4">
@@ -170,19 +183,13 @@ function Header() {
                 <span className="text-base">Wish List</span>
               </li>
             </Link>
-            <Link
-              onClick={() => setProfile(false)}
-              to={"/profile/payment-instalments"}
-            >
+            <Link onClick={() => setProfile(false)} to={"/profile/payment-instalments"}>
               <li className="flex items-center gap-3 cursor-pointer hover:text-blue-600">
                 <AiOutlineDollarCircle size={20} />
                 <span className="text-base">Payments</span>
               </li>
             </Link>
-            <li
-              onClick={handleLogout}
-              className="flex items-center gap-3 cursor-pointer hover:text-red-500 mt-2"
-            >
+            <li onClick={handleLogout} className="flex items-center gap-3 cursor-pointer hover:text-red-500 mt-2">
               <BiLogOut size={20} />
               <span className="text-base">Log out</span>
             </li>
