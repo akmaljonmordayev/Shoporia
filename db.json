@@ -540,7 +540,12 @@
           "title": "Samsung EcoBubble WW80T554DAW",
           "image": {
             "main": "",
-            "images": ["", "", "", ""]
+            "images": [
+              "",
+              "",
+              "",
+              ""
+            ]
           },
           "price": 499,
           "color": "white",
@@ -563,7 +568,12 @@
           "title": "LG TurboWash F4WV309S3E",
           "image": {
             "main": "",
-            "images": ["", "", "", ""]
+            "images": [
+              "",
+              "",
+              "",
+              ""
+            ]
           },
           "price": 560,
           "color": "silver",
@@ -586,7 +596,12 @@
           "title": "Bosch Serie 6 WAT2848XPL",
           "image": {
             "main": "",
-            "images": ["", "", "", ""]
+            "images": [
+              "",
+              "",
+              "",
+              ""
+            ]
           },
           "price": 650,
           "color": "dark grey",
@@ -609,7 +624,12 @@
           "title": "Haier I-Pro Series 7 HW80",
           "image": {
             "main": "",
-            "images": ["", "", "", ""]
+            "images": [
+              "",
+              "",
+              "",
+              ""
+            ]
           },
           "price": 430,
           "color": "white",
@@ -632,7 +652,12 @@
           "title": "Beko WTE7611BWR",
           "image": {
             "main": "",
-            "images": ["", "", "", ""]
+            "images": [
+              "",
+              "",
+              "",
+              ""
+            ]
           },
           "price": 350,
           "color": "white",
@@ -1951,7 +1976,8 @@
       "name": "Akmaljon Mordayev",
       "position": "Project Director",
       "image": "https://avatars.githubusercontent.com/u/134265659?v=4",
-      "description": "I am a Frontend engineer building pixel-perfect, high-performance web apps. Favourite stack: React, Vite, TypeScript, Tailwind, Next Js. ",
+      "description": "Frontend engineer focused on building scalable, high-performance web applications. Experienced in modern frontend stacks and leading development teams.",
+      "github": "",
       "ContactTelegramUs": "https://t.me/Mr_Akmal_dev"
     },
     {
@@ -1959,24 +1985,54 @@
       "name": "Jabborov Adhamjon",
       "position": "UI/UX & Frontend Developer",
       "image": "https://png.pngtree.com/element_our/20200610/ourmid/pngtree-computer-hacker-image_2247730.jpg",
-      "description": "I am a Frontend Developer with a strong focus on UI/UX design. I am proficient in HTML, CSS, and JavaScript, and familiar with various React libraries. I can deploy projects using platforms like Render, GitHub, and Netlify. Besides programming, I enjoy gaming and often play CS2 in my free time.",
+      "description": "Frontend developer with strong UI/UX sense. Works with HTML, CSS, JavaScript and React. Enjoys creating clean interfaces and interactive user experiences.",
+      "github": "",
       "ContactTelegramUs": "https://t.me/jabborov_0o7"
     },
     {
       "id": 3,
       "name": "Shuhratov Ayubhon",
       "position": "Frontend Developer",
-      "image": "https://example.com/alice-johnson.jpg",
-      "description": "Alice Johnson oversees our marketing strategies and has a passion for digital marketing.",
-      "ContactTelegramUs": "https://t.me/akmaljon_mordayev"
+      "image": "https://avatars.githubusercontent.com/u/000000000?v=4",
+      "description": "Frontend developer passionate about responsive design and modern web technologies. Focuses on clean code and performance optimization.",
+      "github": "",
+      "ContactTelegramUs": ""
     },
     {
       "id": 4,
       "name": "Ro'ziyev Firdavs",
       "position": "Frontend Developer",
-      "image": "https://example.com/bob-brown.jpg",
-      "description": "Bob Brown is responsible for our sales team and has a knack for closing deals.",
-      "ContactTelegramUs": "https://t.me/akmaljon_mordayev"
+      "image": "https://avatars.githubusercontent.com/u/000000001?v=4",
+      "description": "Frontend developer experienced in building user-friendly interfaces and interactive web components using modern JavaScript frameworks.",
+      "github": "",
+      "ContactTelegramUs": ""
+    },
+    {
+      "id": 5,
+      "name": "Ro'ziyev Muhammadyusuf",
+      "position": "Frontend Developer",
+      "image": "https://avatars.githubusercontent.com/u/000000002?v=4",
+      "description": "Motivated frontend developer focused on learning modern frameworks and creating visually appealing web applications.",
+      "github": "",
+      "ContactTelegramUs": ""
+    },
+    {
+      "id": 6,
+      "name": "Athamjonov Ibrohimjon",
+      "position": "Frontend Developer",
+      "image": "https://avatars.githubusercontent.com/u/000000003?v=4",
+      "description": "Frontend developer interested in React ecosystem and modern UI development. Pays attention to details and usability.",
+      "github": "",
+      "ContactTelegramUs": ""
+    },
+    {
+      "id": 7,
+      "name": "Jaloliddinov Maqsudjon",
+      "position": "Frontend Developer",
+      "image": "https://avatars.githubusercontent.com/u/000000004?v=4",
+      "description": "Frontend developer focused on clean layouts, responsive design, and smooth user interactions.",
+      "github": "",
+      "ContactTelegramUs": ""
     }
   ]
 }
