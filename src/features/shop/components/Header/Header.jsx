@@ -125,6 +125,7 @@ function Header() {
             ))}
           </nav>
 
+
           <div className="flex items-center gap-4">
             <form
               onSubmit={handleSearch}
