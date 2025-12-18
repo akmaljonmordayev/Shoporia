@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { FiSearch, FiShoppingCart, FiUser, FiMenu, FiX, FiShoppingBag } from "react-icons/fi";
+import {
+  FiSearch,
+  FiShoppingCart,
+  FiUser,
+  FiMenu,
+  FiX,
+  FiShoppingBag,
+} from "react-icons/fi";
 import { AiOutlineHeart, AiOutlineDollarCircle } from "react-icons/ai";
 import { BiLogOut } from "react-icons/bi";
 import LogoShoporia from "../../../../assets/LogoImages/SHOPORIA-logo-transparent.png";
@@ -11,6 +18,11 @@ function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const [profile, setProfile] = useState(false);
   const [userId, setUserId] = useState(null);
+  const [placeholder, setPlaceholder] = useState("Search...");
+  const [charIndex, setCharIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
   const navigate = useNavigate();
 
   const navItems = [
@@ -28,11 +40,47 @@ function Header() {
   //   }
   // }, []);
 
-  const { data: user, isLoading, isError } = useGetOne(
-    "/users",
-    userId,
-    ["user", userId]
-  );
+  const {
+    data: user,
+    isLoading,
+    isError,
+  } = useGetOne("/users", userId, ["user", userId]);
+
+  const { data: electronicsData } = useGetOne("/typeOfElectronics", "all", [
+    "typeOfElectronics",
+  ]);
+
+  const productTitles = electronicsData
+    ? Object.values(electronicsData[0])
+        .flat()
+        .map((item) => item.title)
+    : [];
+
+  useEffect(() => {
+    if (!productTitles.length) return;
+
+    const fullText = productTitles[currentIndex];
+
+    const timeout = setTimeout(
+      () => {
+        if (!deleting) {
+          setPlaceholder(fullText.slice(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+          if (charIndex + 1 === fullText.length) setDeleting(true);
+        } else {
+          setPlaceholder(fullText.slice(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+          if (charIndex - 1 === 0) {
+            setDeleting(false);
+            setCurrentIndex((currentIndex + 1) % productTitles.length);
+          }
+        }
+      },
+      deleting ? 50 : 150
+    );
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, deleting, currentIndex, productTitles]);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -52,7 +100,7 @@ function Header() {
   return (
     <div className="py-[50px] w-full">
       <header className="fixed top-0 left-0 right-0 w-full bg-white shadow-sm z-50">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <NavLink to="/">
             <img
               src={LogoShoporia}
@@ -79,19 +127,23 @@ function Header() {
             ))}
           </nav>
 
+
           <div className="flex items-center gap-4">
             <form
               onSubmit={handleSearch}
               className="hidden md:flex items-center bg-gray-100 rounded-lg px-3 py-2"
             >
               <input
-                type="text"
-                placeholder="Search..."
+                type="search"
+                placeholder={placeholder}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-transparent outline-none text-sm w-32"
+                className="bg-transparent outline-none text-sm w-72 transition-all duration-300"
               />
-              <button type="submit" className="text-gray-600 hover:text-gray-900">
+              <button
+                type="submit"
+                className="text-gray-600 hover:text-gray-900"
+              >
                 <FiSearch className="text-lg" />
               </button>
             </form>
@@ -115,7 +167,11 @@ function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden text-gray-700 hover:text-blue-600"
             >
-              {isMenuOpen ? <FiX className="text-xl" /> : <FiMenu className="text-xl" />}
+              {isMenuOpen ? (
+                <FiX className="text-xl" />
+              ) : (
+                <FiMenu className="text-xl" />
+              )}
             </button>
           </div>
         </div>
@@ -144,8 +200,6 @@ function Header() {
 
       {profile && (
         <div className="w-64 bg-white shadow-lg rounded-xl p-4 fixed right-[70px] top-14 z-10 pt-[40px]">
-          {isError && <p>Error loading user data</p>}
-          {isLoading && <p>Loading...</p>}
           {user && (
             <Link onClick={() => setProfile(false)} to={"/profile"}>
               <div className="mb-4">

@@ -540,7 +540,12 @@
           "title": "Samsung EcoBubble WW80T554DAW",
           "image": {
             "main": "",
-            "images": ["", "", "", ""]
+            "images": [
+              "",
+              "",
+              "",
+              ""
+            ]
           },
           "price": 499,
           "color": "white",
@@ -563,7 +568,12 @@
           "title": "LG TurboWash F4WV309S3E",
           "image": {
             "main": "",
-            "images": ["", "", "", ""]
+            "images": [
+              "",
+              "",
+              "",
+              ""
+            ]
           },
           "price": 560,
           "color": "silver",
@@ -586,7 +596,12 @@
           "title": "Bosch Serie 6 WAT2848XPL",
           "image": {
             "main": "",
-            "images": ["", "", "", ""]
+            "images": [
+              "",
+              "",
+              "",
+              ""
+            ]
           },
           "price": 650,
           "color": "dark grey",
@@ -609,7 +624,12 @@
           "title": "Haier I-Pro Series 7 HW80",
           "image": {
             "main": "",
-            "images": ["", "", "", ""]
+            "images": [
+              "",
+              "",
+              "",
+              ""
+            ]
           },
           "price": 430,
           "color": "white",
@@ -632,7 +652,12 @@
           "title": "Beko WTE7611BWR",
           "image": {
             "main": "",
-            "images": ["", "", "", ""]
+            "images": [
+              "",
+              "",
+              "",
+              ""
+            ]
           },
           "price": 350,
           "color": "white",
@@ -1842,27 +1867,19 @@
   "Slider": [
     {
       "id": 1,
-      "imageSlider": "https://t-mobile.scene7.com/is/image/Tmusprod/Apple-iPhone-17-Pro-Max-Cosmic-Orange-backimage"
+      "imageSlider": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000a6c471f7a597ba91ff5a14f3&ts=490571&p=fs&cid=1&sig=809453cd308e361473af035d2d6af99db44687d1e632bf48c5148899f88b8644&v=0"
     },
     {
       "id": 2,
-      "imageSlider": "https://i.ebayimg.com/images/g/EGUAAOSwSWhjxdjA/s-l1200.jpg"
+      "imageSlider": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000257471f78d33a223a2343546&ts=490571&p=fs&cid=1&sig=f8e63306dc81fe339e080aca4f2d747ef9d99bc8b2cab052feae1d2dfcf6ba04&v=0"
     },
     {
       "id": 3,
-      "imageSlider": "https://m.media-amazon.com/images/I/715zrA5cmLL._AC_SL1500_.jpg"
+      "imageSlider": "https://chatgpt.com/backend-api/estuary/content?id=file_000000008bd071f7bc6b90993e0f5a7f&ts=490571&p=fs&cid=1&sig=7cc5c3d9d15590be66576e0ac8d15e2efecf30e3a16d69055b9dea038edd7a64&v=0"
     },
     {
       "id": 4,
-      "imageSlider": "https://tclelectronics.co.nz/wp-content/uploads/P108FLW_angle_right.webp"
-    },
-    {
-      "id": 5,
-      "imageSlider": "https://m.media-amazon.com/images/I/81pieXC63IL._AC_SL1500_.jpg"
-    },
-    {
-      "id": 6,
-      "imageSlider": "https://cougargaming.com/_cgrwdr_/wwdpp/wp-content/uploads/2024/09/COUGAR-Defensor-01-3.png"
+      "imageSlider": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000021bc71f7ac2b37201cb42716&ts=490571&p=fs&cid=1&sig=d33edd5190604f1320528b56109e069f79899e0b495001db0578a6c83b0628c1&v=0"
     }
   ],
   "CategoryCarts": [
@@ -1951,7 +1968,8 @@
       "name": "Akmaljon Mordayev",
       "position": "Project Director",
       "image": "https://avatars.githubusercontent.com/u/134265659?v=4",
-      "description": "I am a Frontend engineer building pixel-perfect, high-performance web apps. Favourite stack: React, Vite, TypeScript, Tailwind, Next Js. ",
+      "description": "Frontend engineer focused on building scalable, high-performance web applications. Experienced in modern frontend stacks and leading development teams.",
+      "github": "https://github.com/akmaljonmordayev",
       "ContactTelegramUs": "https://t.me/Mr_Akmal_dev"
     },
     {
@@ -1959,24 +1977,63 @@
       "name": "Jabborov Adhamjon",
       "position": "UI/UX & Frontend Developer",
       "image": "https://png.pngtree.com/element_our/20200610/ourmid/pngtree-computer-hacker-image_2247730.jpg",
-      "description": "I am a Frontend Developer with a strong focus on UI/UX design. I am proficient in HTML, CSS, and JavaScript, and familiar with various React libraries. I can deploy projects using platforms like Render, GitHub, and Netlify. Besides programming, I enjoy gaming and often play CS2 in my free time.",
+      "description": "Frontend developer with strong UI/UX sense. Works with HTML, CSS, JavaScript and React. Enjoys creating clean interfaces and interactive user experiences.",
+      "github": "https://github.com/adhamjonjabborov07",
       "ContactTelegramUs": "https://t.me/jabborov_0o7"
     },
     {
       "id": 3,
       "name": "Shuhratov Ayubhon",
       "position": "Frontend Developer",
-      "image": "https://example.com/alice-johnson.jpg",
-      "description": "Alice Johnson oversees our marketing strategies and has a passion for digital marketing.",
-      "ContactTelegramUs": "https://t.me/akmaljon_mordayev"
+      "image": "https://avatars.githubusercontent.com/u/000000000?v=4",
+      "description": "Frontend developer passionate about responsive design and modern web technologies. Focuses on clean code and performance optimization.",
+      "github": "https://github.com/AlfaCefOf",
+      "ContactTelegramUs": "https://t.me/ayyubsh"
     },
     {
       "id": 4,
       "name": "Ro'ziyev Firdavs",
       "position": "Frontend Developer",
-      "image": "https://example.com/bob-brown.jpg",
-      "description": "Bob Brown is responsible for our sales team and has a knack for closing deals.",
-      "ContactTelegramUs": "https://t.me/akmaljon_mordayev"
+      "image": "https://avatars.githubusercontent.com/u/000000001?v=4",
+      "description": "Frontend developer experienced in building user-friendly interfaces and interactive web components using modern JavaScript frameworks.",
+      "github": "https://github.com/Free-cpu2",
+      "ContactTelegramUs": "https://t.me/DetectiveVoid9"
+    },
+    {
+      "id": 5,
+      "name": "Ro'ziyev Muhammadyusuf",
+      "position": "Frontend Developer",
+      "image": "https://avatars.githubusercontent.com/u/000000002?v=4",
+      "description": "Motivated frontend developer focused on learning modern frameworks and creating visually appealing web applications.",
+      "github": "https://github.com/Myruziyev",
+      "ContactTelegramUs": "https://t.me/Mruziyev_777"
+    },
+    {
+      "id": 6,
+      "name": "Athamjonov Ibrohimjon",
+      "position": "Frontend Developer",
+      "image": "https://avatars.githubusercontent.com/u/000000003?v=4",
+      "description": "Frontend developer interested in React ecosystem and modern UI development. Pays attention to details and usability.",
+      "github": "https://github.com/Ibrohimjon707",
+      "ContactTelegramUs": "https://t.me/ibrohim_0056"
+    },
+    {
+      "id": 7,
+      "name": "Jaloliddinov Maqsudjon",
+      "position": "Frontend Developer",
+      "image": "https://avatars.githubusercontent.com/u/000000004?v=4",
+      "description": "Frontend developer focused on clean layouts, responsive design, and smooth user interactions.",
+      "github": "https://github.com/Stich-cyber",
+      "ContactTelegramUs": "https://t.me/none_user67"
+    },
+    {
+      "id": 8,
+      "name": "Ahmadaliyev Azamjon",
+      "position": "Frontend Developer",
+      "image": "https://avatars.githubusercontent.com/u/000000005?v=4",
+      "description": "Frontend developer interested in building modern, responsive web interfaces using React and contemporary UI patterns.",
+      "github": "https://github.com/nolyk",
+      "ContactTelegramUs": "https://t.me/noodyblood"
     }
   ]
 }

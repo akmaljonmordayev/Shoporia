@@ -42,7 +42,7 @@ export default function DailyProduct({
       </div>
 
       <div className="flex gap-4">
-        <div className="w-[55%] flex flex-col gap-3">
+        <div className="w-[40%] flex flex-col gap-3">
           <div className="flex gap-2">
             <span className="bg-yellow-400 px-2 py-1 text-xs font-bold rounded">
               -{discount}%
