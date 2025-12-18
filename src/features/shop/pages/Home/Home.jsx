@@ -1,95 +1,61 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import Photo1 from "./img/photo1-Photoroom-removebg-preview.png";
-import Photo2 from "./img/photo2-removebg-preview.png";
-import Photo3 from "./img/photo3-removebg-preview.png";
-import Photo4 from "./img/photo4.webp";
-import Photo5 from "./img/photo5-removebg-preview.png";
-import Photo6 from "./img/photo6-removebg-preview.png";
-import Photo7 from "./img/photo7.webp";
-import FrameImage from "./img/Frame 26086940.png";
-import CategoryImage from "./img/image.png";
-import IamImage from "./img/iam.png";
-import QwertyImage from "./img/qwerty.png";
-import axiosClient from "../../../../api/axiosClient";
 import { Link } from "react-router-dom";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import CategoryCard from "../../components/CategoryCard/CategoryCard";
 import Ourblogs from "../../components/Our Blogs/ourBlogs";
 import Meta from "../../components/Meta/Meta";
 import Support from "../../components/Support/Support";
-
-const heroImages = [Photo1, Photo2, Photo3, Photo4, Photo5];
-
-const categories = [
-  { name: "Accessories", image: CategoryImage },
-  { name: "Camera", image: FrameImage },
-  { name: "Laptop", image: QwertyImage },
-  { name: "Smart Phone", image: IamImage },
-  { name: "Gaming", image: Photo7 },
-  { name: "Smart Watch", image: Photo6 },
-];
+import Img from "../../components/imgfayl/img";
+import useGetAll from "../../../../hooks/UseGetAll";
+import { useWishlist } from "../WishList/WishList";
 
 export default function Home() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+   const [products, setProducts] = useState([]);
+   const [loading, setLoading] = useState(true);
+   const { data, isError, isLoading } = useGetAll("/Slider", ["slider"]);
+   const {
+     data: categoryData,
+     isError: isErrorCategoryData,
+     isLoading: isLoadingCategoryData,
+   } = useGetAll("/CategoryCarts", ["categoryCart"]);
+   const {
+     data: saleData,
+     isError: isErrorSale,
+     isLoading: isLoadingSale,
+   } = useGetAll("/typeOfElectronics", ["typeOfElectronics"]);
+   const { data: blogData } = useGetAll("/blogCart", [`blogCart`]);
+   const { toggleWishlist, isInWishlist } = useWishlist();
+
+
+  console.log(blogData);
+
+
+  const discountedProducts = saleData?.length
+    ? Object.values(saleData[0])
+      .flat()
+      .filter((item) => item.discount > 0)
+    : [];
+
+  const fiveProducts = discountedProducts.slice(0, 5);
+
+  const heroPrevRef = useRef(null);
+  const heroNextRef = useRef(null);
+  const dailyPrevRef = useRef(null);
+  const dailyNextRef = useRef(null);
+
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        setLoading(true);
-        const response = await axiosClient.get("/typeOfElectronics");
-
-        // Get products from different categories
-        const allProducts = [];
-        if (response && response[0]) {
-          // Mobile phones
-          if (response[0].mobile && Array.isArray(response[0].mobile)) {
-            allProducts.push(...response[0].mobile);
-          }
-          // Laptops
-          if (response[0].laptop && Array.isArray(response[0].laptop)) {
-            allProducts.push(...response[0].laptop);
-          }
-          // Other categories
-          [
-            "washingmachines",
-            "heaters",
-            "TVs",
-            "airconditioners",
-            "Smartwatches",
-            "audio",
-            "Laptopaccessories",
-          ].forEach((category) => {
-            if (Array.isArray(response[0][category])) {
-              allProducts.push(...response[0][category]);
-            }
-          });
-        }
-
-        setProducts(allProducts);
-        console.log("Products loaded:", allProducts);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
+    setReady(true);
   }, []);
-
-  const discountedProducts = products.filter((p) => p.discount > 0).slice(0, 8);
-  const bestSellers = products.filter((p) => p.star >= 4.5).slice(0, 8);
-  const newProducts = [...products]
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 8);
 
   return (
     <div className="w-full bg-white">
-      {/* Hero Section */}
       <div className="py-10 px-6 md:py-16 md:px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10">
           <div className="flex flex-col gap-8 md:gap-10 max-w-md order-2 md:order-1">
@@ -122,14 +88,14 @@ export default function Home() {
                 "--swiper-pagination-color": "#0b2559",
               }}
             >
-              {heroImages.map((img, index) => (
+              {data?.map(({ imageSlider, id }) => (
                 <SwiperSlide
-                  key={index}
+                  key={id}
                   className="flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-4 md:p-6"
                 >
                   <img
-                    src={img}
-                    alt={`Hero Slide ${index + 1}`}
+                    src={imageSlider}
+                    alt={`Hero Slide ${id + 1}`}
                     className="w-full h-auto max-h-80 md:max-h-96 object-contain rounded-lg"
                   />
                 </SwiperSlide>
@@ -138,34 +104,58 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* Category Section */}
-      <div className="bg-white px-6 py-8 md:px-8 md:py-12 border-b">
+      <div className="px-4 py-6 md:px-8 md:py-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
-            {categories.map((category, index) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+
+            {categoryData?.map(({ id, categoryImage, categoryName }) => (
               <Link
-                key={index}
-                to="/products"
-                className="flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-gray-50 transition"
+                key={id}
+                to={`/${categoryName}`}
+                className="
+            flex items-center justify-between
+            bg-white rounded-2xl
+            px-4 py-3
+            shadow-sm border
+            hover:shadow-md hover:border-gray-300
+            transition-all duration-200
+          "
               >
-                <div className="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
-                  <img
-                    src={category.image}
-                    alt={category.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <span className="text-sm font-semibold text-gray-700 text-center">
-                  {category.name}
-                </span>
+                <p className="text-sm font-medium text-gray-800 w-[60%] leading-tight">
+                  {categoryName}
+                </p>
+
+                <img
+                  src={categoryImage}
+                  alt={categoryName}
+                  className="w-16 h-16 object-contain"
+                />
               </Link>
             ))}
+
+            <Link
+              to="/categories"
+              className="
+          flex items-center justify-between
+          bg-white rounded-2xl
+          px-4 py-3
+          shadow-sm border
+          hover:shadow-md hover:border-gray-300
+          transition-all duration-200
+        "
+            >
+              <p className="text-sm font-medium text-gray-800">
+                Все категории
+              </p>
+
+              <span className="text-xl font-bold">→</span>
+            </Link>
+
           </div>
         </div>
       </div>
 
-      {/* Products On Sale */}
+
       <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 py-12 px-6 md:py-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center mb-8">
@@ -175,330 +165,113 @@ export default function Home() {
               </h2>
               <p className="text-blue-100 text-lg">Shop Now!</p>
             </div>
-            <Link to={"/products?onSale=true"}>
+            <Link to={"/products"}>
               <button className="text-white font-semibold text-lg hover:text-orange-400 transition flex items-center gap-2">
                 View all <span className="text-2xl">›</span>
               </button>
             </Link>
           </div>
+          <Swiper
+            modules={[Autoplay, Navigation, Pagination]}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            navigation
+            pagination={{ clickable: true, type: "bullets" }}
+            loop
+            spaceBetween={20}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 15 },
+              1024: { slidesPerView: 4, spaceBetween: 20 },
+            }}
+            className="w-full"
+            style={{
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            }}
+          >
+            {discountedProducts?.map((product) => (
+              <SwiperSlide key={product.id}>
+                <Link to={`/products/${product.id}`}>
+                  <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
+                    <div className="relative h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
+                      {product.discount && (
+                        <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
+                          -{product.discount}%
+                        </div>
+                      )}
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          toggleWishlist(product);
+                        }}
+                        className="absolute top-3 right-3 text-red-500 hover:scale-110 transition-transform z-10"
+                      >
+                        {isInWishlist(product.id) ? (
+                          <AiFillHeart size={28} />
+                        ) : (
+                          <AiOutlineHeart size={28} />
+                        )}
+                      </button>
+                      <img
+                        src={
+                          product.image?.main ||
+                          "https://via.placeholder.com/200"
+                        }
+                        alt={product.title}
+                        className="w-full h-full object-contain p-3"
+                      />
+                    </div>
 
-          {loading ? (
-            <div className="flex justify-center items-center h-64">
-              <div className="text-white text-lg">Loading products...</div>
-            </div>
-          ) : (
-            <Swiper
-              modules={[Autoplay, Navigation, Pagination]}
-              autoplay={{ delay: 4000, disableOnInteraction: false }}
-              navigation
-              pagination={{ clickable: true, type: "bullets" }}
-              loop
-              spaceBetween={20}
-              slidesPerView={1}
-              breakpoints={{
-                640: { slidesPerView: 2, spaceBetween: 15 },
-                1024: { slidesPerView: 4, spaceBetween: 20 },
-              }}
-              className="w-full"
-              style={{
-                "--swiper-navigation-color": "#fff",
-                "--swiper-pagination-color": "#fff",
-              }}
-            >
-              {products.map((product) => (
-                <SwiperSlide key={product.id}>
-                  <Link to={`/product/${product.id}`}>
-                    <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
-                      {/* Image Container */}
-                      <div className="relative h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
-                        {product.discount && (
-                          <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
-                            -{product.discount}%
+                    <div className="p-4 flex flex-col flex-grow">
+                      <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-[2.5rem]">
+                        {product.title}
+                      </h3>
+
+                      <div className="flex flex-wrap gap-1 mb-3">
+                        {product.guaranteed && (
+                          <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
+                            ✓ Guaranteed
+                          </span>
+                        )}
+                        {product.freeDelivery && (
+                          <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
+                            🚚 Free
+                          </span>
+                        )}
+                      </div>
+
+                      <div className="mt-auto">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-xl font-bold text-gray-900">
+                            $
+                            {product.discount
+                              ? Math.round(
+                                product.price * (1 - product.discount / 100)
+                              )
+                              : product.price}
+                          </span>
+                          {product.discount && (
+                            <span className="text-sm text-gray-400 line-through">
+                              ${product.price}
+                            </span>
+                          )}
+                        </div>
+                        {product.star && (
+                          <div className="flex items-center gap-1">
+                            <span className="text-yellow-400">★</span>
+                            <span className="text-sm text-gray-700">
+                              {product.star}
+                            </span>
                           </div>
                         )}
-                        <img
-                          src={
-                            product.image || "https://via.placeholder.com/200"
-                          }
-                          alt={product.title}
-                          className="w-full h-full object-contain p-3"
-                        />
-                      </div>
-
-                      <div className="p-4 flex flex-col flex-grow">
-                        <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-[2.5rem]">
-                          {product.title}
-                        </h3>
-
-                        <div className="flex flex-wrap gap-1 mb-3">
-                          {product.guaranteed && (
-                            <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
-                              ✓ Guaranteed
-                            </span>
-                          )}
-                          {product.freeDelivery && (
-                            <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
-                              🚚 Free
-                            </span>
-                          )}
-                        </div>
-
-                        <div className="mt-auto">
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="text-xl font-bold text-gray-900">
-                              $
-                              {product.discount
-                                ? Math.round(
-                                    product.price * (1 - product.discount / 100)
-                                  )
-                                : product.price}
-                            </span>
-                            {product.discount && (
-                              <span className="text-sm text-gray-400 line-through">
-                                ${product.price}
-                              </span>
-                            )}
-                          </div>
-                          {product.star && (
-                            <div className="flex items-center gap-1">
-                              <span className="text-yellow-400">★</span>
-                              <span className="text-sm text-gray-700">
-                                {product.star}
-                              </span>
-                            </div>
-                          )}
-                        </div>
                       </div>
                     </div>
-                  </Link>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
-        </div>
-      </div>
-
-      {/* New Products */}
-      <div className="bg-gray-50 py-12 px-6 md:py-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0b2559]">
-              New Products
-            </h2>
-            <Link to="/products?new=true">
-              <button className="text-[#0b2559] font-semibold text-lg hover:text-orange-500 transition flex items-center gap-2">
-                View all <span className="text-2xl">›</span>
-              </button>
-            </Link>
-          </div>
-          {loading ? (
-            <div className="flex justify-center items-center h-64">
-              <div className="text-gray-500 text-lg">
-                Loading new products...
-              </div>
-            </div>
-          ) : (
-            <Swiper
-              modules={[Autoplay, Navigation, Pagination]}
-              autoplay={{ delay: 4000, disableOnInteraction: false }}
-              navigation
-              pagination={{ clickable: true, type: "bullets" }}
-              loop
-              spaceBetween={20}
-              slidesPerView={1}
-              breakpoints={{
-                640: { slidesPerView: 2, spaceBetween: 15 },
-                1024: { slidesPerView: 4, spaceBetween: 20 },
-              }}
-              className="w-full"
-              style={{
-                "--swiper-navigation-color": "#0b2559",
-                "--swiper-pagination-color": "#0b2559",
-              }}
-            >
-              {newProducts.map((product) => (
-                <SwiperSlide key={product.id}>
-                  <Link to={`/product/${product.id}`}>
-                    <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
-                      <div className="relative h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
-                        {product.discount && (
-                          <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
-                            -{product.discount}%
-                          </div>
-                        )}
-                        <img
-                          src={
-                            product.image?.main ||
-                            product.image ||
-                            "https://via.placeholder.com/200"
-                          }
-                          alt={product.title}
-                          className="w-full h-full object-contain p-3"
-                        />
-                      </div>
-
-                      <div className="p-4 flex flex-col flex-grow">
-                        <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-[2.5rem]">
-                          {product.title}
-                        </h3>
-
-                        <div className="flex flex-wrap gap-1 mb-3">
-                          {product.guaranteed && (
-                            <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
-                              ✓ Guaranteed
-                            </span>
-                          )}
-                          {product.freeDelivery && (
-                            <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
-                              🚚 Free
-                            </span>
-                          )}
-                        </div>
-
-                        <div className="mt-auto">
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="text-xl font-bold text-gray-900">
-                              $
-                              {product.discount
-                                ? Math.round(
-                                    product.price * (1 - product.discount / 100)
-                                  )
-                                : product.price}
-                            </span>
-                            {product.discount && (
-                              <span className="text-sm text-gray-400 line-through">
-                                ${product.price}
-                              </span>
-                            )}
-                          </div>
-                          {product.star && (
-                            <div className="flex items-center gap-1">
-                              <span className="text-yellow-400">★</span>
-                              <span className="text-sm text-gray-700">
-                                {product.star}
-                              </span>
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
-        </div>
-      </div>
-
-      {/* Best Sellers */}
-      <div className="bg-white py-12 px-6 md:py-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0b2559]">
-              Best Sellers
-            </h2>
-            <Link to="/products?bestSeller=true">
-              <button className="text-[#0b2559] font-semibold text-lg hover:text-orange-500 transition flex items-center gap-2">
-                View all <span className="text-2xl">›</span>
-              </button>
-            </Link>
-          </div>
-          {loading ? (
-            <div className="flex justify-center items-center h-64">
-              <div className="text-gray-500 text-lg">
-                Loading best sellers...
-              </div>
-            </div>
-          ) : (
-            <Swiper
-              modules={[Autoplay, Navigation, Pagination]}
-              autoplay={{ delay: 4000, disableOnInteraction: false }}
-              navigation
-              pagination={{ clickable: true, type: "bullets" }}
-              loop
-              spaceBetween={20}
-              slidesPerView={1}
-              breakpoints={{
-                640: { slidesPerView: 2, spaceBetween: 15 },
-                1024: { slidesPerView: 4, spaceBetween: 20 },
-              }}
-              className="w-full"
-              style={{
-                "--swiper-navigation-color": "#0b2559",
-                "--swiper-pagination-color": "#0b2559",
-              }}
-            >
-              {bestSellers.map((product) => (
-                <SwiperSlide key={product.id}>
-                  <Link to={`/product/${product.id}`}>
-                    <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 h-full flex flex-col cursor-pointer">
-                      <div className="relative h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
-                        {product.discount && (
-                          <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
-                            -{product.discount}%
-                          </div>
-                        )}
-                        <img
-                          src={
-                            product.image?.main ||
-                            product.image ||
-                            "https://via.placeholder.com/200"
-                          }
-                          alt={product.title}
-                          className="w-full h-full object-contain p-3"
-                        />
-                      </div>
-
-                      <div className="p-4 flex flex-col flex-grow">
-                        <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-3 min-h-[2.5rem]">
-                          {product.title}
-                        </h3>
-
-                        <div className="flex flex-wrap gap-1 mb-3">
-                          {product.guaranteed && (
-                            <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
-                              ✓ Guaranteed
-                            </span>
-                          )}
-                          {product.freeDelivery && (
-                            <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
-                              🚚 Free
-                            </span>
-                          )}
-                        </div>
-
-                        <div className="mt-auto">
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="text-xl font-bold text-gray-900">
-                              $
-                              {product.discount
-                                ? Math.round(
-                                    product.price * (1 - product.discount / 100)
-                                  )
-                                : product.price}
-                            </span>
-                            {product.discount && (
-                              <span className="text-sm text-gray-400 line-through">
-                                ${product.price}
-                              </span>
-                            )}
-                          </div>
-                          {product.star && (
-                            <div className="flex items-center gap-1">
-                              <span className="text-yellow-400">★</span>
-                              <span className="text-sm text-gray-700">
-                                {product.star}
-                              </span>
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
+                  </div>
+                </Link>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
 

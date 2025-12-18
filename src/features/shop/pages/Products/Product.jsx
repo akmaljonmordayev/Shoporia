@@ -6,18 +6,19 @@ import Container from "../../components/Container/Container";
 import axiosClient from "../../../../api/axiosClient";
 import ProductCard from "./ProductCard";
 import ProductSidebar from "./ProductSidebar";
+import { useWishlist } from "../WishList/WishList";
 
 function Product() {
-  const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [selectedBrands, setSelectedBrands] = useState([]);
-  const [priceRange, setPriceRange] = useState([0, 2500]);
-  const [selectedFeatures, setSelectedFeatures] = useState([]);
-  const [sortBy, setSortBy] = useState("latest");
-  const [wishlist, setWishlist] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("");
+   const [products, setProducts] = useState([]);
+   const [filteredProducts, setFilteredProducts] = useState([]);
+   const [loading, setLoading] = useState(true);
+   const [sidebarOpen, setSidebarOpen] = useState(false);
+   const [selectedBrands, setSelectedBrands] = useState([]);
+   const [priceRange, setPriceRange] = useState([0, 2500]);
+   const [selectedFeatures, setSelectedFeatures] = useState([]);
+   const [sortBy, setSortBy] = useState("latest");
+   const [searchQuery, setSearchQuery] = useState("");
+   const { toggleWishlist, isInWishlist } = useWishlist();
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -134,13 +135,7 @@ function Product() {
     );
   };
 
-  const toggleWishlist = (productId) => {
-    setWishlist((prev) =>
-      prev.includes(productId)
-        ? prev.filter((id) => id !== productId)
-        : [...prev, productId]
-    );
-  };
+
 
   const addToCart = async (productId) => {
     try {
@@ -305,8 +300,8 @@ function Product() {
                 <ProductCard
                   key={product.id}
                   product={product}
-                  isWishlisted={wishlist.includes(product.id)}
-                  onToggleWishlist={() => toggleWishlist(product.id)}
+                  isWishlisted={isInWishlist(product.id)}
+                  onToggleWishlist={() => toggleWishlist(product)}
                   onAddToCart={addToCart}
                 />
               ))}
