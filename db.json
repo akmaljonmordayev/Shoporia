@@ -1977,7 +1977,7 @@
       "position": "Project Director",
       "image": "https://avatars.githubusercontent.com/u/134265659?v=4",
       "description": "Frontend engineer focused on building scalable, high-performance web applications. Experienced in modern frontend stacks and leading development teams.",
-      "github": "",
+      "github": "https://github.com/akmaljonmordayev",
       "ContactTelegramUs": "https://t.me/Mr_Akmal_dev"
     },
     {
@@ -1986,7 +1986,7 @@
       "position": "UI/UX & Frontend Developer",
       "image": "https://png.pngtree.com/element_our/20200610/ourmid/pngtree-computer-hacker-image_2247730.jpg",
       "description": "Frontend developer with strong UI/UX sense. Works with HTML, CSS, JavaScript and React. Enjoys creating clean interfaces and interactive user experiences.",
-      "github": "",
+      "github": "https://github.com/adhamjonjabborov07",
       "ContactTelegramUs": "https://t.me/jabborov_0o7"
     },
     {
@@ -1995,8 +1995,8 @@
       "position": "Frontend Developer",
       "image": "https://avatars.githubusercontent.com/u/000000000?v=4",
       "description": "Frontend developer passionate about responsive design and modern web technologies. Focuses on clean code and performance optimization.",
-      "github": "",
-      "ContactTelegramUs": ""
+      "github": "https://github.com/AlfaCefOf",
+      "ContactTelegramUs": "https://t.me/ayyubsh"
     },
     {
       "id": 4,
@@ -2004,8 +2004,8 @@
       "position": "Frontend Developer",
       "image": "https://avatars.githubusercontent.com/u/000000001?v=4",
       "description": "Frontend developer experienced in building user-friendly interfaces and interactive web components using modern JavaScript frameworks.",
-      "github": "",
-      "ContactTelegramUs": ""
+      "github": "https://github.com/Free-cpu2",
+      "ContactTelegramUs": "https://t.me/DetectiveVoid9"
     },
     {
       "id": 5,
@@ -2013,8 +2013,8 @@
       "position": "Frontend Developer",
       "image": "https://avatars.githubusercontent.com/u/000000002?v=4",
       "description": "Motivated frontend developer focused on learning modern frameworks and creating visually appealing web applications.",
-      "github": "",
-      "ContactTelegramUs": ""
+      "github": "https://github.com/Myruziyev",
+      "ContactTelegramUs": "https://t.me/Mruziyev_777"
     },
     {
       "id": 6,
@@ -2022,8 +2022,8 @@
       "position": "Frontend Developer",
       "image": "https://avatars.githubusercontent.com/u/000000003?v=4",
       "description": "Frontend developer interested in React ecosystem and modern UI development. Pays attention to details and usability.",
-      "github": "",
-      "ContactTelegramUs": ""
+      "github": "https://github.com/Ibrohimjon707",
+      "ContactTelegramUs": "https://t.me/ibrohim_0056"
     },
     {
       "id": 7,
@@ -2031,8 +2031,17 @@
       "position": "Frontend Developer",
       "image": "https://avatars.githubusercontent.com/u/000000004?v=4",
       "description": "Frontend developer focused on clean layouts, responsive design, and smooth user interactions.",
-      "github": "",
-      "ContactTelegramUs": ""
+      "github": "https://github.com/Stich-cyber",
+      "ContactTelegramUs": "https://t.me/none_user67"
+    },
+    {
+      "id": 8,
+      "name": "Ahmadaliyev Azmjon",
+      "position": "Frontend Developer",
+      "image": "https://avatars.githubusercontent.com/u/000000005?v=4",
+      "description": "Frontend developer interested in building modern, responsive web interfaces using React and contemporary UI patterns.",
+      "github": "https://github.com/nolyk",
+      "ContactTelegramUs": "https://t.me/noodyblood"
     }
   ]
 }
