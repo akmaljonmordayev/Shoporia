@@ -66,11 +66,9 @@ function App() {
         <Route
           path="/"
           element={
-            <ProtectedRoute>
-              <LayOut>
-                <Home />
-              </LayOut>
-            </ProtectedRoute>
+            <LayOut>
+              <Home />
+            </LayOut>
           }
         />
         <Route
@@ -104,11 +102,9 @@ function App() {
         <Route
           path="/products"
           element={
-            <ProtectedRoute>
-              <LayOut>
-                <Product />
-              </LayOut>
-            </ProtectedRoute>
+            <LayOut>
+              <Product />
+            </LayOut>
           }
         />
         <Route
@@ -145,18 +141,16 @@ function App() {
         />
         <Route
           path="/profile/payment-instalments/instalments"
-          element={
-            <LayOut>
-              {/* <Instalments/> */}
-            </LayOut>
-          }
+          element={<LayOut>{/* <Instalments/> */}</LayOut>}
         />
         <Route
           path="/blog/:id"
           element={
-            <LayOut>
-              <BlogSingle />
-            </LayOut>
+            <ProtectedRoute>
+              <LayOut>
+                <BlogSingle />
+              </LayOut>
+            </ProtectedRoute>
           }
         />
         <Route
