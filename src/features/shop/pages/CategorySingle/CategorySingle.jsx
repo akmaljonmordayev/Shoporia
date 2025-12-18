@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import useGetAll from "../../../../hooks/UseGetAll";
+import { FaStar } from "react-icons/fa6";
 
 function CategorySingle() {
   const { categoryName } = useParams();
@@ -42,11 +43,12 @@ function CategorySingle() {
                 {typeOfElectronics.title}
               </h2>
               <p className="text-sm text-gray-500 mt-1">
+                <FaStar />
                 {typeOfElectronics.star}
               </p>
 
               <p className="text-sm text-gray-500 mt-1">
-                {typeOfElectronics.price}
+                Price:{typeOfElectronics.price}
               </p>
             </div>
           ))}
