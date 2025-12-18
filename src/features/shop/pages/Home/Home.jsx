@@ -1,76 +1,191 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import Ourblogs from "../../components/Our Blogs/ourBlogs";
+import Meta from "../../components/Meta/Meta";
+import Support from "../../components/Support/Support";
+import DailyProduct from "../../components/DailyProduct/DalyProduct";
 import useGetAll from "../../../../hooks/UseGetAll";
-import { FaStar } from "react-icons/fa6";
 
-function CategorySingle() {
-  const { categoryName } = useParams();
-  const { data, isLoading, isError } = useGetAll("/typeOfElectronics");
+export default function Home() {
+  const { data: sliderData } = useGetAll("/Slider", ["slider"]);
+  const { data: categoryData } = useGetAll("/CategoryCarts", ["categoryCart"]);
+  const { data: electronicsData } = useGetAll("/typeOfElectronics", [
+    "typeOfElectronics",
+  ]);
 
-  if (isLoading)
-    return (
-      <div className="flex justify-center items-center h-60">
-        <p className="text-lg text-blue-500 animate-pulse">Loading...</p>
-      </div>
-    );
+  const [fiveProducts, setFiveProducts] = useState([]);
 
-  if (isError)
-    return (
-      <div className="flex justify-center items-center h-60">
-        <p className="text-lg text-red-500 font-medium">
-          Something went wrong ❌
-        </p>
-      </div>
-    );
+  useEffect(() => {
+    if (!electronicsData?.length) return;
 
-  const categoryData = data?.[0]?.[categoryName] || [];
+    const updateProducts = () => {
+      const discountedProducts = Object.values(electronicsData[0])
+        .flat()
+        .filter((item) => item.discount > 0);
+
+      const shuffled = [...discountedProducts].sort(() => 0.5 - Math.random());
+      setFiveProducts(shuffled.slice(0, 5));
+    };
+
+    updateProducts();
+    const interval = setInterval(updateProducts, 16_200_000);
+    return () => clearInterval(interval);
+  }, [electronicsData]);
+
+  const heroPrev = useRef(null);
+  const heroNext = useRef(null);
+  const dailyPrev = useRef(null);
+  const dailyNext = useRef(null);
 
   return (
-    <div className="px-6 py-8">
-      <h1 className="text-3xl font-bold mb-8 capitalize bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent">
-        {categoryName}
-      </h1>
-
-      {categoryData.length === 0 ? (
-        <p className="text-gray-500 text-center">No products found.</p>
-      ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {categoryData.map((typeOfElectronics, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-2xl border border-gray-100 
-                         shadow-md hover:shadow-blue-200 hover:border-blue-400
-                         transition-all duration-300 p-5 cursor-pointer group"
+    <div className="w-full bg-white">
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto overflow-x-auto">
+          <div className="flex gap-12 px-4 py-2 whitespace-nowrap">
+            {categoryData?.map(({ id, categoryName }) => (
+              <Link
+                key={id}
+                to={`/${categoryName}`}
+                className="text-sm font-medium text-gray-700 hover:text-blue-600"
+              >
+                {categoryName}
+              </Link>
+            ))}
+            <Link
+              to="/categories"
+              className="text-sm font-medium text-gray-700 hover:text-blue-600"
             >
-              <div className="w-full h-40 flex items-center justify-center mb-4">
-                <img
-                  src={typeOfElectronics.image.images}
-                  alt="Product"
-                  className="max-h-full object-contain group-hover:scale-105 transition-transform"
-                />
-              </div>
-
-              <h2 className="text-lg font-semibold text-gray-800 truncate">
-                {typeOfElectronics.title}
-              </h2>
-
-              <div className="flex items-center gap-1 text-sm text-yellow-500 mt-2">
-                <FaStar />
-                <span className="text-gray-600">{typeOfElectronics.star}</span>
-              </div>
-
-              <p className="text-sm mt-2 text-gray-700">
-                <span className="text-gray-500">Price:</span>{" "}
-                <span className="font-semibold">
-                  ${typeOfElectronics.price}
-                </span>
-              </p>
-            </div>
-          ))}
+              Все категории
+            </Link>
+          </div>
         </div>
-      )}
+      </div>
+
+      <div className="px-6 py-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="relative lg:col-span-2 rounded-3xl overflow-hidden">
+            <Swiper
+              modules={[Autoplay, Navigation, Pagination]}
+              loop={false}
+              autoplay={{ delay: 4000, disableOnInteraction: false }}
+              pagination={{ clickable: true }}
+              navigation={{
+                prevEl: heroPrev.current,
+                nextEl: heroNext.current,
+              }}
+              onBeforeInit={(swiper) => {
+                swiper.params.navigation.prevEl = heroPrev.current;
+                swiper.params.navigation.nextEl = heroNext.current;
+              }}
+            >
+              {sliderData?.map(({ id, imageSlider }) => (
+                <SwiperSlide key={id}>
+                  <img
+                    src={imageSlider}
+                    className="w-full h-[420px] object-cover"
+                    alt=""
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+            <button
+              ref={heroPrev}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white w-10 h-10 rounded-full shadow flex items-center justify-center z-10"
+            >
+              <FaChevronLeft />
+            </button>
+
+            <button
+              ref={heroNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white w-10 h-10 rounded-full shadow flex items-center justify-center z-10"
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+
+          <div className="relative bg-white rounded-3xl shadow">
+            <Swiper
+              modules={[Autoplay, Navigation, Pagination]}
+              loop={false}
+              autoplay={{ delay: 8000, disableOnInteraction: false }}
+              pagination={{ clickable: true }}
+              navigation={{
+                prevEl: dailyPrev.current,
+                nextEl: dailyNext.current,
+              }}
+              onBeforeInit={(swiper) => {
+                swiper.params.navigation.prevEl = dailyPrev.current;
+                swiper.params.navigation.nextEl = dailyNext.current;
+              }}
+            >
+              {fiveProducts.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <Link to="/products">
+                    <DailyProduct
+                      discount={item.discount}
+                      productName={item.title}
+                      price={item.price}
+                      oldPrice={Math.round(
+                        item.price / (1 - item.discount / 100)
+                      )}
+                      monthlyPrice={Math.round(item.price / 12)}
+                      image={item.image?.main}
+                    />
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+            <button
+              ref={dailyPrev}
+              className="absolute left-3 top-1/2 -translate-y-1/2 bg-white w-9 h-9 rounded-full shadow flex items-center justify-center z-10"
+            >
+              <FaChevronLeft />
+            </button>
+
+            <button
+              ref={dailyNext}
+              className="absolute right-3 top-1/2 -translate-y-1/2 bg-white w-9 h-9 rounded-full shadow flex items-center justify-center z-10"
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="px-6 py-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          {categoryData?.map(({ id, categoryName, categoryImage }) => (
+            <Link
+              key={id}
+              to={`/${categoryName}`}
+              className="bg-white border rounded-xl p-4 flex justify-between items-center hover:shadow"
+            >
+              <p className="text-sm font-medium">{categoryName}</p>
+              <img src={categoryImage} className="w-14 h-14 object-contain" />
+            </Link>
+          ))}
+
+          <Link
+            to="/categories"
+            className="bg-white border rounded-xl p-4 flex justify-between items-center hover:shadow"
+          >
+            <p className="text-sm font-medium">Все категории</p>
+            <span className="text-xl">→</span>
+          </Link>
+        </div>
+      </div>
+
+      <Ourblogs />
+      <Meta />
+      <Support />
     </div>
   );
 }
-
-export default CategorySingle;
