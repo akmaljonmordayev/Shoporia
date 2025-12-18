@@ -33,10 +33,12 @@ function Header() {
     { id: 5, name: "Contact Us", path: "/contact-us" },
   ];
 
-  useEffect(() => {
-    const storedToken = JSON.parse(localStorage.getItem("token"));
-    if (storedToken?.userId) setUserId(storedToken.userId);
-  }, []);
+  // useEffect(() => {
+  //   // const storedToken = JSON.parse(localStorage.getItem("token"));
+  //   if (storedToken?.userId) {
+  //     setUserId(storedToken.userId);
+  //   }
+  // }, []);
 
   const {
     data: user,
