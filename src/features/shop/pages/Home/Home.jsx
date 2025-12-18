@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
 import Ourblogs from "../../components/Our Blogs/ourBlogs";
 import Meta from "../../components/Meta/Meta";
 import Support from "../../components/Support/Support";
@@ -20,24 +19,29 @@ export default function Home() {
     "typeOfElectronics",
   ]);
 
-  const discountedProducts = electronicsData?.length
-    ? Object.values(electronicsData[0])
-        .flat()
-        .filter((item) => item.discount > 0)
-    : [];
-
-  const fiveProducts = discountedProducts.slice(0, 5);
-
-  const heroPrevRef = useRef(null);
-  const heroNextRef = useRef(null);
-  const dailyPrevRef = useRef(null);
-  const dailyNextRef = useRef(null);
-
-  const [ready, setReady] = useState(false);
+  const [fiveProducts, setFiveProducts] = useState([]);
 
   useEffect(() => {
-    setReady(true);
-  }, []);
+    if (!electronicsData?.length) return;
+
+    const updateProducts = () => {
+      const discountedProducts = Object.values(electronicsData[0])
+        .flat()
+        .filter((item) => item.discount > 0);
+
+      const shuffled = [...discountedProducts].sort(() => 0.5 - Math.random());
+      setFiveProducts(shuffled.slice(0, 5));
+    };
+
+    updateProducts();
+    const interval = setInterval(updateProducts, 16_200_000);
+    return () => clearInterval(interval);
+  }, [electronicsData]);
+
+  const heroPrev = useRef(null);
+  const heroNext = useRef(null);
+  const dailyPrev = useRef(null);
+  const dailyNext = useRef(null);
 
   return (
     <div className="w-full bg-white">
@@ -66,41 +70,40 @@ export default function Home() {
       <div className="px-6 py-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="relative lg:col-span-2 rounded-3xl overflow-hidden">
-            {ready && (
-              <Swiper
-                modules={[Autoplay, Navigation, Pagination]}
-                loop
-                autoplay={{ delay: 4000 }}
-                pagination={{ clickable: true }}
-                navigation={{
-                  prevEl: heroPrevRef.current,
-                  nextEl: heroNextRef.current,
-                }}
-                onBeforeInit={(swiper) => {
-                  swiper.params.navigation.prevEl = heroPrevRef.current;
-                  swiper.params.navigation.nextEl = heroNextRef.current;
-                }}
-              >
-                {sliderData?.map(({ id, imageSlider }) => (
-                  <SwiperSlide key={id}>
-                    <img
-                      src={imageSlider}
-                      className="w-full h-[420px] object-cover"
-                      alt=""
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            )}
+            <Swiper
+              modules={[Autoplay, Navigation, Pagination]}
+              loop={false}
+              autoplay={{ delay: 4000, disableOnInteraction: false }}
+              pagination={{ clickable: true }}
+              navigation={{
+                prevEl: heroPrev.current,
+                nextEl: heroNext.current,
+              }}
+              onBeforeInit={(swiper) => {
+                swiper.params.navigation.prevEl = heroPrev.current;
+                swiper.params.navigation.nextEl = heroNext.current;
+              }}
+            >
+              {sliderData?.map(({ id, imageSlider }) => (
+                <SwiperSlide key={id}>
+                  <img
+                    src={imageSlider}
+                    className="w-full h-[420px] object-cover"
+                    alt=""
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
             <button
-              ref={heroPrevRef}
+              ref={heroPrev}
               className="absolute left-4 top-1/2 -translate-y-1/2 bg-white w-10 h-10 rounded-full shadow flex items-center justify-center z-10"
             >
               <FaChevronLeft />
             </button>
+
             <button
-              ref={heroNextRef}
+              ref={heroNext}
               className="absolute right-4 top-1/2 -translate-y-1/2 bg-white w-10 h-10 rounded-full shadow flex items-center justify-center z-10"
             >
               <FaChevronRight />
@@ -108,48 +111,47 @@ export default function Home() {
           </div>
 
           <div className="relative bg-white rounded-3xl shadow">
-            {ready && (
-              <Swiper
-                modules={[Autoplay, Navigation, Pagination]}
-                loop
-                autoplay={{ delay: 4000 }}
-                pagination={{ clickable: true }}
-                navigation={{
-                  prevEl: dailyPrevRef.current,
-                  nextEl: dailyNextRef.current,
-                }}
-                onBeforeInit={(swiper) => {
-                  swiper.params.navigation.prevEl = dailyPrevRef.current;
-                  swiper.params.navigation.nextEl = dailyNextRef.current;
-                }}
-              >
-                {fiveProducts.map((item) => (
-                  <SwiperSlide key={item.id}>
-                    <Link to="/products">
-                      <DailyProduct
-                        discount={item.discount}
-                        productName={item.title}
-                        price={item.price}
-                        oldPrice={Math.round(
-                          item.price / (1 - item.discount / 100)
-                        )}
-                        monthlyPrice={Math.round(item.price / 12)}
-                        image={item.image?.main}
-                      />
-                    </Link>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            )}
+            <Swiper
+              modules={[Autoplay, Navigation, Pagination]}
+              loop={false}
+              autoplay={{ delay: 8000, disableOnInteraction: false }}
+              pagination={{ clickable: true }}
+              navigation={{
+                prevEl: dailyPrev.current,
+                nextEl: dailyNext.current,
+              }}
+              onBeforeInit={(swiper) => {
+                swiper.params.navigation.prevEl = dailyPrev.current;
+                swiper.params.navigation.nextEl = dailyNext.current;
+              }}
+            >
+              {fiveProducts.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <Link to="/products">
+                    <DailyProduct
+                      discount={item.discount}
+                      productName={item.title}
+                      price={item.price}
+                      oldPrice={Math.round(
+                        item.price / (1 - item.discount / 100)
+                      )}
+                      monthlyPrice={Math.round(item.price / 12)}
+                      image={item.image?.main}
+                    />
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
             <button
-              ref={dailyPrevRef}
+              ref={dailyPrev}
               className="absolute left-3 top-1/2 -translate-y-1/2 bg-white w-9 h-9 rounded-full shadow flex items-center justify-center z-10"
             >
               <FaChevronLeft />
             </button>
+
             <button
-              ref={dailyNextRef}
+              ref={dailyNext}
               className="absolute right-3 top-1/2 -translate-y-1/2 bg-white w-9 h-9 rounded-full shadow flex items-center justify-center z-10"
             >
               <FaChevronRight />
