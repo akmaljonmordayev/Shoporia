@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ps5 from "./img/img.webp"
+import ps5 from "./img/ps5.webp"
 const PromoBanner = ({ title, subtitle, buttonLabel, buttonLink, isLeft = false }) => {
   return (
     <div
@@ -15,7 +15,7 @@ const PromoBanner = ({ title, subtitle, buttonLabel, buttonLink, isLeft = false 
           {isLeft ? (
             <img src="https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-15-pro-max.png" alt="" />
           ) : (
-            <img className="" src="https://cdn.mediapark.uz/imgs/5d2860d7-aecc-4932-bf95-48477de124bd_1.webphttps://cdn.mediapark.uz/imgs/5d2860d7-aecc-4932-bf95-48477de124bd_1.webp" alt="" />
+            <img className={ps5} src="" alt="" />
           )}
         </div>
       </div>

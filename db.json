@@ -1867,19 +1867,23 @@
   "Slider": [
     {
       "id": 1,
-      "imageSlider": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000a6c471f7a597ba91ff5a14f3&ts=490571&p=fs&cid=1&sig=809453cd308e361473af035d2d6af99db44687d1e632bf48c5148899f88b8644&v=0"
+      "imageSlider": "https://cdn.mediapark.uz/imgs/8e923ba2-068e-4a4e-a715-b980f661ac34_WEB_RU-(64).webp"
     },
     {
       "id": 2,
-      "imageSlider": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000257471f78d33a223a2343546&ts=490571&p=fs&cid=1&sig=f8e63306dc81fe339e080aca4f2d747ef9d99bc8b2cab052feae1d2dfcf6ba04&v=0"
+      "imageSlider": "https://cdn.mediapark.uz/imgs/02465905-692b-42db-8848-54200b6161c0_WEB_ru-(66).webp"
     },
     {
       "id": 3,
-      "imageSlider": "https://chatgpt.com/backend-api/estuary/content?id=file_000000008bd071f7bc6b90993e0f5a7f&ts=490571&p=fs&cid=1&sig=7cc5c3d9d15590be66576e0ac8d15e2efecf30e3a16d69055b9dea038edd7a64&v=0"
+      "imageSlider": "https://cdn.mediapark.uz/imgs/2a2aed21-4f0f-4bd5-97fb-73a0cd991f3d_WEB_RU-(16).webp"
     },
     {
       "id": 4,
-      "imageSlider": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000021bc71f7ac2b37201cb42716&ts=490571&p=fs&cid=1&sig=d33edd5190604f1320528b56109e069f79899e0b495001db0578a6c83b0628c1&v=0"
+      "imageSlider": "https://cdn.mediapark.uz/imgs/3dc8a745-b35d-4c55-8a94-06ac1240b1d3_WEB_RU-(38).webp"
+    },
+    {
+      "id": 5,
+      "imageSlider": "https://cdn.mediapark.uz/imgs/de57e451-37fa-4cba-8d1d-ffc5e5722761_WEB_RU-(53).webp"
     }
   ],
   "CategoryCarts": [
