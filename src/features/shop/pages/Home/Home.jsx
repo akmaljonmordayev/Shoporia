@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
 import Ourblogs from "../../components/Our Blogs/ourBlogs";
 import Meta from "../../components/Meta/Meta";
 import Support from "../../components/Support/Support";
@@ -58,7 +59,7 @@ export default function Home() {
               </Link>
             ))}
             <Link
-              to="/categories"
+              to="/all"
               className="text-sm font-medium text-gray-700 hover:text-blue-600"
             >
               Все категории
@@ -174,7 +175,7 @@ export default function Home() {
           ))}
 
           <Link
-            to="/categories"
+            to="/all"
             className="bg-white border rounded-xl p-4 flex justify-between items-center hover:shadow"
           >
             <p className="text-sm font-medium">Все категории</p>

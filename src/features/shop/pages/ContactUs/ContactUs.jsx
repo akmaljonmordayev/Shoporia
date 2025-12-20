@@ -93,8 +93,9 @@ function ContactUs() {
             </p>
           </div>
         </div>
-        <div className="mt-14 flex justify-center relative z-0">
-          <div className="w-[85%] h-[380px] rounded-xl overflow-hidden shadow-md relative z-0">
+        <div className="mt-14 flex justify-center relative z-10">
+          <div className="w-[85%] h-[380px] rounded-xl overflow-hidden shadow-md relative z-10">
+
             <MapContainer
               center={[41.2995, 69.2401]}
               zoom={13}
