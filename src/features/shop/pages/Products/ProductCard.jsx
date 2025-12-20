@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { AiOutlineHeart, AiFillHeart, AiFillStar } from "react-icons/ai";
 
 function ProductCard({ product, isWishlisted, onToggleWishlist, onAddToCart }) {
+  const navigate = useNavigate();
+
+  const goToDetails = () => {
+    navigate(`/products/${product.id}`, { state: { product } });
+  };
+
   const discountedPrice = product.discount
     ? Math.round(product.price * (1 - product.discount / 100))
     : product.price;
@@ -16,7 +23,10 @@ function ProductCard({ product, isWishlisted, onToggleWishlist, onAddToCart }) {
           </span>
         )}
         <button
-          onClick={onToggleWishlist}
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleWishlist();
+          }}
           className="text-red-500 hover:scale-110 transition-transform"
         >
           {isWishlisted ? (
@@ -26,35 +36,40 @@ function ProductCard({ product, isWishlisted, onToggleWishlist, onAddToCart }) {
           )}
         </button>
       </div>
-      <div className="w-full h-56 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center mb-3">
-        <img
-          src={product.image?.main || "https://via.placeholder.com/200"}
-          alt={product.title}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="mb-3">
-        <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-2">
-          {product.title}
-        </h3>
-        <div className="flex flex-wrap gap-1 mb-2">
-          {product.guaranteed && (
-            <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
-              ✓ Guaranteed
-            </span>
-          )}
-          {product.freeDelivery && (
-            <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
-              🚚 Free Delivery
-            </span>
-          )}
-          {product.inStock && (
-            <span className="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded">
-              In Stock
-            </span>
-          )}
+
+      {/* Clickable area: image + title */}
+      <div onClick={goToDetails} className="cursor-pointer">
+        <div className="w-full h-56 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center mb-3">
+          <img
+            src={product.image?.main || "https://via.placeholder.com/200"}
+            alt={product.title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="mb-3">
+          <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-2">
+            {product.title}
+          </h3>
+          <div className="flex flex-wrap gap-1 mb-2">
+            {product.guaranteed && (
+              <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
+                ✓ Guaranteed
+              </span>
+            )}
+            {product.freeDelivery && (
+              <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">
+                🚚 Free Delivery
+              </span>
+            )}
+            {product.inStock && (
+              <span className="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded">
+                In Stock
+              </span>
+            )}
+          </div>
         </div>
       </div>
+
       <div className="mb-3">
         <div className="flex items-center gap-2 mb-1">
           <span className="text-xl font-bold text-gray-900">
@@ -86,7 +101,10 @@ function ProductCard({ product, isWishlisted, onToggleWishlist, onAddToCart }) {
         </div>
       )}
       <button
-        onClick={() => onAddToCart(product.id)}
+        onClick={(e) => {
+          e.stopPropagation();
+          onAddToCart(product.id);
+        }}
         className="w-full bg-orange-500 hover:bg-orange-600 transition text-white font-semibold py-2 px-3 rounded-lg flex items-center justify-center gap-2"
       >
         <MdOutlineShoppingCart size={20} />
