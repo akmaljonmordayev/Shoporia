@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import orderList from "./img/orderPict.png";
-import useGetAll from "../../../../hooks/UseGetAll"
+import useGetAll from "../../../../hooks/UseGetAll";
 
 function Orders() {
-  const [activeTab, setActiveTab] = useState("delivered");
+  const [activeTab, setActiveTab] = useState("current");
 
   const tabs = [
     { key: "current", label: "Current" },
@@ -13,12 +13,26 @@ function Orders() {
     { key: "returned", label: "Returned" },
   ];
 
-  const { data, isLoading } = useGetAll(
-    `/orders?status=${activeTab}`,
-    ["orders", activeTab]
-  );
+  const { data, isLoading } = useGetAll(`/orders?status=${activeTab}`, [
+    "orders",
+    activeTab,
+  ]);
 
-  const orders = data?.data || [];
+  const apiOrders = data?.data || [];
+
+  const [localOrders, setLocalOrders] = useState([]);
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem("shop_orders_v1");
+      const parsed = raw ? JSON.parse(raw) : [];
+      setLocalOrders(parsed);
+    } catch (e) {
+      setLocalOrders([]);
+    }
+  }, []);
+  const orders =
+    activeTab === "current" ? [...localOrders, ...apiOrders] : apiOrders;
 
   return (
     <div className="px-4 py-6">
@@ -32,14 +46,20 @@ function Orders() {
             onClick={() => setActiveTab(tab.key)}
             className={`
               relative pb-2 text-[15px] transition
-              ${activeTab === tab.key ? "text-blue-600 font-medium" : "text-gray-500"}
+              ${
+                activeTab === tab.key
+                  ? "text-blue-600 font-medium"
+                  : "text-gray-500"
+              }
             `}
           >
             {tab.label}
-            <span className="ml-1 text-gray-400">{activeTab === tab.key ? orders.length : 0}</span>
+            <span className="ml-1 text-gray-400">
+              {activeTab === tab.key ? orders.length : 0}
+            </span>
 
             {activeTab === tab.key && (
-              <span className="absolute left-0 -bottom-[2px] w-full h-[2px] bg-blue-600 rounded-full"></span>
+              <span className="absolute left-0 -bottom-0.5 w-full h-0.5 bg-blue-600 rounded-full"></span>
             )}
           </button>
         ))}
@@ -47,10 +67,7 @@ function Orders() {
 
       {!isLoading && orders.length === 0 && (
         <div className="flex flex-col items-center justify-center mt-16">
-          <img
-            src={orderList}
-            className="w-[200px] h-auto mb-4 opacity-90"
-          />
+          <img src={orderList} className="w-50 h-auto mb-4 opacity-90" />
           <p className="text-gray-500 text-[15px]">
             You have not placed any orders yet
           </p>
@@ -59,10 +76,7 @@ function Orders() {
 
       <div className="flex flex-col gap-6 mt-8">
         {orders.map((order) => (
-          <div
-            key={order.id}
-            className="border border-gray-200 rounded-xl p-5"
-          >
+          <div key={order.id} className="border border-gray-200 rounded-xl p-5">
             <div className="grid grid-cols-5 items-center text-[14px] text-gray-600 mb-3">
               <div>
                 <p className="font-medium text-gray-500">order code</p>

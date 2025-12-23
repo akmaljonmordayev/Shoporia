@@ -6,6 +6,8 @@ import Container from "../../components/Container/Container";
 import axiosClient from "../../../../api/axiosClient";
 import ProductCard from "./ProductCard";
 import ProductSidebar from "./ProductSidebar";
+import { addToCartLocal, getCart } from "../../utils/cart";
+import { useNavigate } from "react-router-dom";
 
 function Product() {
   const [products, setProducts] = useState([]);
@@ -18,6 +20,11 @@ function Product() {
   const [sortBy, setSortBy] = useState("latest");
   const [wishlist, setWishlist] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
+  const [cartIds, setCartIds] = useState(() =>
+    (getCart().items || []).map((i) => String(i.productId))
+  );
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -142,39 +149,16 @@ function Product() {
     );
   };
 
-  const addToCart = async (productId) => {
+  const addToCart = (product) => {
     try {
-      console.log("Adding to cart, productId:", productId);
-
-      const response = await axiosClient.get("/carts");
-      console.log("Cart response:", response);
-
-      let cart = response[0] || { id: 1, userId: 1, items: [] };
-      console.log("Current cart:", cart);
-
-      const existingItem = cart.items.find(
-        (item) => item.productId === productId
-      );
-
-      if (existingItem) {
-        existingItem.quantity += 1;
-        console.log("Updated quantity for product:", productId);
-      } else {
-        cart.items.push({ productId, quantity: 1 });
-        console.log("Added new product to cart:", productId);
-      }
-
-      console.log("Cart before update:", cart);
-
-      const patchResponse = await axiosClient.patch(`/carts/${cart.id}`, {
-        items: cart.items,
-      });
-      console.log("Cart updated successfully:", patchResponse);
-
-      alert(`Product added to cart!`);
-    } catch (error) {
-      console.error("Error adding to cart:", error);
-      alert("Error adding to cart. Check console.");
+      if (!product) return;
+      addToCartLocal(product);
+      const c = getCart();
+      setCartIds((c.items || []).map((i) => String(i.productId)));
+      navigate("/cart");
+    } catch (err) {
+      console.error("Error adding to cart (local):", err);
+      alert("Error adding to cart");
     }
   };
 
@@ -306,6 +290,7 @@ function Product() {
                   key={product.id}
                   product={product}
                   isWishlisted={wishlist.includes(product.id)}
+                  isInCart={cartIds.includes(String(product.id))}
                   onToggleWishlist={() => toggleWishlist(product.id)}
                   onAddToCart={addToCart}
                 />
