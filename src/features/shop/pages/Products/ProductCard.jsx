@@ -3,7 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { AiOutlineHeart, AiFillHeart, AiFillStar } from "react-icons/ai";
 
-function ProductCard({ product, isWishlisted, onToggleWishlist, onAddToCart }) {
+function ProductCard({
+  product,
+  isWishlisted,
+  onToggleWishlist,
+  onAddToCart,
+  isInCart,
+}) {
   const navigate = useNavigate();
 
   const goToDetails = () => {
@@ -103,12 +109,12 @@ function ProductCard({ product, isWishlisted, onToggleWishlist, onAddToCart }) {
       <button
         onClick={(e) => {
           e.stopPropagation();
-          onAddToCart(product.id);
+          onAddToCart(product);
         }}
         className="w-full bg-orange-500 hover:bg-orange-600 transition text-white font-semibold py-2 px-3 rounded-lg flex items-center justify-center gap-2"
       >
         <MdOutlineShoppingCart size={20} />
-        Add to Cart
+        {isInCart ? "Order" : "Add to Cart"}
       </button>
     </div>
   );
