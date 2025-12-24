@@ -3,14 +3,21 @@ import axiosClient from "../api/axiosClient";
 
 const useGetOne = (endpoint, id, queryKey = ["item"]) => {
   const fetchData = async () => {
-    const res = await axiosClient.get(`${endpoint}/${id}`);
-    return res.data;
+    if (!endpoint || !id) return null;
+
+    try {
+      const res = await axiosClient.get(`${endpoint}/${id}`);
+      return res.data;
+    } catch (error) {
+      console.error("❌ API Error:", error.response?.status);
+      return null;
+    }
   };
 
   const { data, isLoading, isError, refetch } = useQuery({
-    queryKey: queryKey,
+    queryKey: [...queryKey, id],
     queryFn: fetchData,
-    enabled: !!id,
+    enabled: Boolean(endpoint && id),
     staleTime: 5 * 60 * 1000,
     refetchOnWindowFocus: false,
   });
