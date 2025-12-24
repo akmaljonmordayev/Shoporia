@@ -285,8 +285,7 @@ export default function Home() {
       </div>
       <div className="py-8 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-start justify-between mb-4">
-          </div>
+          <div className="flex items-start justify-between mb-4"></div>
 
           <div className="py-8 px-6 bg-white">
             <div className="max-w-7xl mx-auto">
@@ -322,24 +321,24 @@ export default function Home() {
         </div>
       </div>
 
-<div className="py-8 px-6 bg-white">
-  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
-    <PromoBanner
-      title="Iphone 15 Series"
-      subtitle="It feels good to be the first. Get ready for the future of smartphones. Experience innovation like never before. Stay tuned for the big iPhone 15 pre-sale."
-      buttonLabel="Register Now"
-      buttonLink="/iphone15"
-      isLeft={true}
-    />
+      <div className="py-8 px-6 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <PromoBanner
+            title="Iphone 15 Series"
+            subtitle="It feels good to be the first. Get ready for the future of smartphones. Experience innovation like never before. Stay tuned for the big iPhone 15 pre-sale."
+            buttonLabel="Register Now"
+            buttonLink="/iphone15"
+            isLeft={true}
+          />
 
-    <PromoBanner
-      title="Play Station 5"
-      subtitle="Digital Edition + 2TB"
-      buttonLabel="Buy Now"
-      buttonLink="/ps5"
-    />
-  </div>
-</div>
+          <PromoBanner
+            title="Play Station 5"
+            subtitle="Digital Edition + 2TB"
+            buttonLabel="Buy Now"
+            buttonLink="/ps5"
+          />
+        </div>
+      </div>
       <div className="py-8 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-start justify-between mb-4">
@@ -365,8 +364,7 @@ export default function Home() {
                     </Link>
                   )
                 )
-              : 
-                Array.from({ length: 4 }).map((_, i) => (
+              : Array.from({ length: 4 }).map((_, i) => (
                   <div
                     key={i}
                     className="bg-gray-100 aspect-square rounded-lg animate-pulse"
